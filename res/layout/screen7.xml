@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:id="@+id/allergy_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#CFDBC5"
+            android:text="@string/allergy_title"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textView_medication_allergies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/allergy_title"
+            android:text="@string/medication_allergies"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <RadioGroup
+            android:id="@+id/radioGroup_Allergy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_medication_allergies"
+            android:layout_below="@id/textView_medication_allergies" >
+
+            <RadioButton
+                android:id="@+id/radioButton_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/no_known_allergies" />
+
+            <RadioButton
+                android:id="@+id/radioButton_yes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/allergy_yes" />
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText_allergy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_reaction1"
+            android:layout_below="@id/radioGroup_Allergy"
+            android:layout_marginTop="5dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/allergy_text1" />
+
+        <TextView
+            android:id="@+id/viewText_allergy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_allergy1"
+            android:text="@string/allergy1"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_reaction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_allergy1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_reaction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_reaction1"
+            android:text="@string/reaction1"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_allergy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_allergy1"
+            android:layout_below="@id/editText_reaction1"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/allergy_text2" >
+
+        </EditText>
+
+        <TextView
+            android:id="@+id/textView_allergy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_allergy2"
+            android:text="@string/allergy2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_reaction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_reaction1"
+            android:layout_below="@id/editText_allergy2"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_reaction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_reaction2"
+            android:text="@string/reaction2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_allergy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_allergy1"
+            android:layout_below="@id/editText_reaction2"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="@string/allergy_text3" />
+
+        <TextView
+            android:id="@+id/textView_allergy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_allergy3"
+            android:text="@string/allergy3"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_reaction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_reaction1"
+            android:layout_below="@id/editText_allergy3"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_reaction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_reaction3"
+            android:text="@string/reaction3"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_allergy4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_allergy1"
+            android:layout_below="@id/editText_reaction3"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_allergy4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_allergy4"
+            android:text="@string/allergy4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_reaction4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_reaction1"
+            android:layout_below="@id/editText_allergy4"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_reaction4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_reaction4"
+            android:text="@string/reaction4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_allergy5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_allergy1"
+            android:layout_below="@id/editText_reaction4"
+            android:layout_marginTop="15dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_allergy5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_allergy5"
+            android:text="@string/allergy5"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <EditText
+            android:id="@+id/editText_reaction5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/editText_reaction1"
+            android:layout_below="@id/editText_allergy5"
+            android:layout_marginTop="10dp"
+            android:ems="10"
+            android:inputType="text" />
+
+        <TextView
+            android:id="@+id/textView_reaction5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/editText_reaction5"
+            android:text="@string/reaction5"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/editText_reaction5"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/next7" />
+
+    </RelativeLayout>
+
+</ScrollView>

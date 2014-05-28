@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Patient</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="states_prompt">Choose a state:</string>
+
+    <string-array name="states_arrays">
+        <item>AL</item>
+        <item>AK</item>
+        <item>AZ</item>
+        <item>AR</item>
+        <item>CA</item>
+        <item>CO</item>
+        <item>CT</item>
+        <item>DE</item>
+        <item>DC</item>
+        <item>FL</item>
+        <item>GA</item>
+        <item>HI</item>
+        <item>ID</item>
+        <item>IL</item>
+        <item>IN</item>
+        <item>IA</item>
+        <item>KS</item>
+        <item>KY</item>
+        <item>LA</item>
+        <item>ME</item>
+        <item>MD</item>
+        <item>MA</item>
+        <item>MI</item>
+        <item>MN</item>
+        <item>MS</item>
+        <item>MO</item>
+        <item>MT</item>
+        <item>NE</item>
+        <item>NV</item>
+        <item>NH</item>
+        <item>NJ</item>
+        <item>NM</item>
+        <item>NY</item>
+        <item>NC</item>
+        <item>ND</item>
+        <item>OH</item>
+        <item>OK</item>
+        <item>OR</item>
+        <item>PA</item>
+        <item>RI</item>
+        <item>SC</item>
+        <item>SD</item>
+        <item>TN</item>
+        <item>TX</item>
+        <item>UT</item>
+        <item>VT</item>
+        <item>VA</item>
+        <item>WA</item>
+        <item>WV</item>
+        <item>WI</item>
+        <item>WY</item>
+    </string-array>
+
+    <string name="title_activity_next">NextActivity</string>
+    <string name="title_activity_next_activity2">NextActivity2</string>
+    <string name="title_activity_date_picker">DatePickerActivity</string>
+    <string name="title_activity_next_activity3">NextActivity3</string>
+    <string name="covered">covered</string>
+    <string name="self_insured">self_insured</string>
+    <string name="secondary">Secondary Insurance</string>
+    <string name="Confirm">Confirm</string>
+    <string name="title_activity_next_acitivity4">NextAcitivity4</string>
+    <string name="title_activity_next_activity4">NextActivity4</string>
+    <string name="ins_holder">blah</string>
+    <string name="ClearButton">ClearButton</string>
+    <string name="icon">icon</string>
+    <string name="btn_Confirm">Next</string>
+    <string name="patient_details">Patient Details</string>
+    <string name="firstname">First</string>
+    <string name="middle">Middle</string>
+    <string name="lastname">Last</string>
+    <string name="gender">Gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="dob">Birthday</string>
+    <string name="marialstatus">Marial Status</string>
+    <string name="single">Single</string>
+    <string name="married">Married</string>
+    <string name="socialsecurity">Social Security</string>
+    <string name="address">Address</string>
+    <string name="city">City</string>
+    <string name="state">State</string>
+    <string name="zipcode">Zip Code</string>
+    <string name="email">Email</string>
+    <string name="phone">Phone</string>
+    <string name="next2">Next</string>
+    <string name="employmenthistory">Employment History</string>
+    <string name="employercompany">Employer</string>
+    <string name="employerphone">Phone</string>
+    <string name="occupation">Occupation</string>
+    <string name="emaddress">Address</string>
+    <string name="emcontact">Emergency Contact</string>
+    <string name="contact1">Contact #1</string>
+    <string name="contact2">Contact #2</string>
+    <string name="emcon1n">Name</string>
+    <string name="emcon2n">Name</string>
+    <string name="emcon1p">Phone</string>
+    <string name="emcon2p">Phone</string>
+    <string name="emcon1re">Relationship with Patient</string>
+    <string name="emcon2re">Relationship with Patient</string>
+    <string name="next3">Next</string>
+    <string name="insurance">Insurance</string>
+    <string name="checkcover">Check if covered</string>
+    <string name="incomp">Insurance Company</string>
+    <string name="incomp2">Insurance Company</string>
+    <string name="incompn">Phone Number</string>
+    <string name="incompn2">Phone Number</string>
+    <string name="incomppo2">Policy Number</string>
+    <string name="incomppo">Policy Number</string>
+    <string name="incompgr">Group Number</string>
+    <string name="incompgr2">Group Number</string>
+    <string name="selfin">Check if self insured</string>
+    <string name="ifyes">If yes,</string>
+    <string name="pohns">Policy Holder\'s Name</string>
+    <string name="pohre">Relaionship</string>
+    <string name="next4">Next</string>
+    <string name="ok">OK</string>
+    <string name="medicalhistory">Medical History</string>
+    <string name="mhquestion">Which of the following conditions have you been treated for in the past? (Please check all that apply)</string>
+    <string name="heartdisease">Heart Disease</string>
+    <string name="asthma">Asthma</string>
+    <string name="high_cholesterol">High Cholesterol</string>
+    <string name="std">Sexually Transmitted Disease</string>
+    <string name="cancer">Cancer</string>
+    <string name="high_blood_pressure">High Blood Pressure</string>
+    <string name="diabetes">Diabetes</string>
+    <string name="arthritis">Arthritis</string>
+    <string name="anemia">Anemia</string>
+    <string name="seizures">Seizures</string>
+    <string name="hearingloss">Hearing loss</string>
+    <string name="kidneystones">Kidney stones</string>
+    <string name="ulcers">Ulcers</string>
+    <string name="prostate_problems">Prostate problems</string>
+    <string name="stroke">Stroke</string>
+    <string name="corrective_lenses">Corrective Lenses</string>
+    <string name="ear_problems">Ear problems</string>
+    <string name="neurological_problem">Neurological problem</string>
+    <string name="depression">Depression</string>
+    <string name="title1">Patient Details</string>
+    <string name="clear1">Clear</string>
+    <string name="clear6">Clear</string>
+    <string name="allergy_title">Allergy</string>
+    <string name="medication_allergies">Medication Allergies</string>
+    <string name="no_known_allergies">No known allergies</string>
+    <string name="allergy_yes">Yes</string>
+    <string name="allergy1">Allergy</string>
+    <string name="allergy2">Allergy</string>
+    <string name="allergy3">Allergy</string>
+    <string name="allergy4">Allergy</string>
+    <string name="allergy5">Allergy</string>
+    <string name="reaction1">Reaction</string>
+    <string name="reaction2">Reaction</string>
+    <string name="reaction3">Reaction</string>
+    <string name="reaction4">Reaction</string>
+    <string name="reaction5">Reaction</string>
+    <string name="allergy_text1" />
+    <string name="allergy_text2" />
+    <string name="allergy_text3" />
+    <string name="allergy_text4" />
+    <string name="allergy_text5" />
+    <string name="title_activity_review">ReviewActivity</string>
+    <string name="title_activity_next_activity6">NextActivity6</string>
+    <string name="next6">Next</string>
+    <string name="date_picker">Date Picker</string>
+    <string name="states">States</string>
+    <string name="next7">Next</string>
+    
+    <string name="edit_section">Edit</string>
+    
+</resources>

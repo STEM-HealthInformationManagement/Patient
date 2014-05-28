@@ -1,0 +1,299 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        style="@layout/screen3"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        tools:context=".MainActivity" >
+
+        <!-- Check box if covered -->
+        <CheckBox
+            android:id="@+id/ChB_covered"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_insurance"
+            android:layout_marginTop="30dp"
+            android:text="@string/checkcover" />
+
+        <!-- Insurance company -->
+        <TextView
+            android:id="@+id/textView_insurancecompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ChB_covered"
+            android:layout_below="@+id/ChB_covered"
+            android:layout_marginLeft="20dp"
+            android:text="@string/incomp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance company's number -->
+        <TextView
+            android:id="@+id/textView_insurancecompanynumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompany"
+            android:layout_below="@+id/textView_insurancecompany"
+            android:layout_marginTop="20dp"
+            android:text="@string/incompn"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance caompany's group number -->
+        <TextView
+            android:id="@+id/textView_insurancecompanygroup"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompanynumber"
+            android:layout_below="@+id/textView_insurancecompanynumber"
+            android:layout_marginTop="20dp"
+            android:text="@string/incompgr"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance company's policy number -->
+        <TextView
+            android:id="@+id/textView_insurancecompanypolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompanygroup"
+            android:layout_below="@+id/textView_insurancecompanygroup"
+            android:layout_marginTop="20dp"
+            android:text="@string/incomppo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- checkbox if self insured -->
+        <CheckBox
+            android:id="@+id/ChB_self_insured"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ChB_covered"
+            android:layout_below="@+id/textView_insurancecompanypolicy"
+            android:layout_marginTop="30dp"
+            android:text="@string/selfin" />
+
+        <!-- if yes textview -->
+        <TextView
+            android:id="@+id/textView_ifyes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/ChB_self_insured"
+            android:layout_below="@+id/ChB_self_insured"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/ifyes"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Policy holder's name -->
+        <TextView
+            android:id="@+id/textView_policyholder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_ifyes"
+            android:layout_toRightOf="@+id/textView_ifyes"
+            android:layout_marginTop="20dp"
+            android:text="@string/pohns"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Relationship with patient and policy holder -->
+        <TextView
+            android:id="@+id/textView_policyrelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_policyholder"
+            android:layout_below="@+id/textView_policyholder"
+            android:layout_marginTop="20dp"
+            android:text="@string/pohre"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Checkbox if has secondary insurance -->
+        <CheckBox
+            android:id="@+id/ChB_secondary"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/ChB_self_insured"
+            android:layout_below="@id/textView_policyrelationship"
+            android:layout_marginTop="30dp"
+            android:text="@string/secondary" />
+
+        <!-- Insurance company2 -->
+        <TextView
+            android:id="@+id/textView_insurancecompany2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompanypolicy"
+            android:layout_below="@+id/ChB_secondary"
+            android:layout_marginTop="20dp"
+            android:text="@string/incomp2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance company's phone2 -->
+        <TextView
+            android:id="@+id/textView_insurancecompanyphone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompany2"
+            android:layout_below="@+id/textView_insurancecompany2"
+            android:layout_marginTop="20dp"
+            android:text="@string/incompn2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance company group number2 -->
+        <TextView
+            android:id="@+id/textView_insurancecompanygroup2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompanyphone2"
+            android:layout_below="@+id/textView_insurancecompanyphone2"
+            android:layout_marginTop="20dp"
+            android:text="@string/incompgr2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance company policy number2 -->
+        <TextView
+            android:id="@+id/textView_insurancecompanypolicy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_insurancecompanygroup2"
+            android:layout_below="@+id/textView_insurancecompanygroup2"
+            android:layout_marginTop="20dp"
+            android:text="@string/incomppo2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance phone number textbox -->
+        <EditText
+            android:id="@+id/editText_insurancephone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanynumber"
+            android:layout_alignBottom="@+id/textView_insurancecompanynumber"
+            android:layout_toRightOf="@+id/textView_insurancecompanynumber"
+            android:ems="10"
+            android:inputType="phone" />
+		
+		<!-- Insurance group number textbox -->
+        <EditText
+            android:id="@+id/editText_insurancegroupnumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanygroup"
+            android:layout_alignBottom="@+id/textView_insurancecompanygroup"
+            android:layout_alignLeft="@+id/editText_insurancephone"
+            android:ems="10"
+            android:inputType="number" />
+
+        <!-- Policy number textbox -->
+        <EditText
+            android:id="@+id/editText_insurancepolicy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanypolicy"
+            android:layout_alignBottom="@+id/textView_insurancecompanypolicy"
+            android:layout_alignLeft="@+id/editText_insurancegroupnumber"
+            android:ems="10"
+            android:inputType="number" />
+
+        <!-- Policy holder's name textbox -->
+        <EditText
+            android:id="@+id/editText_policyholdername"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_policyholder"
+            android:layout_alignBottom="@+id/textView_policyholder"
+            android:layout_toRightOf="@id/textView_policyholder"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <!-- relationship textbox -->
+        <EditText
+            android:id="@+id/editText_holderrelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_policyrelationship"
+            android:layout_alignBottom="@+id/textView_policyrelationship"
+            android:layout_toRightOf="@+id/textView_policyrelationship"
+            android:ems="10"
+            android:inputType="text" />
+
+        <!-- Insurance company2 textbox -->
+        <EditText
+            android:id="@+id/editText_insurancecompany2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompany2"
+            android:layout_alignBottom="@+id/textView_insurancecompany2"
+            android:layout_toRightOf="@id/textView_insurancecompany2"
+            android:ems="10"
+            android:inputType="text" />
+
+        <!-- Insurance phone2 textbox -->
+        <EditText
+            android:id="@+id/editText_insurancephone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanyphone2"
+            android:layout_alignBottom="@+id/textView_insurancecompanyphone2"
+            android:layout_toRightOf="@+id/textView_policyrelationship"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <!-- Insurance group number2 textbox -->
+        <EditText
+            android:id="@+id/editText_insurancegroupnumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanygroup2"
+            android:layout_alignBottom="@+id/textView_insurancecompanygroup2"
+            android:layout_toRightOf="@+id/textView_policyrelationship"
+            android:ems="10"
+            android:inputType="number" />
+
+        <!-- Insurance policy number2 textbox -->
+        <EditText
+            android:id="@+id/editText_insurancepolicynumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompanypolicy2"
+            android:layout_alignBottom="@+id/textView_insurancecompanypolicy2"
+            android:layout_toRightOf="@+id/textView_policyrelationship"
+            android:ems="10"
+            android:inputType="number" />
+
+        <!-- Insurance company textbox -->
+        <EditText
+            android:id="@+id/editText_insurancecompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_insurancecompany"
+            android:layout_alignBottom="@+id/textView_insurancecompany"
+            android:layout_toRightOf="@+id/textView_insurancecompany"
+            android:ems="10"
+            android:inputType="text" >
+
+        </EditText>
+
+        <!-- NEXT BUTTON -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_insurancepolicynumber2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/next4" />
+
+        <!-- Insurance header -->
+        <TextView
+            android:id="@+id/textView_insurance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:background="#CFDBC5"
+            android:text="@string/insurance"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    </RelativeLayout>
+
+</ScrollView>

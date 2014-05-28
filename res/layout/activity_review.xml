@@ -1,0 +1,849 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+ 
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="1977dp"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        tools:context=".ReviewActivity" >
+
+        
+		<!-- Patient Details Header -->
+        <TextView
+            android:id="@+id/reviewPatientDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:background="#CFDBC5"
+            android:text="@string/patient_details"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Patient Details edit button -->
+        <Button
+            android:id="@+id/button1"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewPatientDetails"
+            android:background="#CFDBC5"
+            android:onClick="editDetails"
+            android:text="@string/edit_section" />
+
+        <!-- textbox first name -->
+        <TextView
+            android:id="@+id/reviewFirstName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewPatientDetails"
+            android:layout_marginTop="10dp"
+            android:layout_toStartOf="@id/button1"
+            android:text="@string/firstname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- textbox middle name -->
+        <TextView
+            android:id="@+id/reviewMiddleName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewFirstName"
+            android:layout_marginTop="5dp"
+            android:text="@string/middle"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- textbox last name -->
+        <TextView
+            android:id="@+id/reviewLastName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewMiddleName"
+            android:layout_marginTop="5dp"
+            android:text="@string/lastname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- radiobutton gender -->
+        <TextView
+            android:id="@+id/reviewGender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewLastName"
+            android:layout_marginTop="5dp"
+            android:text="@string/gender"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- DOB -->
+        <TextView
+            android:id="@+id/reviewDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewGender"
+            android:layout_marginTop="5dp"
+            android:text="@string/dob"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- radio button Marital Status -->
+        <TextView
+            android:id="@+id/reviewMarital"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewDOB"
+            android:layout_marginTop="5dp"
+            android:text="@string/marialstatus"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- SSN -->
+        <TextView
+            android:id="@+id/reviewSocialSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewMarital"
+            android:layout_marginTop="5dp"
+            android:text="@string/socialsecurity"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- textbox Address -->
+        <TextView
+            android:id="@+id/reviewAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewSocialSec"
+            android:layout_marginTop="5dp"
+            android:text="@string/address"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Email -->
+        <TextView
+            android:id="@+id/reviewEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewAddress"
+            android:layout_marginTop="5dp"
+            android:text="@string/email"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- textbox Phone number -->
+        <TextView
+            android:id="@+id/reviewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPatientDetails"
+            android:layout_below="@+id/reviewEmail"
+            android:layout_marginTop="5dp"
+            android:text="@string/phone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employer -->
+        <TextView
+            android:id="@+id/reviewEmployerCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmploymentHistory"
+            android:layout_below="@+id/reviewEmploymentHistory"
+            android:layout_marginTop="5dp"
+            android:text="@string/employercompany"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employer's Phone -->
+        <TextView
+            android:id="@+id/reviewEmployerPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmployerCompany"
+            android:layout_below="@+id/reviewEmployerCompany"
+            android:layout_marginTop="5dp"
+            android:text="@string/employerphone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Occupation -->
+        <TextView
+            android:id="@+id/reviewOccupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmployerPhone"
+            android:layout_below="@+id/reviewEmployerPhone"
+            android:layout_marginTop="5dp"
+            android:text="@string/occupation"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employer Address -->
+        <TextView
+            android:id="@+id/reviewEmployerAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewOccupation"
+            android:layout_below="@+id/reviewOccupation"
+            android:layout_marginTop="5dp"
+            android:text="@string/emaddress"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employment history header -->
+        <TextView
+            android:id="@+id/reviewEmploymentHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPhone"
+            android:layout_below="@+id/reviewPhone"
+            android:layout_marginTop="20dp"
+            android:background="#CFDBC5"
+            android:text="@string/employmenthistory" />
+
+        <!-- Emergency Contact -->
+        <TextView
+            android:id="@+id/reviewEmergencyContact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmployerAddress"
+            android:layout_below="@+id/reviewEmployerAddress"
+            android:layout_marginTop="20dp"
+            android:background="#CFDBC5"
+            android:text="@string/emcontact" />
+
+        <!-- Contact's name -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactName1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewContact1"
+            android:layout_below="@+id/reviewContact1"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon1n"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Contact's phone -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactPhone1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContactName1"
+            android:layout_below="@+id/reviewEmergencyContactName1"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon1p"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Contact's relationship to patient -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactRelationship1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContactPhone1"
+            android:layout_below="@+id/reviewEmergencyContactPhone1"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon1re"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Conatact #1 -->
+        <TextView
+            android:id="@+id/reviewContact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContact"
+            android:layout_below="@+id/reviewEmergencyContact"
+            android:layout_marginTop="14dp"
+            android:text="@string/contact1"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Contact #2 -->
+        <TextView
+            android:id="@+id/reviewContact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContactRelationship1"
+            android:layout_below="@+id/reviewEmergencyContactRelationship1"
+            android:layout_marginTop="14dp"
+            android:text="@string/contact2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- contact2's phone -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactPhone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewContact2"
+            android:layout_below="@+id/reviewEmergencyContactName2"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon2p"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- contact2's relationship with patient -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactRelationship2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContactPhone2"
+            android:layout_below="@+id/reviewEmergencyContactPhone2"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon2re"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- contact2's name -->
+        <TextView
+            android:id="@+id/reviewEmergencyContactName2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewContact2"
+            android:layout_below="@+id/reviewContact2"
+            android:layout_marginTop="5dp"
+            android:text="@string/emcon2n"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance header -->
+        <TextView
+            android:id="@+id/reviewInsurance"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEmergencyContactRelationship2"
+            android:layout_below="@+id/reviewEmergencyContactRelationship2"
+            android:layout_marginTop="14dp"
+            android:background="#CFDBC5"
+            android:text="@string/insurance" />
+
+        <!-- Group number -->
+        <TextView
+            android:id="@+id/reviewInsuranceGroupNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurance"
+            android:layout_below="@+id/reviewInsurancePhoneNumber"
+            android:layout_marginTop="5dp"
+            android:text="@string/incompgr"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Policy number -->
+        <TextView
+            android:id="@+id/reviewInsurancePolicyNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurancePhoneNumber"
+            android:layout_below="@+id/reviewInsuranceGroupNumber"
+            android:layout_marginTop="5dp"
+            android:text="@string/incomppo"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Phone number -->
+        <TextView
+            android:id="@+id/reviewInsurancePhoneNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsuranceGroupNumber"
+            android:layout_below="@+id/reviewInsuranceCompany"
+            android:layout_marginTop="5dp"
+            android:text="@string/incompn"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance Company -->
+        <TextView
+            android:id="@+id/reviewInsuranceCompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurancePhoneNumber"
+            android:layout_below="@+id/reviewInsurance"
+            android:layout_marginTop="5dp"
+            android:layout_toStartOf="@id/button1"
+            android:text="@string/incomp"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Policy Holder's name -->
+        <TextView
+            android:id="@+id/reviewPolicyHolderName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurancePolicyNumber"
+            android:layout_below="@+id/reviewInsurancePolicyNumber"
+            android:layout_marginTop="16dp"
+            android:text="@string/pohns"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Policy Holder's relationship -->
+        <TextView
+            android:id="@+id/reviewPolicyHolderRelationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPolicyHolderName"
+            android:layout_below="@+id/reviewPolicyHolderName"
+            android:layout_marginTop="5dp"
+            android:text="@string/pohre"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance Phone number 2 -->
+        <TextView
+            android:id="@+id/reviewInsurancePhoneNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurance2"
+            android:layout_below="@+id/reviewInsurance2"
+            android:layout_marginTop="5dp"
+            android:text="@string/incompn2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance Group number 2 -->
+        <TextView
+            android:id="@+id/reviewInsuranceGroupNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurancePhoneNumber2"
+            android:layout_below="@+id/reviewInsurancePhoneNumber2"
+            android:layout_marginTop="5dp"
+            android:text="@string/incompgr2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance Policy Number 2 -->
+        <TextView
+            android:id="@+id/reviewInsurancePolicyNumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsuranceGroupNumber2"
+            android:layout_below="@+id/reviewInsuranceGroupNumber2"
+            android:layout_marginTop="5dp"
+            android:text="@string/incomppo2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Insurance 2 -->
+        <TextView
+            android:id="@+id/reviewInsurance2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewPolicyHolderRelationship"
+            android:layout_below="@+id/reviewPolicyHolderRelationship"
+            android:layout_marginTop="14dp"
+            android:text="@string/incomp2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Medical History header -->
+        <TextView
+            android:id="@+id/reviewMedicalHistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewInsurancePolicyNumber2"
+            android:layout_below="@+id/reviewInsurancePolicyNumber2"
+            android:layout_marginTop="15dp"
+            android:background="#CFDBC5"
+            android:text="@string/medicalhistory" />
+
+        <!-- Heart Didease -->
+        <TextView
+            android:id="@+id/reviewHeartDisease"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewMedicalHistory"
+            android:layout_below="@+id/reviewMedicalHistory"
+            android:layout_marginTop="5dp"
+            android:text="@string/heartdisease"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Heart Cholesterol -->
+        <TextView
+            android:id="@+id/reviewHeartCholesterol"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewHeartDisease"
+            android:layout_below="@+id/reviewHeartDisease"
+            android:layout_marginTop="5dp"
+            android:text="@string/high_cholesterol"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- High Blood Pressure -->
+        <TextView
+            android:id="@+id/reviewHighBloodPressure"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewHeartCholesterol"
+            android:layout_below="@+id/reviewHeartCholesterol"
+            android:layout_marginTop="5dp"
+            android:text="@string/high_blood_pressure"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Diabetes -->
+        <TextView
+            android:id="@+id/reviewDiabetes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewHighBloodPressure"
+            android:layout_below="@+id/reviewHighBloodPressure"
+            android:layout_marginTop="5dp"
+            android:text="@string/diabetes"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Arthritis -->
+        <TextView
+            android:id="@+id/reviewArthritis"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewDiabetes"
+            android:layout_below="@+id/reviewDiabetes"
+            android:layout_marginTop="5dp"
+            android:text="@string/arthritis"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Hearing loss -->
+        <TextView
+            android:id="@+id/reviewHearingLoss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewArthritis"
+            android:layout_below="@+id/reviewArthritis"
+            android:layout_marginTop="5dp"
+            android:text="@string/hearingloss"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Kidney Stones -->
+        <TextView
+            android:id="@+id/reviewKidneyStones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewHearingLoss"
+            android:layout_below="@+id/reviewHearingLoss"
+            android:layout_marginTop="5dp"
+            android:text="@string/kidneystones"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Prostate Problems -->
+        <TextView
+            android:id="@+id/reviewProstateProblems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewKidneyStones"
+            android:layout_below="@+id/reviewKidneyStones"
+            android:layout_marginTop="5dp"
+            android:text="@string/prostate_problems"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Corrective Lenses -->
+        <TextView
+            android:id="@+id/reviewCorrectiveLenses"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewProstateProblems"
+            android:layout_below="@+id/reviewProstateProblems"
+            android:layout_marginTop="5dp"
+            android:text="@string/corrective_lenses"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Neurological Problem -->
+        <TextView
+            android:id="@+id/reviewNeurologicalProblem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewCorrectiveLenses"
+            android:layout_below="@+id/reviewCorrectiveLenses"
+            android:layout_marginTop="5dp"
+            android:text="@string/neurological_problem"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Asthma -->
+        <TextView
+            android:id="@+id/reviewAsthma"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewNeurologicalProblem"
+            android:layout_below="@+id/reviewNeurologicalProblem"
+            android:layout_marginTop="5dp"
+            android:text="@string/asthma"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Cancer -->
+        <TextView
+            android:id="@+id/reviewCancer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAsthma"
+            android:layout_below="@+id/reviewAsthma"
+            android:layout_marginTop="5dp"
+            android:text="@string/cancer"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- STD -->
+        <TextView
+            android:id="@+id/reviewSTD"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewCancer"
+            android:layout_below="@+id/reviewCancer"
+            android:layout_marginTop="5dp"
+            android:text="@string/std"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Anemia -->
+        <TextView
+            android:id="@+id/reviewAnemia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewSTD"
+            android:layout_below="@+id/reviewSTD"
+            android:layout_marginTop="5dp"
+            android:text="@string/anemia"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Seizures -->
+        <TextView
+            android:id="@+id/reviewSeizures"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAnemia"
+            android:layout_below="@+id/reviewAnemia"
+            android:layout_marginTop="5dp"
+            android:text="@string/seizures"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Ulcers -->
+        <TextView
+            android:id="@+id/reviewUlcers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewSeizures"
+            android:layout_below="@+id/reviewSeizures"
+            android:layout_marginTop="5dp"
+            android:text="@string/ulcers"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Stroke -->
+        <TextView
+            android:id="@+id/reviewStroke"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewUlcers"
+            android:layout_below="@+id/reviewUlcers"
+            android:layout_marginTop="5dp"
+            android:text="@string/stroke"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Ear Problems -->
+        <TextView
+            android:id="@+id/reviewEarProblems"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewStroke"
+            android:layout_below="@+id/reviewStroke"
+            android:layout_marginTop="5dp"
+            android:text="@string/ear_problems"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Depression -->
+        <TextView
+            android:id="@+id/reviewDepression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewEarProblems"
+            android:layout_below="@+id/reviewEarProblems"
+            android:layout_marginTop="5dp"
+            android:text="@string/depression"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Allgery header -->
+        <TextView
+            android:id="@+id/reviewAllergy"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewDepression"
+            android:layout_below="@+id/reviewDepression"
+            android:layout_marginTop="15dp"
+            android:background="#CFDBC5"
+            android:text="@string/allergy_title" />
+
+        <!-- Allergy2 -->
+        <TextView
+            android:id="@+id/reviewAllergy2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy1"
+            android:layout_below="@+id/reviewReaction1"
+            android:layout_marginTop="10dp"
+            android:text="@string/allergy2"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Allergy3 -->
+        <TextView
+            android:id="@+id/reviewAllergy3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy2"
+            android:layout_below="@+id/reviewReaction2"
+            android:layout_marginTop="10dp"
+            android:text="@string/allergy3"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Allergy4 -->
+        <TextView
+            android:id="@+id/reviewAllergy4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy3"
+            android:layout_below="@+id/reviewReaction3"
+            android:layout_marginTop="10dp"
+            android:text="@string/allergy4"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Allergy5 -->
+        <TextView
+            android:id="@+id/reviewAllergy5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy4"
+            android:layout_below="@+id/reviewReaction4"
+            android:layout_marginTop="10dp"
+            android:text="@string/allergy5"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Allergy1 -->
+        <TextView
+            android:id="@+id/reviewAllergy1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewMedicationAllergies"
+            android:layout_alignRight="@+id/reviewGender"
+            android:layout_below="@+id/reviewMedicationAllergies"
+            android:layout_marginTop="10dp"
+            android:text="@string/allergy1"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Medication allergies -->
+        <TextView
+            android:id="@+id/reviewMedicationAllergies"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy"
+            android:layout_below="@+id/reviewAllergy"
+            android:layout_marginTop="16dp"
+            android:text="@string/medication_allergies"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Reaction1 -->
+        <TextView
+            android:id="@+id/reviewReaction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy1"
+            android:layout_below="@+id/reviewAllergy1"
+            android:layout_marginTop="5dp"
+            android:text="@string/reaction1"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Reaction2 -->
+        <TextView
+            android:id="@+id/reviewReaction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewReaction1"
+            android:layout_below="@+id/reviewAllergy2"
+            android:layout_marginTop="5dp"
+            android:text="@string/reaction2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Reaction3 -->
+        <TextView
+            android:id="@+id/reviewReaction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewAllergy"
+            android:layout_below="@+id/reviewAllergy3"
+            android:layout_marginTop="5dp"
+            android:text="@string/reaction3"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Reaction4 -->
+        <TextView
+            android:id="@+id/reviewReaction4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewReaction2"
+            android:layout_below="@+id/reviewAllergy4"
+            android:layout_marginTop="5dp"
+            android:text="@string/reaction4"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Reaction5 -->
+        <TextView
+            android:id="@+id/reviewReaction5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewReaction3"
+            android:layout_below="@+id/reviewAllergy5"
+            android:layout_marginTop="5dp"
+            android:text="@string/reaction5"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- Employment History Edit button -->
+        <Button
+            android:id="@+id/Button01"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewEmploymentHistory"
+            android:background="#CFDBC5"
+            android:text="@string/edit_section" 
+            android:onClick="editEmployment" />
+
+        <!-- Emergency Contact Edit button -->
+        <Button
+            android:id="@+id/Button02"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewEmergencyContact"
+            android:background="#CFDBC5"
+            android:text="@string/edit_section"
+            android:onClick="editEmergenC" />
+
+        <!-- Insurance Edit button -->
+        <Button
+            android:id="@+id/Button03"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewInsurance"
+            android:background="#CFDBC5"
+            android:text="@string/edit_section"
+            android:onClick="editInsurrance" />
+
+        <!-- Medical History Edit button -->
+        <Button
+            android:id="@+id/Button04"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewMedicalHistory"
+            android:background="#CFDBC5"
+            android:text="@string/edit_section"
+            android:onClick="editMedical"  />
+
+        <!-- Allergy Edit button -->
+        <Button
+            android:id="@+id/Button05"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/reviewAllergy"
+            android:background="#CFDBC5"
+            android:text="@string/edit_section"
+            android:onClick="editAllergy" />
+
+        <Button
+            android:onClick="onClick"
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignRight="@+id/reviewInsuranceCompany"
+            android:text="Submit Application" />
+
+</RelativeLayout>
+
+</ScrollView>

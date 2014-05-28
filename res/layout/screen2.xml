@@ -1,0 +1,400 @@
+<ScrollView xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView1"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity" >
+
+        <!-- Patient header -->
+        <TextView
+            android:id="@+id/textView_title1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#CFDBC5"
+            android:text="@string/patient_details"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <!-- first name textbox -->
+        <EditText
+            android:id="@+id/editText_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_firstname"
+            android:layout_alignBottom="@+id/textView_firstname"
+            android:layout_marginLeft="22dp"
+            android:layout_toRightOf="@id/textView_firstname"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:nextFocusDown="@+id/editText_middlename" />
+
+        <!-- marital status -->
+        <RadioGroup
+            android:id="@+id/radioGroup_maritalStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView_maritalstatus"
+            android:layout_toRightOf="@+id/textView_maritalstatus"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton_Single"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/single" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioButton_Married"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/married" >
+            </RadioButton>
+        </RadioGroup>
+
+        <!-- middle name textview -->
+        <TextView
+            android:id="@+id/textView_middlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@id/textView_firstname"
+            android:layout_marginTop="20dp"
+            android:text="@string/middle"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- last name textview -->
+        <TextView
+            android:id="@+id/textName_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@id/textView_middlename"
+            android:layout_marginTop="20dp"
+            android:text="@string/lastname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- middle name -->
+        <EditText
+            android:id="@+id/editText_middlename"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_middlename"
+            android:layout_alignBottom="@+id/textView_middlename"
+            android:layout_alignRight="@id/editText_firstname"
+            android:ems="10"
+            android:inputType="text" />
+
+        
+		<!-- last name textbox -->
+        <EditText
+            android:id="@+id/editText_lastname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textName_lastname"
+            android:layout_alignBottom="@+id/textName_lastname"
+            android:layout_alignLeft="@+id/editText_middlename"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <!-- DOB -->
+        <EditText
+            android:id="@+id/editText_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_dob"
+            android:layout_alignBottom="@+id/textView_dob"
+            android:layout_alignLeft="@id/editText_lastname"
+            android:ems="10"
+            android:gravity="center"
+            android:inputType="date"
+            android:width="150dp" >
+
+        </EditText>
+
+        <!-- SSN textbox -->
+        <EditText
+            android:id="@+id/editText_ssn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_ssn"
+            android:layout_alignBottom="@+id/textView_ssn"
+            android:layout_alignRight="@id/editText_firstname"
+            android:layout_toRightOf="@+id/textView_ssn"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <!-- gender textview -->
+        <TextView
+            android:id="@+id/textView_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textName_lastname"
+            android:layout_marginTop="20dp"
+            android:text="@string/gender"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- gender -->
+        <RadioGroup
+            android:id="@+id/radioGroup_gender"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView_gender"
+            android:layout_toRightOf="@+id/textView_gender"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/radioButton_male"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/male" >
+            </RadioButton>
+
+            <RadioButton
+                android:id="@+id/radioButton_female"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/female" >
+            </RadioButton>
+        </RadioGroup>
+
+        <!-- DOB textview -->
+        <TextView
+            android:id="@+id/textView_dob"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textView_gender"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@id/editText_dob"
+            android:text="@string/dob"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- marital status textview -->
+        <TextView
+            android:id="@+id/textView_maritalstatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textView_dob"
+            android:layout_marginTop="20dp"
+            android:text="@string/marialstatus"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- SSN textview -->
+        <TextView
+            android:id="@+id/textView_ssn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textView_maritalstatus"
+            android:layout_marginTop="20dp"
+            android:text="@string/socialsecurity"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Address textview -->
+        <TextView
+            android:id="@+id/textView_Address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textView_ssn"
+            android:layout_marginTop="20dp"
+            android:text="@string/address"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Address textbox -->
+        <EditText
+            android:id="@+id/editText_Address1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_Address"
+            android:layout_alignRight="@id/editText_firstname"
+            android:layout_toRightOf="@+id/textView_Address"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <!-- Address line 2 textbox -->
+        <EditText
+            android:id="@+id/editText_Address2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@id/editText_firstname"
+            android:layout_below="@+id/textView_Address"
+            android:layout_marginTop="20dp"
+            android:layout_toRightOf="@+id/textView_Address"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <!-- City textview -->
+        <TextView
+            android:id="@+id/textView_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/editText_Address2"
+            android:layout_marginTop="20dp"
+            android:text="@string/city"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- City textbox -->
+        <EditText
+            android:id="@+id/editText_city"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_city"
+            android:layout_alignBottom="@+id/textView_city"
+            android:layout_alignRight="@id/editText_firstname"
+            android:layout_toRightOf="@+id/textView_Address"
+            android:ems="10"
+            android:inputType="text" >
+        </EditText>
+
+        <!-- zipcode numberbox -->
+        <EditText
+            android:id="@+id/editText_zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_zipcode"
+            android:layout_alignBottom="@+id/textView_zipcode"
+            android:layout_toLeftOf="@+id/imageButton_date"
+            android:layout_toRightOf="@+id/textView_zipcode"
+            android:ems="10"
+            android:inputType="number"
+            android:maxLength="5" />
+
+        <!-- State textview -->
+        <TextView
+            android:id="@+id/textView_state"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@id/textView_city"
+            android:layout_marginTop="20dp"
+            android:text="@string/state"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- zipcode textview -->
+        <TextView
+            android:id="@+id/textView_zipcode"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@id/textView_state"
+            android:layout_marginTop="20dp"
+            android:text="@string/zipcode"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- states spinner -->
+        <Spinner
+            android:id="@+id/spinner_states"
+            style="@style/AppBaseTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/textView_state"
+            android:layout_toRightOf="@id/textView_state"
+            android:contentDescription="@string/states"
+            android:entries="@array/states_arrays"
+            tools:listitem="@android:layout/simple_spinner_item" />
+
+        <!-- Email textview -->
+        <TextView
+            android:id="@+id/textView_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/editText_zipcode"
+            android:layout_marginTop="20dp"
+            android:text="@string/email"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Phone number textview -->
+        <TextView
+            android:id="@+id/textView_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/textView_firstname"
+            android:layout_below="@+id/textView_email"
+            android:layout_marginTop="20dp"
+            android:text="@string/phone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Phone number number box -->
+        <EditText
+            android:id="@+id/editText_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_phone"
+            android:layout_alignBottom="@+id/textView_phone"
+            android:layout_alignRight="@+id/editText_email"
+            android:layout_toRightOf="@+id/textView_zipcode"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <!-- DOB date picker -->
+        <ImageButton
+            android:id="@+id/imageButton_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/editText_dob"
+            android:layout_toRightOf="@+id/editText_dob"
+            android:contentDescription="@string/date_picker"
+            android:src="@drawable/ic_action_name" />
+
+        <!-- NEXT BUTTON -->
+        <Button
+            android:id="@+id/btn_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/editText_phone"
+            android:text="@string/next2" />
+
+        <!-- Email textbox -->
+        <EditText
+            android:id="@+id/editText_email"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_email"
+            android:layout_alignBottom="@+id/textView_email"
+            android:layout_alignLeft="@+id/editText_zipcode"
+            android:layout_toLeftOf="@+id/imageButton_date"
+            android:ems="10"
+            android:inputType="textEmailAddress" />
+
+        <!-- CLEAR NUMBER -->
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/btn_Confirm"
+            android:layout_alignBottom="@+id/btn_Confirm"
+            android:text="@string/clear1" 
+            android:layout_toLeftOf="@+id/btn_Confirm"/>
+
+        <!-- firstname textview -->
+        <TextView
+            android:id="@+id/textView_firstname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView_title1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/firstname"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    </RelativeLayout>
+
+</ScrollView>

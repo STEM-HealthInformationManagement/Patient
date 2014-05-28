@@ -1,0 +1,283 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ScrollView2"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"  >
+
+    <RelativeLayout
+        style="@layout/screen3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context=".MainActivity" >
+
+        <!-- Employment History header -->
+        <TextView
+            android:id="@+id/textView_employmenthistory"
+            android:text="@string/employmenthistory"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="#CFDBC5"
+            android:textAppearance="?android:attr/textAppearanceLarge" />          
+
+        <!-- Employer textview -->
+        <TextView
+            android:id="@+id/textView_company"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textView_employmenthistory"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="14dp"
+            android:text="@string/employercompany"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employer phone textview -->
+        <TextView
+            android:id="@+id/textView_employerphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_company"
+            android:layout_below="@+id/textView_company"
+            android:layout_marginTop="20dp"
+            android:text="@string/employerphone"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Occupation textview -->
+        <TextView
+            android:id="@+id/textView_occupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_company"
+            android:layout_below="@+id/textView_employerphone"
+            android:layout_marginTop="20dp"
+            android:text="@string/occupation"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Employer's address textview -->
+        <TextView
+            android:id="@+id/textView_employeraddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_company"
+            android:layout_below="@+id/textView_occupation"
+            android:layout_marginTop="20dp"
+            android:text="@string/emaddress"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- Company edit text -->
+        <EditText
+            android:id="@+id/editText_employercompany"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_company"
+            android:layout_alignBottom="@+id/textView_company"
+            android:layout_toRightOf="@+id/textView_company"
+            android:ems="10"
+            android:inputType="text" >
+            <requestFocus />
+
+        </EditText>
+
+        <!-- Employer phone textbox -->
+        <EditText
+            android:id="@+id/editText_employerphone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_employerphone"
+            android:layout_alignBottom="@+id/textView_employerphone"
+            android:layout_toRightOf="@+id/textView_employerphone"
+            android:ems="10"
+            android:inputType="phone" />
+
+         <!-- Employer's address textbox -->
+        <EditText
+            android:id="@+id/editText_employeradress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_employeraddress"
+            android:layout_alignBottom="@+id/textView_employeraddress"
+            android:layout_alignLeft="@+id/editText_employercompany"
+            android:ems="10"
+            android:inputType="textPostalAddress" />
+
+        <!-- Emergency contact header -->
+        <TextView
+            android:id="@+id/textView_emergencycontact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_employeradress"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="30dp"
+            android:text="@string/emcontact"
+            android:background="#CFDBC5"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+             />
+
+        <!-- contact#1 text view-->
+        <TextView
+            android:id="@+id/textView_contact1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/textView_emergencycontact"
+            android:layout_marginTop="20dp"
+            android:text="@string/contact1"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <!-- contact name textview-->
+        <TextView
+            android:id="@+id/textView_contact1name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_contact1"
+            android:layout_marginTop="15dp"
+            android:text="@string/emcon1n"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- contact2 name textview -->
+        <TextView
+            android:id="@+id/textView_emergencycontact2name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_contact2"
+            android:layout_below="@+id/textView_contact2"
+            android:layout_marginTop="15dp"
+            android:text="@string/emcon2n"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <!-- contact2 name editext -->
+        <EditText
+            android:id="@+id/editText_contact2name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_emergencycontact2name"
+            android:layout_alignBottom="@+id/textView_emergencycontact2name"
+            android:layout_alignLeft="@+id/editText_contact2phone"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <!-- conatct2 phone textbox -->
+        <EditText
+            android:id="@+id/editText_contact2phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_contact2phone"
+            android:layout_alignBottom="@+id/textView_contact2phone"
+            android:layout_toRightOf="@+id/textView_contact2phone"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <EditText
+            android:id="@+id/editText_contact2relationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_contact2relationship"
+            android:layout_alignBottom="@+id/textView_contact2relationship"
+            android:layout_toRightOf="@+id/textView_contact2relationship"
+            android:ems="10"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText_contact1relationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_contact1relationship"
+            android:layout_alignBottom="@+id/textView_contact1relationship"
+            android:layout_toRightOf="@id/textView_contact1relationship"
+            android:ems="10"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/editText_contact1name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_contact1name"
+            android:layout_alignBottom="@+id/textView_contact1name"
+            android:layout_alignLeft="@+id/editText_contact1phone"
+            android:ems="10"
+            android:inputType="textPersonName" />
+
+        <EditText
+            android:id="@+id/editText_contact1phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_contact1phone"
+            android:layout_alignBottom="@+id/textView_contact1phone"
+            android:layout_toRightOf="@+id/textView_contact1phone"
+            android:ems="10"
+            android:inputType="phone" />
+
+        <TextView
+            android:id="@+id/textView_contact2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_contact1relationship"
+            android:layout_below="@id/textView_contact1relationship"
+            android:layout_marginTop="20dp"
+            android:text="@string/contact2"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        <TextView
+            android:id="@+id/textView_contact1relationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_contact1phone"
+            android:layout_marginTop="20dp"
+            android:text="@string/emcon1re"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_contact1phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_contact1name"
+            android:layout_below="@+id/editText_contact1name"
+            android:layout_marginTop="20dp"
+            android:text="@string/emcon1p"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_contact2phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/editText_contact2name"
+            android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/editText_contact1phone"
+            android:text="@string/emcon2p"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/textView_contact2relationship"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_contact2phone"
+            android:layout_below="@+id/editText_contact2phone"
+            android:layout_marginTop="20dp"
+            android:text="@string/emcon2re"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <Button
+            android:id="@+id/btn_Confirm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/textView_contact2relationship"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/next3" />
+
+        <EditText
+            android:id="@+id/editText_occupation"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView_occupation"
+            android:layout_alignBottom="@+id/textView_occupation"
+            android:layout_toRightOf="@+id/textView_company"
+            android:ems="10"
+            android:inputType="text" >
+        </EditText>
+
+    </RelativeLayout>
+
+</ScrollView>
