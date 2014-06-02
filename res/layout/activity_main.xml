@@ -10,6 +10,7 @@
     tools:context=".MainActivity"  >
     
 <!--Next Button | Ace-->
+
     <Button
         android:id="@+id/btn_Confirm"
         android:layout_width="wrap_content"
@@ -18,8 +19,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="36dp"
         android:contentDescription="@string/btn_Confirm"
-        android:text="@string/btn_Confirm" />
-
+        android:text="@string/btnStart" />
     
 <!-- Logo Image | Ace -->
     <ImageView

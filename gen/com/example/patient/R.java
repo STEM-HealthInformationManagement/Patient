@@ -290,6 +290,7 @@ public final class R {
         public static final int app_name=0x7f070000;
         public static final int arthritis=0x7f07004d;
         public static final int asthma=0x7f070047;
+        public static final int btnStart=0x7f070076;
         public static final int btn_Confirm=0x7f070011;
         public static final int cancer=0x7f07004a;
         public static final int checkcover=0x7f070035;

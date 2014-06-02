@@ -175,5 +175,6 @@
     <string name="next7">Next</string>
     
     <string name="edit_section">Edit</string>
+    <string name="btnStart">START</string>
     
 </resources>
