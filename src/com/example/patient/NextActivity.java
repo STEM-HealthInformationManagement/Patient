@@ -2,8 +2,9 @@
 package com.example.patient;
 
 import java.util.Calendar;
+import java.util.Date;
 import java.util.StringTokenizer;
-
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
 import android.content.Context;
@@ -148,7 +149,7 @@ public class NextActivity extends Activity {
         ImageButton dateButton = (ImageButton) findViewById(R.id.imageButton_date);
         
         dateButton.setOnClickListener(new View.OnClickListener() {
-        	@Override 
+        	@SuppressLint("NewApi") @Override 
         	public void onClick(View v) {
             	       		
         		Calendar  dtTxt = null;
@@ -182,6 +183,8 @@ public class NextActivity extends Activity {
                 datePicking2.setTitle(title);
                 DatePicker dateCeption = datePicking2.getDatePicker();
                 dateCeption.setCalendarViewShown(false);
+                long currentDay = Calendar.DATE;
+                dateCeption.getCalendarView().setDate(currentDay);
                 
                 datePicking2.show();
             }
