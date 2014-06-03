@@ -183,7 +183,7 @@ public class NextActivity extends Activity {
                 datePicking2.setTitle(title);
                 DatePicker dateCeption = datePicking2.getDatePicker();
                 dateCeption.setCalendarViewShown(false);
-                long currentDay = Calendar.DATE;
+                long currentDay = Calendar.getInstance().getTimeInMillis();
                 dateCeption.getCalendarView().setDate(currentDay);
                 
                 datePicking2.show();
