@@ -148,7 +148,8 @@ public class NextActivity2 extends Activity {
             String cPhone2 = c2Phone.getText().toString();
             String cRelation2 = c2Relation.getText().toString();
             
-            final String[] emergency = {cName1, cPhone1, cRelation1, cName2, cPhone2, cRelation2 };
+            final String[] emergency = {cName1, cPhone1, cRelation1, 
+            							cName2, cPhone2, cRelation2 };
             
             //pile all the received data on this activity to send it to the next one            
     		i.putExtra("employment_history", employment);
