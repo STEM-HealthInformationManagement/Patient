@@ -90,6 +90,8 @@ public class NextActivity extends Activity {
 		dZipCode = (EditText) findViewById(R.id.editText_zipcode);
 		dEmail = (EditText) findViewById(R.id.editText_email);
 		dPhone = (EditText) findViewById(R.id.editText_phone);
+		
+		
 		//tasks the activity performs when it is started by the review page
 		if (fromReview == 1){
 			//sets the next button to finish button 
@@ -273,14 +275,20 @@ public class NextActivity extends Activity {
         		String email = dEmail.getText().toString();
         		String phone = dPhone.getText().toString(); 
         		//puts the data in an array 
+        		
+        		if  ( firstName != null || lastName != null)
+        		{
+   
         		String[] patientDetails = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
         									email, phone,  address2 };
         		//puts the array in an intent to be sent to the next activity 
         		i.putExtra("details", patientDetails);
         		
         		startActivity(i);
-        		
+        	
         	}
+        		else
+        			{}}
         });
         //clear button 
 		Button clearButton = (Button) findViewById(R.id.button1);
