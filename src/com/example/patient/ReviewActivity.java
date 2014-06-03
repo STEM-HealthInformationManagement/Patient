@@ -631,7 +631,7 @@ public class ReviewActivity extends Activity {
 					     HttpPost httppost = new HttpPost(url);
 					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
 					     HttpResponse response = httpclient.execute(httppost);
-					     Toast.makeText(getApplicationContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
+					     //Toast.makeText(getApplicationContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
 						} 
 						catch (Exception e) 
 						{
