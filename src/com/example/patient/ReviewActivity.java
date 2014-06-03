@@ -108,6 +108,8 @@ public class ReviewActivity extends Activity {
 	private TextView reaction4;
 	private TextView reaction5;
 	
+	String iFirstName;
+	String iLastName;
 	
 
 	
@@ -201,9 +203,9 @@ public class ReviewActivity extends Activity {
 		//Data of the emergency contact section from the previous activity
 		final String[] emergencyContact = getIntent().getStringArrayExtra("emergency_contact");
 		
-		final String iFirstName = patientDetails[0];
+		iFirstName = patientDetails[0];
 		final String iMiddleName = patientDetails[1];
-		final String iLastName = patientDetails[2];		
+		iLastName = patientDetails[2];		
 		final String iGender = patientDetails[3];
 		final String iDOB = patientDetails[4];
 		final String iStatus = patientDetails[5];
@@ -610,9 +612,9 @@ public class ReviewActivity extends Activity {
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
 			int numFirst = 11;
-		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().subSequence(numFirst, firstName.length()).toString().trim()));
+		 	postParameters.add(new BasicNameValuePair("firstName", iFirstName));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
-			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().subSequence(numFirst, lastName.length()).toString().trim()));
+			postParameters.add(new BasicNameValuePair("lastName", iLastName));
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
 			final String url = "http://www.njcuacm.org/restricted/stem_test/app/test_put.php";
