@@ -55,7 +55,7 @@ public class NextActivity extends Activity {
 	
 	int fromReview;
 
-	@SuppressWarnings("deprecation")
+	@SuppressWarnings({ "deprecation", "unused" })
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
