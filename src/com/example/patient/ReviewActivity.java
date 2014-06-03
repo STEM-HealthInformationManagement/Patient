@@ -608,7 +608,8 @@ public class ReviewActivity extends Activity {
 		{
 
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
-		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
+//		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
+		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().subSequence(12, firstName.length()).toString().trim()));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
 			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().toString().trim()));
 			
