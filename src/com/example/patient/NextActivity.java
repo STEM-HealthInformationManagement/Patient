@@ -197,7 +197,7 @@ public class NextActivity extends Activity {
         	public void onClick(View v) {
         		
         		Intent i;
-        		if (fromReview == 1) {
+        		if (fromReview == 1 && firstName != null && lastName != null)) {
         			//if this activity is started by the review page 
         			//the intent is assigned with a value that starts the review page
         			i = new Intent(NextActivity.this, ReviewActivity.class);
@@ -277,7 +277,7 @@ public class NextActivity extends Activity {
         		//puts the data in an array 
         		
         		if  ( firstName != null || lastName != null)
-        		{
+        		
    
         		String[] patientDetails = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
         									email, phone,  address2 };
@@ -287,8 +287,6 @@ public class NextActivity extends Activity {
         		startActivity(i);
         	
         	}
-        		else
-        			{}}
         });
         //clear button 
 		Button clearButton = (Button) findViewById(R.id.button1);
