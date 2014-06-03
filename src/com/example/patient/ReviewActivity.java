@@ -620,7 +620,7 @@ public class ReviewActivity extends Activity {
 			
 			
 			
-			Toast.makeText(getBaseContext(), "The message is sending!", Toast.LENGTH_SHORT).show();
+			Toast.makeText(getBaseContext(), "The message is sending!", Toast.LENGTH_LONG).show();
 			//yuchen added the following code, you can ignore CustomHttpClient.java
 				new Thread() {
 					@Override
@@ -631,7 +631,7 @@ public class ReviewActivity extends Activity {
 					     HttpPost httppost = new HttpPost(url);
 					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
 					     HttpResponse response = httpclient.execute(httppost);
-					     Toast.makeText(getBaseContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
+					     Toast.makeText(getApplicationContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
 						} 
 						catch (Exception e) 
 						{
