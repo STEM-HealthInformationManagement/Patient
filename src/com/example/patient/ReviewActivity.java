@@ -609,7 +609,7 @@ public class ReviewActivity extends Activity {
 
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
-		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().subSequence(12, firstName.length()).toString().trim()));
+		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().subSequence(11, firstName.length()).toString().trim()));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
 			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().toString().trim()));
 			
@@ -631,6 +631,7 @@ public class ReviewActivity extends Activity {
 					     HttpPost httppost = new HttpPost(url);
 					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
 					     HttpResponse response = httpclient.execute(httppost);
+					     Toast.makeText(getBaseContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
 						} 
 						catch (Exception e) 
 						{
