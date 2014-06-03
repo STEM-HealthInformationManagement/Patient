@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
 
     <string name="app_name">Patient</string>
     <string name="action_settings">Settings</string>
@@ -7,6 +7,7 @@
     <string name="states_prompt">Choose a state:</string>
 
     <string-array name="states_arrays">
+        <item></item>
         <item>Alabama</item>
         <item>Alaska</item>
         <item>Arizona</item>
@@ -58,6 +59,8 @@
         <item>West Virginia</item>
         <item>Wisconsin</item>
         <item>Wyoming</item>
+     
+        
     </string-array>
 
     <string name="title_activity_next">NextActivity</string>
@@ -176,5 +179,7 @@
     
     <string name="edit_section">Edit</string>
     <string name="btnStart">Start</string>
+    <!-- <item android:id="@+id/item1" android:layout_height="wrap_content" android:layout_width="wrap_content"/> -->
+
     
 </resources>
