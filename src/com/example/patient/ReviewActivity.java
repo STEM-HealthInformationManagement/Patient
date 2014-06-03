@@ -613,7 +613,7 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().toString().trim()));
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
-			String url = "http://test.byethost14.com/insert.php";
+			final String url = "http://130.156.6.1/phpFiles/test_put.php";
 			
 			
 			
@@ -627,7 +627,7 @@ public class ReviewActivity extends Activity {
 					// TODO Auto-generated method stub
 						try {
 						HttpClient httpclient = new DefaultHttpClient();
-					     HttpPost httppost = new HttpPost("http://test.byethost14.com/insert.php");
+					     HttpPost httppost = new HttpPost(url);
 					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
 					     HttpResponse response = httpclient.execute(httppost);
 						} 
