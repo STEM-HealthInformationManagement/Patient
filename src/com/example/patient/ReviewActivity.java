@@ -613,7 +613,7 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().toString().trim()));
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
-			final String url = "http://130.156.6.1/phpFiles/test_put.php";
+			final String url = "http://www.njcuacm.org/restricted/stem_test/app/test_put.php";
 			
 			
 			
