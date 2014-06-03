@@ -609,11 +609,10 @@ public class ReviewActivity extends Activity {
 
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
-			int numFirst = firstName.toString().indexOf(32);
-			int numLast = lastName.toString().indexOf(32);
+			int numFirst = 11;
 		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().subSequence(numFirst, firstName.length()).toString().trim()));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
-			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().subSequence(numLast, lastName.length()).toString().trim()));
+			postParameters.add(new BasicNameValuePair("lastName", lastName.getText().subSequence(numFirst, lastName.length()).toString().trim()));
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
 			final String url = "http://www.njcuacm.org/restricted/stem_test/app/test_put.php";
