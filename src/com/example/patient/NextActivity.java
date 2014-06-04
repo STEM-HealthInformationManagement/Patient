@@ -197,7 +197,7 @@ public class NextActivity extends Activity {
         	public void onClick(View v) {
         		
         		Intent i;
-        		if (fromReview == 1  && firstName != null && lastName != null) {
+        		if (fromReview == 1) {
         			//if this activity is started by the review page 
         			//the intent is assigned with a value that starts the review page
         			i = new Intent(NextActivity.this, ReviewActivity.class);

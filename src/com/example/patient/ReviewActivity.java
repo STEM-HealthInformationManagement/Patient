@@ -706,7 +706,6 @@ public class ReviewActivity extends Activity {
 					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
 					     HttpResponse response = httpclient.execute(httppost);
 					     //Toast.makeText(getApplicationContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
-							Toast.makeText(getBaseContext(), e.getMessage()+"Message Sent!!", Toast.LENGTH_SHORT).show();
 
 						} 
 						catch (Exception e) 
@@ -715,7 +714,8 @@ public class ReviewActivity extends Activity {
 							Toast.makeText(getBaseContext(), e.getMessage()+"...it didnt send (-_-)", Toast.LENGTH_SHORT).show();
 							e.printStackTrace();
 						}
-					super.run();
+						
+						super.run();
 					}
 					}.start();
 				// end
