@@ -683,14 +683,22 @@ public class ReviewActivity extends Activity {
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
 			int numFirst = 11;
+			int numLast = 9;
+			String fullAddress = iAddress + " " + iAddress2;
+			
 		 	postParameters.add(new BasicNameValuePair("firstName", iFirstName));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
 			postParameters.add(new BasicNameValuePair("lastName", iLastName));
+			postParameters.add(new BasicNameValuePair("us_state", iState));
+			postParameters.add(new BasicNameValuePair("zipcode", iZip));
+			postParameters.add(new BasicNameValuePair("gender", iGender));
+			postParameters.add(new BasicNameValuePair("f_address", fullAddress));
+			
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
 			final String url = "http://www.njcuacm.org/restricted/stem_test/app/test_put.php";
 			
-			
+ 			
 			
 			
 			

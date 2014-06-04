@@ -180,6 +180,8 @@
     <string name="edit_section">Edit</string>
     <string name="btnStart">Start</string>
     <!-- <item android:id="@+id/item1" android:layout_height="wrap_content" android:layout_width="wrap_content"/> -->
+    <string name="add_allergy">+</string>
+    <string name="delete_allergy">-</string>
 
     
 </resources>

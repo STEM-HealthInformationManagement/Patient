@@ -14,6 +14,8 @@ import android.widget.TextView;
 
 public class NextActivity6 extends Activity {
 	private Button b;
+	private Button addAllergyButton;
+	private Button deleteAllergyButton;
 	
 	private RadioGroup ques;
 	private RadioButton yes;
@@ -56,6 +58,8 @@ public class NextActivity6 extends Activity {
 		fromReview = getIntent().getIntExtra("review", 0);
 		
 		b = (Button) findViewById(R.id.button1);
+		addAllergyButton = (Button) findViewById(R.id.button2);
+		deleteAllergyButton = (Button) findViewById(R.id.button3);
 		
 		ques = (RadioGroup) findViewById(R.id.radioGroup_Allergy);
 		yes = (RadioButton) findViewById(R.id.radioButton_yes);
@@ -85,29 +89,33 @@ public class NextActivity6 extends Activity {
 		reactionT4 =  (TextView) findViewById(R.id.textView_reaction4);
 		reactionT5 =  (TextView) findViewById(R.id.textView_reaction5);
 		
+		//Add/delete allergy button invisible
+		addAllergyButton.setVisibility(View.INVISIBLE);
+		deleteAllergyButton.setVisibility(View.INVISIBLE);
+		
 		allergy1.setEnabled(false);
-		allergy2.setEnabled(false);
-		allergy3.setEnabled(false);
-		allergy4.setEnabled(false);
-		allergy5.setEnabled(false);
+		allergy2.setVisibility(View.INVISIBLE);
+		allergy3.setVisibility(View.INVISIBLE);
+		allergy4.setVisibility(View.INVISIBLE);
+		allergy5.setVisibility(View.INVISIBLE);
 		
 		allergyT1.setEnabled(false);
-		allergyT2.setEnabled(false);
-		allergyT3.setEnabled(false);
-		allergyT4.setEnabled(false);
-		allergyT5.setEnabled(false);
+		allergyT2.setVisibility(View.INVISIBLE);
+		allergyT3.setVisibility(View.INVISIBLE);
+		allergyT4.setVisibility(View.INVISIBLE);
+		allergyT5.setVisibility(View.INVISIBLE);
 
 		reaction1.setEnabled(false);
-		reaction2.setEnabled(false);
-		reaction3.setEnabled(false);
-		reaction4.setEnabled(false);
-		reaction5.setEnabled(false);
+		reaction2.setVisibility(View.INVISIBLE);
+		reaction3.setVisibility(View.INVISIBLE);
+		reaction4.setVisibility(View.INVISIBLE);
+		reaction5.setVisibility(View.INVISIBLE);
 		
 		reactionT1.setEnabled(false);
-		reactionT2.setEnabled(false);
-		reactionT3.setEnabled(false);
-		reactionT4.setEnabled(false);
-		reactionT5.setEnabled(false);
+		reactionT2.setVisibility(View.INVISIBLE);
+		reactionT3.setVisibility(View.INVISIBLE);
+		reactionT4.setVisibility(View.INVISIBLE);
+		reactionT5.setVisibility(View.INVISIBLE);
 		
 		//tasks the activity performs when it is started by the review page
 		if (fromReview == 1){
@@ -161,6 +169,11 @@ public class NextActivity6 extends Activity {
         			allergy3.setEnabled(true);
         			allergy4.setEnabled(true);
         			allergy5.setEnabled(true);
+        			
+        			//button to activate allergy fields
+        			addAllergyButton.setVisibility(View.VISIBLE);
+        			deleteAllergyButton.setVisibility(View.VISIBLE);
+        			
         			
         			reaction1.setEnabled(true);
         			reaction2.setEnabled(true);
@@ -231,6 +244,71 @@ public class NextActivity6 extends Activity {
 		
 		//Data of the medical history section from the previous activity
 		final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		addAllergyButton.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+        		if (allergy4.isShown() && reaction4.isShown())
+        		{
+        			allergy5.setVisibility(View.VISIBLE);
+        			reaction5.setVisibility(View.VISIBLE);
+        			allergyT5.setVisibility(View.VISIBLE);
+        			reactionT5.setVisibility(View.VISIBLE);
+        		}
+        		else if (allergy3.isShown() && reaction3.isShown())
+        		{
+        			allergy4.setVisibility(View.VISIBLE);
+        			reaction4.setVisibility(View.VISIBLE);
+        			allergyT4.setVisibility(View.VISIBLE);
+        			reactionT4.setVisibility(View.VISIBLE);
+        		}
+        		else if (allergy2.isShown() && reaction2.isShown())
+        		{
+        			allergy3.setVisibility(View.VISIBLE);
+        			reaction3.setVisibility(View.VISIBLE);
+        			allergyT3.setVisibility(View.VISIBLE);
+        			reactionT3.setVisibility(View.VISIBLE);
+        		}
+        		else if (allergy1.isShown() && reaction1.isShown())
+        		{
+        			allergy2.setVisibility(View.VISIBLE);
+        			reaction2.setVisibility(View.VISIBLE);
+        			allergyT2.setVisibility(View.VISIBLE);
+        			reactionT2.setVisibility(View.VISIBLE);
+        		}
+        	}
+		});
+		
+		deleteAllergyButton.setOnClickListener(new View.OnClickListener() {
+        	public void onClick(View v) {
+        		if (allergy5.isShown() && reaction5.isShown())
+        		{
+        			allergy5.setVisibility(View.INVISIBLE);
+        			reaction5.setVisibility(View.INVISIBLE);
+        			allergyT5.setVisibility(View.INVISIBLE);
+        			reactionT5.setVisibility(View.INVISIBLE);
+        		}
+        		else if (allergy4.isShown() && reaction4.isShown())
+        		{
+        			allergy4.setVisibility(View.INVISIBLE);
+        			reaction4.setVisibility(View.INVISIBLE);
+        			allergyT4.setVisibility(View.INVISIBLE);
+        			reactionT4.setVisibility(View.INVISIBLE);
+        		}
+        		else if (allergy3.isShown() && reaction3.isShown())
+        		{
+        			allergy3.setVisibility(View.INVISIBLE);
+        			reaction3.setVisibility(View.INVISIBLE);
+        			allergyT3.setVisibility(View.INVISIBLE);
+        			reactionT3.setVisibility(View.INVISIBLE);
+        		}
+        		else if (allergy2.isShown() && reaction2.isShown())
+        		{
+        			allergy2.setVisibility(View.INVISIBLE);
+        			reaction2.setVisibility(View.INVISIBLE);
+        			allergyT2.setVisibility(View.INVISIBLE);
+        			reactionT2.setVisibility(View.INVISIBLE);
+        		}
+        	}
+		});
 		
         b.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
