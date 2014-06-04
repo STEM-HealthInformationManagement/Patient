@@ -79,22 +79,25 @@ public class NextActivity3 extends Activity {
         group_Num_Sec_In = (EditText) findViewById(R.id.editText_insurancegroupnumber2);
         policy_Num_Sec_In = (EditText) findViewById(R.id.editText_insurancepolicynumber2);
         
+        // makes labels invisible
         //disables all the textViews, and editTexts
 		ins_Comp.setVisibility(View.INVISIBLE);
 		phone.setVisibility(View.INVISIBLE);
 		group_Num.setVisibility(View.INVISIBLE); 
 		policy_Num.setVisibility(View.INVISIBLE);
 		
+		
+		// makes input fields invisible
 		// ins_Comp_In.setEnabled(false);
 		ins_Comp_In.setVisibility(View.INVISIBLE);
 		phone_In.setVisibility(View.INVISIBLE);
 		group_Num_In.setVisibility(View.INVISIBLE);
 		policy_Num_In.setVisibility(View.INVISIBLE);
 		
-		holder_Name.setEnabled(false); 
-		rel_Holder.setEnabled(false);
-		holder_Name_In.setEnabled(false); 
-		rel_Holder_In.setEnabled(false); 
+		holder_Name.setVisibility(View.INVISIBLE); 
+		rel_Holder.setVisibility(View.INVISIBLE);
+		holder_Name_In.setVisibility(View.INVISIBLE); 
+		rel_Holder_In.setVisibility(View.INVISIBLE); 
 		
 		ins_Comp_Sec.setEnabled(false);
 		phone_Sec.setEnabled(false);
@@ -161,7 +164,7 @@ public class NextActivity3 extends Activity {
 					phone_In.setVisibility(View.INVISIBLE);
 					group_Num.setVisibility(View.INVISIBLE);
 					group_Num_In.setVisibility(View.INVISIBLE);
-					policy_Num.setVisibility(View.INVISIBLE); 
+					policy_Num.setVisibility(View.INVISIBLE);
 					policy_Num_In.setVisibility(View.INVISIBLE);
 					
 					if (C_secondary.isChecked())
@@ -191,8 +194,12 @@ public class NextActivity3 extends Activity {
 			public void onClick (View v){
 				if (C_self_insured.isChecked()){ 
 					
+					holder_Name.setVisibility(View.VISIBLE);
 					holder_Name_In.setFocusable(true);
+					holder_Name_In.setVisibility(View.VISIBLE);
+					rel_Holder.setVisibility(View.VISIBLE);
 					rel_Holder_In.setFocusable(true);
+					rel_Holder_In.setVisibility(View.VISIBLE);
 					holder_Name_In.requestFocus();
 					
 					//unchecks the other checkboxes if they're checked
@@ -226,8 +233,10 @@ public class NextActivity3 extends Activity {
 				if (C_self_insured.isChecked() == false){ 
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled
-					holder_Name.setEnabled(false); 					
-					rel_Holder.setEnabled(false);
+					holder_Name.setVisibility(View.INVISIBLE); 
+					holder_Name_In.setVisibility(View.INVISIBLE);
+					rel_Holder.setVisibility(View.INVISIBLE);
+					rel_Holder_In.setVisibility(View.INVISIBLE);
 					
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);

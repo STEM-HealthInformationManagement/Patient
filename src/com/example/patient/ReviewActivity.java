@@ -709,7 +709,7 @@ public class ReviewActivity extends Activity {
 						     response.getAllHeaders();
 						     runOnUiThread(new Runnable(){
 						    	 public void run() {
-						    	    Toast.makeText(getApplicationContext(), "Application Successfully Submitted!", Toast.LENGTH_LONG).show();
+						    	    Toast.makeText(getBaseContext(), "Application Successfully Submitted!", Toast.LENGTH_LONG).show();
 						    	 }
 						    	 });
 						}
