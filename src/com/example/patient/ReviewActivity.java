@@ -700,7 +700,6 @@ public class ReviewActivity extends Activity {
 					@Override
 					public void run() {
 					// TODO Auto-generated method stub
-<<<<<<< HEAD
 						try
 						{
 							HttpClient httpclient = new DefaultHttpClient();
@@ -714,17 +713,6 @@ public class ReviewActivity extends Activity {
 						    	 }
 						    	 });
 						}
-						
-=======
-						try {
-						HttpClient httpclient = new DefaultHttpClient();
-					     HttpPost httppost = new HttpPost(url);
-					     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
-					     HttpResponse response = httpclient.execute(httppost);
-					     //Toast.makeText(getApplicationContext(), "Message has been sent!", Toast.LENGTH_SHORT).show();
-
-						} 
->>>>>>> 1b79ff9367488ffe5d0360efe1a4f5960985a537
 						catch (Exception e) 
 						{
 							// TODO Auto-generated catch block
