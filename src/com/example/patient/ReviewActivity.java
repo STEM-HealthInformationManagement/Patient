@@ -110,7 +110,78 @@ public class ReviewActivity extends Activity {
 	
 	String iFirstName;
 	String iLastName;
+	String iGender;
+	String iDOB;
+	String iStatus;
+	String iSSN;
+	String iAddress;
+	String iCity;
+	String iState;
+	String iZip;
+	String iEmail;
+	String iPhone;
+	String iAddress2;
 	
+	String empName;
+	String empPhone;
+	String occup;
+	String empAddress;
+
+	String cName1;
+	String cPhone1;
+	String cRelation1;
+
+	String cName2;
+	String cPhone2;
+	String cRelation2;
+	
+	String[] insurance;
+	String insComp;
+	String phoneIns;
+	String gNum;
+	String polNum;
+	
+	String holder;
+	String rel;
+	
+	String insComp2;
+	String phoneIns2;
+	String gNum2;
+	String polNum2;
+
+	String[] medHistory;
+	String heartD;
+	String highCol;
+	String highPress;
+	String diab;
+	String arth;
+	String hearLoss;
+	String kidneyStn;
+	String prostate;
+	String correctLens;
+	String neuroProb;
+	String asthm;
+	String canc;
+	String sTD;
+	String anem;
+	String seizr;
+	String ulcrs;
+	String strk;
+	String earProb;
+	String depressn;
+	
+	String[] allergies;
+	String sAllergy1;
+	String sAllergy2;
+	String sAllergy3;
+	String sAllergy4;
+	String sAllergy5;
+	
+	String sReaction1;
+	String sReaction2;
+	String sReaction3;
+	String sReaction4;
+	String sReaction5;
 
 	
 	
@@ -206,81 +277,81 @@ public class ReviewActivity extends Activity {
 		iFirstName = patientDetails[0];
 		final String iMiddleName = patientDetails[1];
 		iLastName = patientDetails[2];		
-		final String iGender = patientDetails[3];
-		final String iDOB = patientDetails[4];
-		final String iStatus = patientDetails[5];
-		final String iSSN = patientDetails[6];
-		final String iAddress = patientDetails[7];
-		final String iCity = patientDetails[8];
-		final String iState = patientDetails[9];
-		final String iZip = patientDetails[10];
-		final String iEmail = patientDetails[11];
-		final String iPhone = patientDetails[12];
-		final String iAddress2 = patientDetails[13];
+		iGender = patientDetails[3];
+		iDOB = patientDetails[4];
+		iStatus = patientDetails[5];
+		iSSN = patientDetails[6];
+		iAddress = patientDetails[7];
+		iCity = patientDetails[8];
+		iState = patientDetails[9];
+		iZip = patientDetails[10];
+		iEmail = patientDetails[11];
+		iPhone = patientDetails[12];
+		iAddress2 = patientDetails[13];
 		
-		final String empName = employmentHist[0];
-		final String empPhone = employmentHist[1];
-		final String occup = employmentHist[2];
-		final String empAddress = employmentHist[3];
+		empName = employmentHist[0];
+		empPhone = employmentHist[1];
+		occup = employmentHist[2];
+		empAddress = employmentHist[3];
 
-		final String cName1 = emergencyContact[0];
-		final String cPhone1 = emergencyContact[1];
-		final String cRelation1 = emergencyContact[2];
+		cName1 = emergencyContact[0];
+		cPhone1 = emergencyContact[1];
+		cRelation1 = emergencyContact[2];
 
-		final String cName2 = emergencyContact[3];
-		final String cPhone2 = emergencyContact[4];
-		final String cRelation2 = emergencyContact[5];
+		cName2 = emergencyContact[3];
+		cPhone2 = emergencyContact[4];
+		cRelation2 = emergencyContact[5];
 		
 		//Data of the insurance section from the previous activity
-		final String[] insurance = getIntent().getStringArrayExtra("insurance_Data");
-		final String insComp = insurance[0];
-		final String phoneIns = insurance[1];
-		final String gNum = insurance[2];
-		final String polNum = insurance[3];
+		insurance = getIntent().getStringArrayExtra("insurance_Data");
+		insComp = insurance[0];
+		phoneIns = insurance[1];
+		gNum = insurance[2];
+		polNum = insurance[3];
 		
-		final String holder = insurance[4];
-		final String rel = insurance[5];
+		holder = insurance[4];
+		rel = insurance[5];
 		
-		final String insComp2 = insurance[6];
-		final String phoneIns2 = insurance[7];
-		final String gNum2 = insurance[8];
-		final String polNum2 = insurance[9];
+		insComp2 = insurance[6];
+		phoneIns2 = insurance[7];
+		gNum2 = insurance[8];
+		polNum2 = insurance[9];
 		
 		//Data of the medical history section from the previous activity
-		final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
-		String heartD = medHistory[0];
-		String highCol = medHistory[1];
-		String highPress = medHistory[2];
-		String diab = medHistory[3];
-		String arth = medHistory[4];
-		String hearLoss = medHistory[5];
-		String kidneyStn = medHistory[6];
-		String prostate = medHistory[7];
-		String correctLens = medHistory[8];
-		String neuroProb = medHistory[9];
-		String asthm = medHistory[10];
-		String canc = medHistory[11];
-		String sTD = medHistory[12];
-		String anem = medHistory[13];
-		String seizr = medHistory[14];
-		String ulcrs = medHistory[15];
-		String strk = medHistory[16];
-		String earProb = medHistory[17];
-		String depressn = medHistory[18];
+		medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		heartD = medHistory[0];
+		highCol = medHistory[1];
+		highPress = medHistory[2];
+		diab = medHistory[3];
+		arth = medHistory[4];
+		hearLoss = medHistory[5];
+		kidneyStn = medHistory[6];
+		prostate = medHistory[7];
+		correctLens = medHistory[8];
+		neuroProb = medHistory[9];
+		asthm = medHistory[10];
+		canc = medHistory[11];
+		sTD = medHistory[12];
+		anem = medHistory[13];
+		seizr = medHistory[14];
+		ulcrs = medHistory[15];
+		strk = medHistory[16];
+		earProb = medHistory[17];
+		depressn = medHistory[18];
 		
 		//Data of the allergy section from the previous activity
-		final String[] allergies = getIntent().getStringArrayExtra("allergies");
-		String sAllergy1 = allergies[0];
-		String sAllergy2 = allergies[1];
-		String sAllergy3 = allergies[2];
-		String sAllergy4 = allergies[3];
-		String sAllergy5 = allergies[4];
+		allergies = getIntent().getStringArrayExtra("allergies");
+		sAllergy1 = allergies[0];
+		sAllergy2 = allergies[1];
+		sAllergy3 = allergies[2];
+		sAllergy4 = allergies[3];
+		sAllergy5 = allergies[4];
 		
-		String sReaction1 = allergies[5];
-		String sReaction2 = allergies[6];
-		String sReaction3 = allergies[7];
-		String sReaction4 = allergies[8];
-		String sReaction5 = allergies[9];
+		sReaction1 = allergies[5];
+		sReaction2 = allergies[6];
+		sReaction3 = allergies[7];
+		sReaction4 = allergies[8];
+		sReaction5 = allergies[9];
 		
 		//sets the all the collected data to be viewed on the review page 
 		firstName.setText("Firstname: " + iFirstName);
