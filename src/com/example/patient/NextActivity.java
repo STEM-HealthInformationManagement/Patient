@@ -239,7 +239,7 @@ public class NextActivity extends Activity {
         				 String firstName = dFirstName.getText().toString();
                 		 String middleName = dMiddleName.getText().toString();
                 	    String  lastName = dLastName.getText().toString();
-                		if (firstName.equals("") && lastName.equals("") ){
+                		if (firstName.equals("") || lastName.equals("") ){
         			
         		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
