@@ -239,6 +239,26 @@
             android:layout_marginTop="20dp"
             android:text="@string/next7" />
 
+        <Button
+            android:id="@+id/button2"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText_allergy1"
+            android:layout_alignRight="@+id/editText_allergy1"
+            android:text="@string/add_allergy" />
+
+        <Button
+            android:id="@+id/button3"
+            style="?android:attr/buttonStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/editText_allergy1"
+            android:layout_alignTop="@+id/button2"
+            android:layout_toLeftOf="@+id/button2"
+            android:layout_toRightOf="@+id/radioGroup_Allergy"
+            android:text="@string/delete_allergy" />
+
     </RelativeLayout>
 
 </ScrollView>

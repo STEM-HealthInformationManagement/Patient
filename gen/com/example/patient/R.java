@@ -48,11 +48,12 @@ public final class R {
         public static final int RelativeLayout1=0x7f0b004e;
         public static final int ScrollView1=0x7f0b004d;
         public static final int ScrollView2=0x7f0b0070;
-        public static final int action_settings=0x7f0b00d1;
+        public static final int action_settings=0x7f0b00d2;
         public static final int allergy_title=0x7f0b00b8;
         public static final int btn_Confirm=0x7f0b0000;
         public static final int button1=0x7f0b0003;
         public static final int button2=0x7f0b00b7;
+        public static final int button3=0x7f0b00d1;
         public static final int buttonSubmit=0x7f0b004c;
         public static final int checkBox1=0x7f0b00a3;
         public static final int checkBox10=0x7f0b00b4;
@@ -273,6 +274,9 @@ public final class R {
         public static final int ClearButton=0x7f07000f;
         public static final int Confirm=0x7f07000b;
         public static final int action_settings=0x7f070001;
+        /**  <item android:id="@+id/item1" android:layout_height="wrap_content" android:layout_width="wrap_content"/> 
+         */
+        public static final int add_allergy=0x7f070077;
         public static final int address=0x7f07001e;
         public static final int allergy1=0x7f070060;
         public static final int allergy2=0x7f070061;
@@ -302,6 +306,7 @@ public final class R {
         public static final int corrective_lenses=0x7f070055;
         public static final int covered=0x7f070008;
         public static final int date_picker=0x7f070072;
+        public static final int delete_allergy=0x7f070078;
         public static final int depression=0x7f070058;
         public static final int diabetes=0x7f07004c;
         public static final int dob=0x7f070019;
