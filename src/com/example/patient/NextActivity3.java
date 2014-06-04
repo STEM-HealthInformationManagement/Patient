@@ -99,15 +99,15 @@ public class NextActivity3 extends Activity {
 		holder_Name_In.setVisibility(View.INVISIBLE); 
 		rel_Holder_In.setVisibility(View.INVISIBLE); 
 		
-		ins_Comp_Sec.setEnabled(false);
-		phone_Sec.setEnabled(false);
-		group_Num_Sec.setEnabled(false);
-		policy_Num_Sec.setEnabled(false);
+		ins_Comp_Sec.setVisibility(View.INVISIBLE);
+		phone_Sec.setVisibility(View.INVISIBLE);
+		group_Num_Sec.setVisibility(View.INVISIBLE);
+		policy_Num_Sec.setVisibility(View.INVISIBLE);
 		
-		ins_Comp_Sec_In.setEnabled(false);
-		phone_Sec_In.setEnabled(false);
-		group_Num_Sec_In.setEnabled(false);
-		policy_Num_Sec_In.setEnabled(false);
+		ins_Comp_Sec_In.setVisibility(View.INVISIBLE);
+		phone_Sec_In.setVisibility(View.INVISIBLE);
+		group_Num_Sec_In.setVisibility(View.INVISIBLE);
+		policy_Num_Sec_In.setVisibility(View.INVISIBLE);
 		
 		C_secondary.setEnabled(false);
 		
@@ -263,10 +263,18 @@ public class NextActivity3 extends Activity {
 			public void onClick (View v){
 				if (C_secondary.isChecked()){
 					
+					ins_Comp_Sec.setVisibility(View.VISIBLE);
 					ins_Comp_Sec_In.setFocusable(true);
+					ins_Comp_Sec_In.setVisibility(View.VISIBLE);
+					phone_Sec.setVisibility(View.VISIBLE);
 					phone_Sec_In.setFocusable(true);
+					phone_Sec_In.setVisibility(View.VISIBLE);
+					group_Num_Sec.setVisibility(View.VISIBLE);
 					group_Num_Sec_In.setFocusable(true);
+					group_Num_Sec_In.setVisibility(View.VISIBLE);
+					policy_Num.setVisibility(View.VISIBLE);
 					policy_Num_Sec_In.setFocusable(true);
+					policy_Num_Sec_In.setVisibility(View.VISIBLE);
 					
 					ins_Comp_Sec.setEnabled(true);
 					phone_Sec.setEnabled(true);
@@ -282,15 +290,15 @@ public class NextActivity3 extends Activity {
 				if (C_secondary.isChecked() == false){
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled
-					ins_Comp_Sec.setEnabled(false);
-					phone_Sec.setEnabled(false);
-					group_Num_Sec.setEnabled(false);
-					policy_Num_Sec.setEnabled(false);
+					ins_Comp_Sec.setVisibility(View.INVISIBLE);
+					phone_Sec.setVisibility(View.INVISIBLE);
+					group_Num_Sec.setVisibility(View.INVISIBLE);
+					policy_Num_Sec.setVisibility(View.INVISIBLE);
 					
-					ins_Comp_Sec_In.setEnabled(false);
-					phone_Sec_In.setEnabled(false);
-					group_Num_Sec_In.setEnabled(false);
-					policy_Num_Sec_In.setEnabled(false);
+					ins_Comp_Sec_In.setVisibility(View.INVISIBLE);
+					phone_Sec_In.setVisibility(View.INVISIBLE);
+					group_Num_Sec_In.setVisibility(View.INVISIBLE);
+					policy_Num_Sec_In.setVisibility(View.INVISIBLE);
 				}
 			}
         });
