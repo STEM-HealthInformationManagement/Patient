@@ -110,6 +110,7 @@ public class ReviewActivity extends Activity {
 	
 	String iFirstName;
 	String iLastName;
+	String iMiddleName;
 	String iGender;
 	String iDOB;
 	String iStatus;
@@ -275,7 +276,7 @@ public class ReviewActivity extends Activity {
 		final String[] emergencyContact = getIntent().getStringArrayExtra("emergency_contact");
 		
 		iFirstName = patientDetails[0];
-		final String iMiddleName = patientDetails[1];
+		iMiddleName = patientDetails[1];
 		iLastName = patientDetails[2];		
 		iGender = patientDetails[3];
 		iDOB = patientDetails[4];
@@ -693,6 +694,8 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("zipcode", iZip));
 			postParameters.add(new BasicNameValuePair("gender", iGender));
 			postParameters.add(new BasicNameValuePair("f_address", fullAddress));
+			postParameters.add(new BasicNameValuePair("city", iCity));
+			postParameters.add(new BasicNameValuePair("m_name", iMiddleName));
 			
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
