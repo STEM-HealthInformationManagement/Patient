@@ -229,7 +229,12 @@ public class NextActivity extends Activity {
             		i.putExtra("allergies", allergies);
         			
         		}
+        		
         		else {
+        			if (dFirstName == null && dLastName == null)
+            		{  }
+        			
+        		
         			//the intent is assigned with a value that start the next activity
         			i = new Intent(NextActivity.this, NextActivity2.class);
         		}
