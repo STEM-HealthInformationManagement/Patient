@@ -23,6 +23,7 @@ import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+
 public class NextActivity extends Activity {
 	
 	EditText dFirstName;
@@ -193,13 +194,17 @@ public class NextActivity extends Activity {
                 datePicking2.show();
             }
         });
-        
+     
         // when the next page button is clicked
         b.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-        		String firstName = dFirstName.getText().toString();
-        		String middleName = dMiddleName.getText().toString();
-        		String lastName = dLastName.getText().toString();
+        		
+				while(dFirstName == null && dLastName== null){
+					String firstName = dFirstName.getText().toString();
+					String middleName = dMiddleName.getText().toString();
+					String lastName = dLastName.getText().toString();
+        
+				}
         		Intent i;
         		if (fromReview == 1) {
         			//if this activity is started by the review page 
@@ -234,22 +239,32 @@ public class NextActivity extends Activity {
         			
         		}
         		
-        		 else if ( dFirstName == null && dLastName == null ){
+        		 else   {
         			//the intent is assigned with a value that start the next activity
-        			 v.willNotDraw();
-        			i = new Intent(NextActivity.this, NextActivity2.class);
-        		} else {
-        			  runOnUiThread(new Runnable(){
+        				String firstName = dFirstName.getText().toString();
+                		String middleName = dMiddleName.getText().toString();
+                		String lastName = dLastName.getText().toString();
+                		if (firstName.equals("") && lastName.equals("") ){
+        			
+        		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
 					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
-					    	   
+					    	    
 					    	 }
 					    	 });
-        			  i = new Intent(NextActivity.this, NextActivity.class);
-        		}
+        		      			  i = new Intent(NextActivity.this, NextActivity.class);
+					    	 } else{
+					    		 i = new Intent(NextActivity.this, NextActivity2.class);}
+					    	 }
+        		      			  
+        			 
+  
         		
         		//gets the data entered by the user
-        	
+        		
+        		String firstName = dFirstName.getText().toString();
+        		String middleName = dMiddleName.getText().toString();
+        		String lastName = dLastName.getText().toString();
         		
         		String genderSelected = "Gender: not selected";
 				if (dGenderFem.isChecked()) {
