@@ -199,12 +199,7 @@ public class NextActivity extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
         		
-				while(dFirstName == null && dLastName== null){
-					String firstName = dFirstName.getText().toString();
-					String middleName = dMiddleName.getText().toString();
-					String lastName = dLastName.getText().toString();
-        
-				}
+			
         		Intent i;
         		if (fromReview == 1) {
         			//if this activity is started by the review page 
@@ -241,28 +236,30 @@ public class NextActivity extends Activity {
         		
         		 else   {
         			//the intent is assigned with a value that start the next activity
-        				String firstName = dFirstName.getText().toString();
-                		String middleName = dMiddleName.getText().toString();
-                		String lastName = dLastName.getText().toString();
+        				 String firstName = dFirstName.getText().toString();
+                		 String middleName = dMiddleName.getText().toString();
+                	    String  lastName = dLastName.getText().toString();
                 		if (firstName.equals("") && lastName.equals("") ){
         			
         		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
 					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
-					    	    
-					    	 }
+					    		
+					    	 }  
+
+							   
 					    	 });
-        		      			  i = new Intent(NextActivity.this, NextActivity.class);
-					    	 } else{
+        		      			i = new Intent(NextActivity.this, NextActivity.class);
+					    	 } 
 					    		 i = new Intent(NextActivity.this, NextActivity2.class);}
-					    	 }
+					    	 
         		      			  
         			 
   
         		
         		//gets the data entered by the user
-        		
-        		String firstName = dFirstName.getText().toString();
+        	
+        		String  firstName = dFirstName.getText().toString();
         		String middleName = dMiddleName.getText().toString();
         		String lastName = dLastName.getText().toString();
         		
@@ -313,6 +310,7 @@ public class NextActivity extends Activity {
         	}
         });
         //clear button 
+       
 		Button clearButton = (Button) findViewById(R.id.button1);
 		clearButton.setOnClickListener (new View.OnClickListener()
 		{
@@ -345,6 +343,7 @@ public class NextActivity extends Activity {
 
 	}
 //clear button for edittexts and radiogroups
+	
 	public void clearAll(ViewGroup root) 
 	{
 	    for (int i = 0, j = root.getChildCount(); i < j; i++) 
