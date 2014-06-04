@@ -694,7 +694,7 @@ public class ReviewActivity extends Activity {
 			
 			
 			
-			Toast.makeText(getBaseContext(), "The message is sending!", Toast.LENGTH_LONG).show();
+			Toast.makeText(getBaseContext(), "Submitting Application...", Toast.LENGTH_LONG).show();
 			//yuchen added the following code, you can ignore CustomHttpClient.java
 				new Thread() {
 					@Override
