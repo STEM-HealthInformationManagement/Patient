@@ -250,8 +250,9 @@ public class NextActivity extends Activity {
 							   
 					    	 });
         		      			i = new Intent(NextActivity.this, NextActivity.class);
-					    	 } 
+					    	 } else{
 					    		 i = new Intent(NextActivity.this, NextActivity2.class);}
+        		 }
 					    	 
         		      			  
         			 
