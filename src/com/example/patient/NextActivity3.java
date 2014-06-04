@@ -80,15 +80,16 @@ public class NextActivity3 extends Activity {
         policy_Num_Sec_In = (EditText) findViewById(R.id.editText_insurancepolicynumber2);
         
         //disables all the textViews, and editTexts
-		ins_Comp.setEnabled(false);
-		phone.setEnabled(false);
-		group_Num.setEnabled(false); 
-		policy_Num.setEnabled(false); 
+		ins_Comp.setVisibility(View.INVISIBLE);
+		phone.setVisibility(View.INVISIBLE);
+		group_Num.setVisibility(View.INVISIBLE); 
+		policy_Num.setVisibility(View.INVISIBLE);
 		
-		ins_Comp_In.setEnabled(false);
-		phone_In.setEnabled(false);
-		group_Num_In.setEnabled(false);
-		policy_Num_In.setEnabled(false);
+		// ins_Comp_In.setEnabled(false);
+		ins_Comp_In.setVisibility(View.INVISIBLE);
+		phone_In.setVisibility(View.INVISIBLE);
+		group_Num_In.setVisibility(View.INVISIBLE);
+		policy_Num_In.setVisibility(View.INVISIBLE);
 		
 		holder_Name.setEnabled(false); 
 		rel_Holder.setEnabled(false);
@@ -112,11 +113,18 @@ public class NextActivity3 extends Activity {
 			public void onClick (View v) {
 				
 				if (C_covered.isChecked()) {
-					
+					ins_Comp.setVisibility(View.VISIBLE);
 					ins_Comp_In.setFocusable(true);
+					ins_Comp_In.setVisibility(View.VISIBLE);
+					phone.setVisibility(View.VISIBLE);
 					phone_In.setFocusable(true);
+					phone_In.setVisibility(View.VISIBLE);
+					group_Num.setVisibility(View.VISIBLE);
 					group_Num_In.setFocusable(true);
+					group_Num_In.setVisibility(View.VISIBLE);
+					policy_Num.setVisibility(View.VISIBLE);
 					policy_Num_In.setFocusable(true);
+					policy_Num_In.setVisibility(View.VISIBLE);
 					ins_Comp_In.requestFocus();
 					
 					//unchecks the other checkboxes if they're checked  
@@ -147,10 +155,14 @@ public class NextActivity3 extends Activity {
 				if (C_covered.isChecked() == false){
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled 
-					ins_Comp.setEnabled(false);
-					phone.setEnabled(false);
-					group_Num.setEnabled(false); 
-					policy_Num.setEnabled(false); 
+					ins_Comp.setVisibility(View.INVISIBLE);
+					ins_Comp_In.setVisibility(View.INVISIBLE);
+					phone.setVisibility(View.INVISIBLE);
+					phone_In.setVisibility(View.INVISIBLE);
+					group_Num.setVisibility(View.INVISIBLE);
+					group_Num_In.setVisibility(View.INVISIBLE);
+					policy_Num.setVisibility(View.INVISIBLE); 
+					policy_Num_In.setVisibility(View.INVISIBLE);
 					
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);
