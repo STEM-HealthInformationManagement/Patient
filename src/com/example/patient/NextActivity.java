@@ -4,6 +4,7 @@ package com.example.patient;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.StringTokenizer;
+
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
@@ -20,6 +21,7 @@ import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 public class NextActivity extends Activity {
 	
@@ -195,7 +197,9 @@ public class NextActivity extends Activity {
         // when the next page button is clicked
         b.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
-        		
+        		String firstName = dFirstName.getText().toString();
+        		String middleName = dMiddleName.getText().toString();
+        		String lastName = dLastName.getText().toString();
         		Intent i;
         		if (fromReview == 1) {
         			//if this activity is started by the review page 
@@ -230,19 +234,22 @@ public class NextActivity extends Activity {
         			
         		}
         		
-        		else {
-        			if (dFirstName == null && dLastName == null)
-            		{  }
-        			
-        		
+        		 else if ( dFirstName == null && dLastName == null ){
         			//the intent is assigned with a value that start the next activity
+        			 v.willNotDraw();
         			i = new Intent(NextActivity.this, NextActivity2.class);
+        		} else {
+        			  runOnUiThread(new Runnable(){
+					    	 public void run() {
+					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
+					    	   
+					    	 }
+					    	 });
+        			  i = new Intent(NextActivity.this, NextActivity.class);
         		}
         		
         		//gets the data entered by the user
-        		String firstName = dFirstName.getText().toString();
-        		String middleName = dMiddleName.getText().toString();
-        		String lastName = dLastName.getText().toString();
+        	
         		
         		String genderSelected = "Gender: not selected";
 				if (dGenderFem.isChecked()) {
