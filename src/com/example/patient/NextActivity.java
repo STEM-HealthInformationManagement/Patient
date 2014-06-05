@@ -292,8 +292,7 @@ public class NextActivity extends Activity {
         		
         		 else   {
         			//the intent is assigned with a value that start the next activity
-                		if (firstName.equals("") || lastName.equals("") ){
-        			
+                		if (firstName.equals("") || lastName.equals("") || genderSelected.equals("")|| birthDate.equals("")|| ssn.equals("")|| address1.equals("")|| city.equals("")|| state.equals("")|| zip.equals("")|| phone.equals("")|| address2.equals("") ){
         		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
 					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
