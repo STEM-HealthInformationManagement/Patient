@@ -119,7 +119,7 @@
         </EditText>
 
         <!-- SSN textbox -->
-        <EditText
+        <EditText
             android:id="@+id/editText_ssn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,7 +129,7 @@
             android:layout_toRightOf="@+id/textView_ssn"
             android:ems="10"
             android:inputType="number"
-            android:maxLength="9" />
+            android:maxLength="@integer/nine" />
 
         <!-- gender textview -->
         <TextView

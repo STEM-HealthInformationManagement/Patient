@@ -696,6 +696,18 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("f_address", fullAddress));
 			postParameters.add(new BasicNameValuePair("city", iCity));
 			postParameters.add(new BasicNameValuePair("m_name", iMiddleName));
+			postParameters.add(new BasicNameValuePair("dob", iDOB));
+			postParameters.add(new BasicNameValuePair("mar_status", iStatus));
+			postParameters.add(new BasicNameValuePair("s_s_n", iSSN));
+			postParameters.add(new BasicNameValuePair("email", iEmail));
+			postParameters.add(new BasicNameValuePair("phone", iPhone));
+			postParameters.add(new BasicNameValuePair("emplr_name", empName));
+			postParameters.add(new BasicNameValuePair("emplr_phone", empPhone));
+			postParameters.add(new BasicNameValuePair("emplr_occup", occup));
+			postParameters.add(new BasicNameValuePair("emplr_address", empAddress));
+			postParameters.add(new BasicNameValuePair("contact_name1", cName1));			//Emergency Contact Name
+			postParameters.add(new BasicNameValuePair("contact_phone1", cPhone1));			//Emergency Contact Phone
+			postParameters.add(new BasicNameValuePair("contact_relation1", cRelation1));		//Emergency Relation
 			
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
