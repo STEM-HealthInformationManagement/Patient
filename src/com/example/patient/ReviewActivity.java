@@ -340,6 +340,7 @@ public class ReviewActivity extends Activity {
 		earProb = medHistory[17];
 		depressn = medHistory[18];
 		
+		
 		//Data of the allergy section from the previous activity
 		allergies = getIntent().getStringArrayExtra("allergies");
 		sAllergy1 = allergies[0];
@@ -683,9 +684,10 @@ public class ReviewActivity extends Activity {
 
 			final ArrayList<NameValuePair> postParameters = new ArrayList<NameValuePair>();
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
-			int numFirst = 11;
-			int numLast = 9;
+//			int numFirst = 11;
+//			int numLast = 9;
 			String fullAddress = iAddress + " " + iAddress2;
+			String[] fullMedicalHistory = medHistory.toString().split("(\\d+)(,\\s*\\d+)*");
 			
 		 	postParameters.add(new BasicNameValuePair("firstName", iFirstName));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
@@ -708,6 +710,30 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("contact_name1", cName1));			//Emergency Contact Name
 			postParameters.add(new BasicNameValuePair("contact_phone1", cPhone1));			//Emergency Contact Phone
 			postParameters.add(new BasicNameValuePair("contact_relation1", cRelation1));		//Emergency Relation
+			postParameters.add(new BasicNameValuePair("contact_name2", cName2));			//Emergency Contact Name
+			postParameters.add(new BasicNameValuePair("contact_phone2", cPhone2));			//Emergency Contact Phone
+			postParameters.add(new BasicNameValuePair("contact_relation2", cRelation2));		//Emergency Relation
+			postParameters.add(new BasicNameValuePair("insurance_comp", insComp));
+			postParameters.add(new BasicNameValuePair("insurance_phone", phoneIns));
+			postParameters.add(new BasicNameValuePair("group_num", gNum));
+			postParameters.add(new BasicNameValuePair("policy_num", polNum));
+			postParameters.add(new BasicNameValuePair("holder", holder));
+			postParameters.add(new BasicNameValuePair("relationship", rel));
+			postParameters.add(new BasicNameValuePair("insurance_comp1", insComp2));
+			postParameters.add(new BasicNameValuePair("insurance_comp2", phoneIns2));
+			postParameters.add(new BasicNameValuePair("group_num2", gNum2));
+			postParameters.add(new BasicNameValuePair("policy_num2", polNum2));
+			postParameters.add(new BasicNameValuePair("medicalhistory", fullMedicalHistory.toString()));
+			postParameters.add(new BasicNameValuePair("allergy1", sAllergy1));
+			postParameters.add(new BasicNameValuePair("allergy2", sAllergy2));
+			postParameters.add(new BasicNameValuePair("allergy3", sAllergy3));
+			postParameters.add(new BasicNameValuePair("allergy4", sAllergy4));
+			postParameters.add(new BasicNameValuePair("allergy5", sAllergy5));
+			postParameters.add(new BasicNameValuePair("reaction1", sReaction1));
+			postParameters.add(new BasicNameValuePair("reaction2", sReaction2));
+			postParameters.add(new BasicNameValuePair("reaction3", sReaction3));
+			postParameters.add(new BasicNameValuePair("reaction4", sReaction4));
+			postParameters.add(new BasicNameValuePair("reaction5", sReaction5));
 			
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
