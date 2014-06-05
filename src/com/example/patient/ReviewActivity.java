@@ -279,8 +279,8 @@ public class ReviewActivity extends Activity {
 		iMiddleName = patientDetails[1];
 		iLastName = patientDetails[2];		
 		iGender = patientDetails[3];
-		iDOB = patientDetails[4];
-		iStatus = patientDetails[5];
+		iDOB = patientDetails[4];				//
+		iStatus = patientDetails[5];			
 		iSSN = patientDetails[6];
 		iAddress = patientDetails[7];
 		iCity = patientDetails[8];
@@ -696,7 +696,9 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("f_address", fullAddress));
 			postParameters.add(new BasicNameValuePair("city", iCity));
 			postParameters.add(new BasicNameValuePair("m_name", iMiddleName));
-			
+			postParameters.add(new BasicNameValuePair("birthday", iDOB));
+			postParameters.add(new BasicNameValuePair("m_name", iStatus));
+			postParameters.add(new BasicNameValuePair("m_name", iSSN));
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
 			final String url = "http://www.njcuacm.org/restricted/stem_test/app/test_put.php";
