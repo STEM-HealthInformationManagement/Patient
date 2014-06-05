@@ -1,8 +1,9 @@
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/ScrollView2"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ScrollView2"
     android:layout_width="fill_parent"
-    android:layout_height="match_parent"  >
+    android:layout_height="match_parent"
+    tools:context=".NextActivity2" >
 
     <RelativeLayout
         style="@layout/screen3"
@@ -277,6 +278,16 @@
             android:ems="10"
             android:inputType="text" >
         </EditText>
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_below="@+id/editText_contact2relationship"
+            android:layout_marginTop="16dp"
+            android:text="@string/mssg2user"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </RelativeLayout>
 
