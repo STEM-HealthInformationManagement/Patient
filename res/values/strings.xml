@@ -59,8 +59,6 @@
         <item>West Virginia</item>
         <item>Wisconsin</item>
         <item>Wyoming</item>
-     
-        
     </string-array>
 
     <string name="title_activity_next">NextActivity</string>
@@ -176,12 +174,11 @@
     <string name="date_picker">Date Picker</string>
     <string name="states">States</string>
     <string name="next7">Next</string>
-    
     <string name="edit_section">Edit</string>
     <string name="btnStart">Start</string>
     <!-- <item android:id="@+id/item1" android:layout_height="wrap_content" android:layout_width="wrap_content"/> -->
     <string name="add_allergy">+</string>
     <string name="delete_allergy">-</string>
+    <string name="title_activity_test_clear">TestClearActivity</string>
 
-    
 </resources>
