@@ -180,14 +180,7 @@
     <string name="add_allergy">+</string>
     <string name="delete_allergy">-</string>
   <string name="mssg2user">* Marks Required Fields</string>
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-=======
     <string name="title_activity_test_clear">TestClearActivity</string>
->>>>>>> 242e42399228de38930e602b44c48eed1da48511
-=======
-    <string name="title_activity_test_clear">TestClearActivity</string>
->>>>>>> 5df7a6c27a845bc73c1c4a825af3b60f6cbffe59
 
 </resources>
