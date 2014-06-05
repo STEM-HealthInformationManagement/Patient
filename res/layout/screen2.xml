@@ -129,7 +129,7 @@
             android:layout_toRightOf="@+id/textView_ssn"
             android:ems="10"
             android:inputType="number"
-            android:maxLength="5" />
+            android:maxLength="9" />
 
         <!-- gender textview -->
         <TextView
