@@ -259,6 +259,15 @@
             android:layout_toRightOf="@+id/radioGroup_Allergy"
             android:text="@string/delete_allergy" />
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignRight="@+id/button3"
+            android:layout_below="@+id/editText_reaction5"
+            android:text="@string/mssg2user"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
     </RelativeLayout>
 
 </ScrollView>

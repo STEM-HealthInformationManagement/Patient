@@ -395,6 +395,18 @@
             android:text="@string/firstname"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
+        <TextView
+            android:id="@+id/textView_mssg2user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="false"
+            android:layout_below="@+id/editText_phone"
+            android:layout_centerInParent="false"
+            android:layout_marginTop="7dp"
+            android:layout_toRightOf="@+id/textView_phone"
+            android:text="@string/mssg2user"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
     </RelativeLayout>
 
 </ScrollView>
