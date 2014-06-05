@@ -199,12 +199,15 @@ public class NextActivity extends Activity {
         b.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
         		
+        		String firstName = dFirstName.getText().toString();
+       		 String middleName = dMiddleName.getText().toString();
+       	    String  lastName = dLastName.getText().toString();
 			
-        		Intent i;
+        		//Intent i;
         		if (fromReview == 1) {
         			//if this activity is started by the review page 
         			//the intent is assigned with a value that starts the review page
-        			i = new Intent(NextActivity.this, ReviewActivity.class);
+        			Intent i = new Intent(NextActivity.this, ReviewActivity.class);
         			
         			//Data of the employment history section from the review page
         			final String[] employmentHist = getIntent().getStringArrayExtra("employment_history");
@@ -232,13 +235,63 @@ public class NextActivity extends Activity {
             		
             		i.putExtra("allergies", allergies);
         			
+            		//Save everything in the intent again, and start new intent.
+		    		  
+	        		
+	        		//gets the data entered by the user
+	        	
+	        		firstName = dFirstName.getText().toString();
+	        		middleName = dMiddleName.getText().toString();
+	        		lastName = dLastName.getText().toString();
+	        		
+	        		String genderSelected = "Gender: not selected";
+					if (dGenderFem.isChecked()) {
+						genderSelected = "Gender: Female";			
+	        		}
+					
+					if (dGenderMale.isChecked()) {
+	        			genderSelected = "Gender: Male";
+	        		}
+	        		        		
+	        		String birthDate = date.getText().toString();
+	        		
+	        		String status = "Marital Status: not selected";
+	        		if (dMarried.isChecked()) {
+	        			status = "Marital Status: Married";
+	        		}
+	        		
+	        		if (dSingle.isChecked()) {
+	        			status = "Marital Status: Single";
+	        		}
+	        		
+	        		String ssn = dSocialSec.getText().toString();
+	        		
+	        		String address1 = dAddress.getText().toString();
+
+	        		String address2 = dAddress2.getText().toString();
+
+	        		String city = dCity.getText().toString();
+	        		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
+	        		
+	        		int statePos = dState.getSelectedItemPosition();
+	        		i.putExtra("selected_state", statePos);
+	        		
+	        		String zip = dZipCode.getText().toString();
+	        		String email = dEmail.getText().toString();
+	        		String phone = dPhone.getText().toString(); 
+	        		//puts the data in an array 
+	   
+	        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
+	        									email, phone,  address2 };
+	        		//puts the array in an intent to be sent to the next activity 
+	        		i.putExtra("details", patientDetails);
+	        		
+	        		startActivity(i);
+
         		}
         		
         		 else   {
         			//the intent is assigned with a value that start the next activity
-        				 String firstName = dFirstName.getText().toString();
-                		 String middleName = dMiddleName.getText().toString();
-                	    String  lastName = dLastName.getText().toString();
                 		if (firstName.equals("") || lastName.equals("") ){
         			
         		      			  runOnUiThread(new Runnable(){
@@ -249,64 +302,69 @@ public class NextActivity extends Activity {
 
 							   
 					    	 });
-        		      			i = new Intent(NextActivity.this, NextActivity.class);
-					    	 } else{
-					    		 i = new Intent(NextActivity.this, NextActivity2.class);}
+        		      			//i = new Intent(NextActivity.this, NextActivity.class);
+					    	 }
+                		else{
+					    		 Intent i = new Intent(NextActivity.this, NextActivity2.class);
+					    		 
+					        		//Save everything in the intent again, and start new intent.
+					    		  
+					        		
+					        		//gets the data entered by the user
+					        	
+					        		firstName = dFirstName.getText().toString();
+					        		middleName = dMiddleName.getText().toString();
+					        		lastName = dLastName.getText().toString();
+					        		
+					        		String genderSelected = "Gender: not selected";
+									if (dGenderFem.isChecked()) {
+										genderSelected = "Gender: Female";			
+					        		}
+									
+									if (dGenderMale.isChecked()) {
+					        			genderSelected = "Gender: Male";
+					        		}
+					        		        		
+					        		String birthDate = date.getText().toString();
+					        		
+					        		String status = "Marital Status: not selected";
+					        		if (dMarried.isChecked()) {
+					        			status = "Marital Status: Married";
+					        		}
+					        		
+					        		if (dSingle.isChecked()) {
+					        			status = "Marital Status: Single";
+					        		}
+					        		
+					        		String ssn = dSocialSec.getText().toString();
+					        		
+					        		String address1 = dAddress.getText().toString();
+
+					        		String address2 = dAddress2.getText().toString();
+
+					        		String city = dCity.getText().toString();
+					        		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
+					        		
+					        		int statePos = dState.getSelectedItemPosition();
+					        		i.putExtra("selected_state", statePos);
+					        		
+					        		String zip = dZipCode.getText().toString();
+					        		String email = dEmail.getText().toString();
+					        		String phone = dPhone.getText().toString(); 
+					        		//puts the data in an array 
+					   
+					        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
+					        									email, phone,  address2 };
+					        		//puts the array in an intent to be sent to the next activity 
+					        		i.putExtra("details", patientDetails);
+					        		
+					        		startActivity(i);
+
+					    		 
+					    	}
         		 }
 					    	 
         		      			  
-        			 
-  
-        		
-        		//gets the data entered by the user
-        	
-        		String  firstName = dFirstName.getText().toString();
-        		String middleName = dMiddleName.getText().toString();
-        		String lastName = dLastName.getText().toString();
-        		
-        		String genderSelected = "Gender: not selected";
-				if (dGenderFem.isChecked()) {
-					genderSelected = "Gender: Female";			
-        		}
-				
-				if (dGenderMale.isChecked()) {
-        			genderSelected = "Gender: Male";
-        		}
-        		        		
-        		String birthDate = date.getText().toString();
-        		
-        		String status = "Marital Status: not selected";
-        		if (dMarried.isChecked()) {
-        			status = "Marital Status: Married";
-        		}
-        		
-        		if (dSingle.isChecked()) {
-        			status = "Marital Status: Single";
-        		}
-        		
-        		String ssn = dSocialSec.getText().toString();
-        		
-        		String address1 = dAddress.getText().toString();
-
-        		String address2 = dAddress2.getText().toString();
-
-        		String city = dCity.getText().toString();
-        		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
-        		
-        		int statePos = dState.getSelectedItemPosition();
-        		i.putExtra("selected_state", statePos);
-        		
-        		String zip = dZipCode.getText().toString();
-        		String email = dEmail.getText().toString();
-        		String phone = dPhone.getText().toString(); 
-        		//puts the data in an array 
-   
-        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
-        									email, phone,  address2 };
-        		//puts the array in an intent to be sent to the next activity 
-        		i.putExtra("details", patientDetails);
-        		
-        		startActivity(i);
         	
         	}
         });
