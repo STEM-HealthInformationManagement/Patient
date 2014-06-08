@@ -182,5 +182,7 @@
   <string name="mssg2user">* Marks Required Fields</string>
 
     <string name="title_activity_test_clear">TestClearActivity</string>
+    <string name="httpResponseText">Awaiting Response...</string>
+    <string name="clearFieldMenuItem">Clear All Fields</string>
 
 </resources>

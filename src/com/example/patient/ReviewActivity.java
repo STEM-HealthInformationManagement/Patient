@@ -1,7 +1,9 @@
 package com.example.patient;
 
+import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.ArrayList;
 
 import org.apache.http.HttpEntity;
@@ -13,6 +15,8 @@ import org.apache.http.client.entity.UrlEncodedFormEntity;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.impl.client.DefaultHttpClient;
 import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONArray;
+import org.json.JSONObject;
 
 import com.example.patient.R.color;
 
@@ -184,7 +188,11 @@ public class ReviewActivity extends Activity {
 	String sReaction4;
 	String sReaction5;
 
+	//Get JSON Response Content
+	String responseContent;
 	
+	//Show response content in this textview
+	private TextView httpResponseContentView; 
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -202,6 +210,11 @@ public class ReviewActivity extends Activity {
 		address = (TextView) findViewById(R.id.reviewAddress);
 		email = (TextView) findViewById(R.id.reviewEmail);
 		phone = (TextView) findViewById(R.id.reviewPhone);
+		
+		
+		httpResponseContentView = (TextView) findViewById(R.id.textView1);
+		
+		
 		
 		// employment history section on the review page
 		employerName = (TextView) findViewById(R.id.reviewEmployerCompany);
@@ -265,6 +278,8 @@ public class ReviewActivity extends Activity {
 		reaction3 = (TextView) findViewById(R.id.reviewReaction3);
 		reaction4 = (TextView) findViewById(R.id.reviewReaction4);
 		reaction5 = (TextView) findViewById(R.id.reviewReaction5);
+		
+		submitBtn = (Button) findViewById(R.id.buttonSubmit);
 		
 		//Data of the patient details section from the previous activity
 		final String[] patientDetails = getIntent().getStringArrayExtra("details");
@@ -686,9 +701,28 @@ public class ReviewActivity extends Activity {
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
 //			int numFirst = 11;
 //			int numLast = 9;
-			String fullAddress = iAddress + " " + iAddress2;
-			String[] fullMedicalHistory = medHistory.toString().split("(\\d+)(,\\s*\\d+)*");
+			final String fullAddress = iAddress + " " + iAddress2;
+			final String fullMedicalHistory = medHistory.toString();
+			/*String separator = ", ";
+			int total = medHistory.length * separator.length();
+			for (String s : medHistory) {
+			    total += s.length();
+			}
+
+			final StringBuilder sb = new StringBuilder(total);
+			for (String s : medHistory) {
+			    sb.append(separator).append(s);
+			}*/
 			
+//			String fullMedicalHistory = "";
+//			for(int i = 0; i <= medHistory.length; i++)
+//			{
+//				fullMedicalHistory += medHistory[i] + ", "; 
+//			}
+//			final String fmd = fullMedicalHistory;
+			
+ 
+/**			
 		 	postParameters.add(new BasicNameValuePair("firstName", iFirstName));
 			//postParameters.add(new BasicNameValuePair("middleName", middleName.getText().toString().trim()));
 			postParameters.add(new BasicNameValuePair("lastName", iLastName));
@@ -734,6 +768,9 @@ public class ReviewActivity extends Activity {
 			postParameters.add(new BasicNameValuePair("reaction3", sReaction3));
 			postParameters.add(new BasicNameValuePair("reaction4", sReaction4));
 			postParameters.add(new BasicNameValuePair("reaction5", sReaction5));
+*/			
+			final JSONObject jObj = new JSONObject();
+			
 			
 			
 			//String url = "http://mejikage.no-ip.biz/server/HIS/insert.php  ";
@@ -743,7 +780,7 @@ public class ReviewActivity extends Activity {
 			
 			
 			
-			Toast.makeText(getBaseContext(), "The message is sending!", Toast.LENGTH_LONG).show();
+			Toast.makeText(getBaseContext(), "Submitting Application...", Toast.LENGTH_LONG).show();
 			//yuchen added the following code, you can ignore CustomHttpClient.java
 				new Thread() {
 					@Override
@@ -751,21 +788,167 @@ public class ReviewActivity extends Activity {
 					// TODO Auto-generated method stub
 						try
 						{
+
 							HttpClient httpclient = new DefaultHttpClient();
 						     HttpPost httppost = new HttpPost(url);
-						     httppost.setEntity(new UrlEncodedFormEntity(postParameters));
+						     
+			/*
+			 * From Saurabh: I am trying this new way to enter everything into a JSON Array and Encode it through Java.
+			 * Then, take the information in PHP and Decode it there, as well as output everything there.
+			 */			     
+						   //Enter all information into a JSON ARRAY  
+						    jObj.put("firstName", iFirstName);
+							jObj.put("lastName", iLastName);
+							jObj.put("us_state", iState);
+							jObj.put("zipcode", iZip);
+							jObj.put("gender", iGender);
+							jObj.put("f_address", fullAddress);
+							jObj.put("city", iCity);
+							jObj.put("m_name", iMiddleName);
+							jObj.put("dob", iDOB);
+							jObj.put("mar_status", iStatus);
+							jObj.put("s_s_n", iSSN);
+							jObj.put("email", iEmail);
+							jObj.put("phone", iPhone);
+							jObj.put("emplr_name", empName);
+							jObj.put("emplr_phone", empPhone);
+							jObj.put("emplr_occup", occup);
+							jObj.put("emplr_address", empAddress);
+							jObj.put("contact_name1", cName1);		
+							jObj.put("contact_phone1", cPhone1);	
+							jObj.put("contact_relation1", cRelation1);
+							jObj.put("contact_name2", cName2);		
+							jObj.put("contact_phone2", cPhone2);	
+							jObj.put("contact_relation2", cRelation2);
+							jObj.put("insurance_comp", insComp);
+							jObj.put("insurance_phone", phoneIns);
+							jObj.put("group_num", gNum);
+							jObj.put("policy_num", polNum);
+							jObj.put("holder", holder);
+							jObj.put("relationship", rel);
+							jObj.put("insurance_comp2", insComp2);
+							jObj.put("insurance_phone2", phoneIns2);
+							jObj.put("group_num2", gNum2);
+							jObj.put("policy_num2", polNum2);
+							jObj.put("medicalhistory", medHistory);
+							jObj.put("allergy1", sAllergy1);
+							jObj.put("allergy2", sAllergy2);
+							jObj.put("allergy3", sAllergy3);
+							jObj.put("allergy4", sAllergy4);
+							jObj.put("allergy5", sAllergy5);
+							jObj.put("reaction1", sReaction1);
+							jObj.put("reaction2", sReaction2);
+							jObj.put("reaction3", sReaction3);
+							jObj.put("reaction4", sReaction4);
+							jObj.put("reaction5", sReaction5);
+							
+							JSONArray allJsonObjects = new JSONArray();
+				            allJsonObjects.put(jObj);
+				            
+				            //This sets a custom header for PHP, to read it via
+				            //$_SERVER['HTTP_JSON']; which is assigned to a variable
+				            //and controlled later in the PHP script.
+							httppost.setHeader("json", jObj.toString());
+							httppost.getParams().setParameter("jsonpost", allJsonObjects);
+				            
+							/********************ORIGINAL CODE*******************************/
+						     //httppost.setEntity(new UrlEncodedFormEntity(postParameters));
+							/****************************************************************/
+							System.out.print(jObj);
 						     HttpResponse response = httpclient.execute(httppost);
-						     response.getAllHeaders();
+						     
+						     //response.getAllHeaders();
+						   if(response != null)
+						   {
+						     InputStream is = response.getEntity().getContent();
+						     
+				                BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+				                StringBuilder sb = new StringBuilder();
+				 
+				                String line = null;
+				                
+				                try {
+				                    while ((line = reader.readLine()) != null) {
+				                        sb.append(line + "\n");
+				                    }
+				                } catch (IOException e) {
+				                    e.printStackTrace();
+				                } finally {
+				                    try {
+				                        is.close();
+				                    } catch (IOException e) {
+				                        e.printStackTrace();
+				                    }
+				                }
+				                responseContent = sb.toString();
+				                
+				                //Below is used for testing response when data is delivered to PHP.
+				                
+				                //When Response Text View shows "{'good':'good'}", all information
+				                //including all fields have been stored into the database.
+				                
+				                //When Response Text View shows "{'good':'good'}", some or none
+				                //of the fields have been stored into the database and an ERROR
+				                //statement MAY be show on top of this. If not, an internal server/
+				                //database error probably occured.
+				                
+				                //Un-comment below block of code ONLY for testing!
+/***********************************************************************************************************************				                
+				                runOnUiThread(new Runnable(){
+							    	 public void run() {
+						                httpResponseContentView.setText(responseContent);
+							    	 }
+							    	 });
+***********************************************************************************************************************/				                
+						    if(responseContent.contains("good"))
+						    {
 						     runOnUiThread(new Runnable(){
 						    	 public void run() {
 						    	    Toast.makeText(getApplicationContext(), "Application Successfully Submitted!", Toast.LENGTH_LONG).show();
+					                httpResponseContentView.setText("Your Health Information Application Has Been Submitted!");
+					                submitBtn.setVisibility(View.INVISIBLE);
+					                try {
+										Thread.sleep(4000);
+										 Intent i = new Intent(ReviewActivity.this, MainActivity.class);
+										 startActivity(i);
+										 finish();
+									} catch (InterruptedException e) {
+										// TODO Auto-generated catch block
+										e.printStackTrace();
+									}
 						    	 }
 						    	 });
+						    }
+						    else if(responseContent.contains("bad"))
+						    {
+						    	runOnUiThread(new Runnable(){
+							    	 public void run() {
+							    	    Toast.makeText(getApplicationContext(), "An Error Occurred!", Toast.LENGTH_LONG).show();
+						                httpResponseContentView.setText("We're sorry, an error occured submitting your application.\n"
+						                								+ "Please try again.\n\n"
+						                								+ "If error persists, please try again an hour later.");
+							    	 }
+							    	 });
+						    }
+						   }
+						   else
+						   {
+							   runOnUiThread(new Runnable(){
+							    	 public void run() {
+							    	    Toast.makeText(getApplicationContext(), "Submission "
+							    	    		+ "Unsuccessful! Please Try Again.", Toast.LENGTH_LONG).show();
+							    	 }
+							    	 });
+						   }
 						}
-						catch (Exception e) 
+						catch (final Exception e) 
 						{
 							// TODO Auto-generated catch block
+							 runOnUiThread(new Runnable(){
+						    	 public void run() {
 							Toast.makeText(getBaseContext(), e.getMessage()+"...it didnt send (-_-)", Toast.LENGTH_SHORT).show();
+						    	 }
+					    	 });
 							e.printStackTrace();
 						}
 						

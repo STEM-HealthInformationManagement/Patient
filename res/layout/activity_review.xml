@@ -5,7 +5,7 @@
  
     <RelativeLayout
         android:layout_width="fill_parent"
-        android:layout_height="1977dp"
+        android:layout_height="2545dp"
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
@@ -843,6 +843,16 @@
             android:layout_alignParentBottom="true"
             android:layout_alignRight="@+id/reviewInsuranceCompany"
             android:text="Submit Application" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/reviewReaction5"
+            android:layout_alignRight="@+id/Button05"
+            android:layout_below="@+id/reviewReaction5"
+            android:layout_marginTop="50dp"
+            android:text="@string/httpResponseText" />
 
 </RelativeLayout>
 

@@ -29,8 +29,18 @@ public class MainActivity extends Activity {
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
     }
-   
 
+    //Prevent BACK button from being pressed.
+    //Therefore, the application will no longer quit when BACK button is pressed.
+    //Also when application is submitted, pressing the BACK button will no longer
+    //go to the previous activity.
+    @Override
+    public void onBackPressed() {
+
+       return;
+    }
+
+    
     } 
 
 

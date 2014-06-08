@@ -8,10 +8,12 @@ import java.util.StringTokenizer;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
+import android.content.ClipData.Item;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
@@ -53,7 +55,7 @@ public class NextActivity extends Activity {
 	private String title; 
 	Context context;
 	
-	
+//	Menu menu;
 	
 	
 	int fromReview;
@@ -63,6 +65,7 @@ public class NextActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.screen2);
+//		this.getMenuInflater().inflate(R.menu.next, menu);
 		
 		date = (EditText) findViewById(R.id.editText_dob);
 		context = getApplicationContext();
@@ -292,7 +295,7 @@ public class NextActivity extends Activity {
         		
         		 else   {
         			//the intent is assigned with a value that start the next activity
-                		if (firstName.equals("") || lastName.equals("") || genderSelected.equals("")|| birthDate.equals("")|| ssn.equals("")|| address1.equals("")|| city.equals("")|| state.equals("")|| zip.equals("")|| phone.equals("")|| address2.equals("") ){
+                		if (firstName.equals("") || lastName.equals("")){
         		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
 					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
@@ -377,17 +380,50 @@ public class NextActivity extends Activity {
 				clearAll((ViewGroup) findViewById(R.id.RelativeLayout1));
 			}
 		});
-		
-		
-        
+		        
 	}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.next, menu);
-		return true;
+		return super.onCreateOptionsMenu(menu);
+		
+		//Clear All Fields Menu Item
+		/*
+		MenuItem clearFieldsMenuItem = (MenuItem) findViewById(R.id.item1);
+		clearFieldsMenuItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener()
+				{
+					@Override
+					public boolean onMenuItemClick(MenuItem item) {
+						clearAll((ViewGroup) findViewById(R.id.RelativeLayout1));
+						return false;
+					}
+			
+				});
+		*/
+		
 	}
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+	    // Handle presses on the action bar items
+	    switch (item.getItemId()) {
+	        case R.id.action_settings:
+	        	runOnUiThread(new Runnable(){
+			    	 public void run() {
+			    	    Toast.makeText(getApplicationContext(), "Settings not yet available!", Toast.LENGTH_SHORT).show();
+			    	 }
+			    	 });
+	            return true;
+	        case R.id.item1:
+	        	clearAll((ViewGroup) findViewById(R.id.RelativeLayout1));
+	            return true;
+	        default:
+	            return super.onOptionsItemSelected(item);
+	    }
+	}
+	
+	
 	
 	private class PickDate implements DatePickerDialog.OnDateSetListener {
 

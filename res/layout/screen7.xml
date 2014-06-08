@@ -260,7 +260,7 @@
             android:text="@string/delete_allergy" />
 
         <TextView
-            android:id="@+id/textView1"
+            android:id="@+id/httpResponseTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignRight="@+id/button3"
