@@ -909,7 +909,7 @@ public class ReviewActivity extends Activity {
 					                submitBtn.setVisibility(View.INVISIBLE);
 					                try {
 										Thread.sleep(4000);
-										 Intent i = new Intent(ReviewActivity.this, MainActivity.class);
+										 Intent i = new Intent(ReviewActivity.this, ThankYou.class);
 										 startActivity(i);
 										 finish();
 									} catch (InterruptedException e) {
@@ -1034,5 +1034,11 @@ public class ReviewActivity extends Activity {
 		getMenuInflater().inflate(R.menu.review, menu);
 		return true;
 	}
+	
+	   @Override
+	    public void onBackPressed() {
+
+	       return;
+	    }	
 
 }
