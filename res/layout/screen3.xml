@@ -20,7 +20,7 @@
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
             android:background="#CFDBC5"
-            android:textAppearance="?android:attr/textAppearanceLarge" />          
+            android:textAppearance="?android:attr/textAppearanceMedium" />          
 
         <!-- Employer textview -->
         <TextView
@@ -283,9 +283,9 @@
             android:id="@+id/httpResponseTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_below="@+id/editText_contact2relationship"
-            android:layout_marginTop="16dp"
+            android:layout_alignBaseline="@+id/textView_employmenthistory"
+            android:layout_alignBottom="@+id/textView_employmenthistory"
+            android:layout_alignParentRight="true"
             android:text="@string/mssg2user"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
