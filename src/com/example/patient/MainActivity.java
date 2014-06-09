@@ -1,11 +1,16 @@
 package com.example.patient;
 
 import android.app.Activity;
+import android.content.Context;
 import android.content.Intent;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
@@ -13,13 +18,32 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        Button b = (Button) findViewById(R.id.btn_Confirm);
+        final Button b = (Button) findViewById(R.id.btn_Confirm);
+        final TextView tv1 = (TextView) findViewById(R.id.textView1);
+        b.setVisibility(View.INVISIBLE);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             Intent i = new Intent(MainActivity.this, NextActivity.class);
             startActivity(i);
             }
         });
+        Handler handler = new Handler(); 
+        handler.postDelayed(new Runnable() { 
+             public void run() { 
+                  if(isNetworkAvailable())
+                  {
+                	  b.setVisibility(View.VISIBLE);
+                	  tv1.setText("");
+                  }
+                  else
+                  {
+                	  b.setVisibility(View.INVISIBLE);
+                	  tv1.setText("Internet Connection Required!");;
+                  }
+             } 
+        }, 2000); 
+	        
+
     }
 
 
@@ -38,6 +62,13 @@ public class MainActivity extends Activity {
     public void onBackPressed() {
 
        return;
+    }
+    
+    private boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager 
+              = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }
 
     
