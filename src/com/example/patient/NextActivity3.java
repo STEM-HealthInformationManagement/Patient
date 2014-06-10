@@ -136,7 +136,7 @@ public class NextActivity3 extends Activity {
 						C_self_insured.setChecked(false);
 					}
 					
-					C_secondary.setEnabled(true);
+					// C_secondary.setEnabled(true);
 					
 					//enables the textviews and editTexts associated 
 					//with the checkbox
@@ -272,7 +272,7 @@ public class NextActivity3 extends Activity {
 					group_Num_Sec.setVisibility(View.VISIBLE);
 					group_Num_Sec_In.setFocusable(true);
 					group_Num_Sec_In.setVisibility(View.VISIBLE);
-					policy_Num.setVisibility(View.VISIBLE);
+					policy_Num_Sec.setVisibility(View.VISIBLE);//found it
 					policy_Num_Sec_In.setFocusable(true);
 					policy_Num_Sec_In.setVisibility(View.VISIBLE);
 					
