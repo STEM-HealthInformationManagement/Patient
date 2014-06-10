@@ -22,14 +22,6 @@
         android:text="@string/btnStart" />
     
 <!-- Logo Image | Ace -->
-    <ImageView
-        android:id="@+id/ImageView_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:contentDescription="@string/icon"
-        android:src="@drawable/logo" />
 
     <TextView
         android:id="@+id/textView1"
@@ -38,5 +30,14 @@
         android:layout_above="@+id/btn_Confirm"
         android:layout_centerHorizontal="true"
         android:gravity="center" />
+
+    <ImageView
+        android:id="@+id/ImageView_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/icon"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

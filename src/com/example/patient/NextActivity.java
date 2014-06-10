@@ -205,6 +205,41 @@ public class NextActivity extends Activity {
         		String firstName = dFirstName.getText().toString();
        		 String middleName = dMiddleName.getText().toString();
        	    String  lastName = dLastName.getText().toString();
+       	    
+       	 String ssn = dSocialSec.getText().toString();
+ 		String address1 = dAddress.getText().toString();
+ 		String address2 = dAddress2.getText().toString();
+ 		String genderSelected = "Gender: not selected";
+		if (dGenderFem.isChecked()) {
+			genderSelected = "Gender: Female";			
+		}
+		
+		if (dGenderMale.isChecked()) {
+			genderSelected = "Gender: Male";
+		}
+		        		
+		String birthDate = date.getText().toString();
+		
+		String status = "Marital Status: not selected";
+		if (dMarried.isChecked()) {
+			status = "Marital Status: Married";
+		}
+		
+		if (dSingle.isChecked()) {
+			status = "Marital Status: Single";
+		}
+		
+	
+
+		String city = dCity.getText().toString();
+		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
+		
+		int statePos = dState.getSelectedItemPosition();
+		
+		
+		String zip = dZipCode.getText().toString();
+		String email = dEmail.getText().toString();
+		String phone = dPhone.getText().toString(); 
 			
         		//Intent i;
         		if (fromReview == 1) {
@@ -243,45 +278,15 @@ public class NextActivity extends Activity {
 	        		
 	        		//gets the data entered by the user
 	        	
-	        		firstName = dFirstName.getText().toString();
-	        		middleName = dMiddleName.getText().toString();
-	        		lastName = dLastName.getText().toString();
 	        		
-	        		String genderSelected = "Gender: not selected";
-					if (dGenderFem.isChecked()) {
-						genderSelected = "Gender: Female";			
-	        		}
-					
-					if (dGenderMale.isChecked()) {
-	        			genderSelected = "Gender: Male";
-	        		}
-	        		        		
-	        		String birthDate = date.getText().toString();
+	        	
+	        	
 	        		
-	        		String status = "Marital Status: not selected";
-	        		if (dMarried.isChecked()) {
-	        			status = "Marital Status: Married";
-	        		}
 	        		
-	        		if (dSingle.isChecked()) {
-	        			status = "Marital Status: Single";
-	        		}
-	        		
-	        		String ssn = dSocialSec.getText().toString();
-	        		
-	        		String address1 = dAddress.getText().toString();
 
-	        		String address2 = dAddress2.getText().toString();
-
-	        		String city = dCity.getText().toString();
-	        		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
 	        		
-	        		int statePos = dState.getSelectedItemPosition();
 	        		i.putExtra("selected_state", statePos);
-	        		
-	        		String zip = dZipCode.getText().toString();
-	        		String email = dEmail.getText().toString();
-	        		String phone = dPhone.getText().toString(); 
+	        	 
 	        		//puts the data in an array 
 	   
 	        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
@@ -295,7 +300,11 @@ public class NextActivity extends Activity {
         		
         		 else   {
         			//the intent is assigned with a value that start the next activity
-                		if (firstName.equals("") || lastName.equals("")){
+        			 
+        			 //This If Parameter below is too damn High .. i mean .. long ... Suggest switching it to a for-loop that checks the patientDetails Array for empty/null strings.
+                		if (firstName.equals("") || lastName.equals("")|| middleName.equals("")||genderSelected.equals("Gender: not selected")
+                				|| birthDate.equals("")||status.equals("Marital Status: not selected") || ssn.equals("")|| address1.equals("") 
+                				|| city.equals("")|| state.equals("")|| zip.equals("")|| phone.equals("") ){
         		      			  runOnUiThread(new Runnable(){
 					    	 public void run() {
 					    	    Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
@@ -311,48 +320,9 @@ public class NextActivity extends Activity {
 					    		 
 					        		//Save everything in the intent again, and start new intent.
 					    		  
-					        		
+					    		 i.putExtra("selected_state", statePos);
 					        		//gets the data entered by the user
 					        	
-					        		firstName = dFirstName.getText().toString();
-					        		middleName = dMiddleName.getText().toString();
-					        		lastName = dLastName.getText().toString();
-					        		
-					        		String genderSelected = "Gender: not selected";
-									if (dGenderFem.isChecked()) {
-										genderSelected = "Gender: Female";			
-					        		}
-									
-									if (dGenderMale.isChecked()) {
-					        			genderSelected = "Gender: Male";
-					        		}
-					        		        		
-					        		String birthDate = date.getText().toString();
-					        		
-					        		String status = "Marital Status: not selected";
-					        		if (dMarried.isChecked()) {
-					        			status = "Marital Status: Married";
-					        		}
-					        		
-					        		if (dSingle.isChecked()) {
-					        			status = "Marital Status: Single";
-					        		}
-					        		
-					        		String ssn = dSocialSec.getText().toString();
-					        		
-					        		String address1 = dAddress.getText().toString();
-
-					        		String address2 = dAddress2.getText().toString();
-
-					        		String city = dCity.getText().toString();
-					        		String state = dState.getItemAtPosition(dState.getSelectedItemPosition()).toString();
-					        		
-					        		int statePos = dState.getSelectedItemPosition();
-					        		i.putExtra("selected_state", statePos);
-					        		
-					        		String zip = dZipCode.getText().toString();
-					        		String email = dEmail.getText().toString();
-					        		String phone = dPhone.getText().toString(); 
 					        		//puts the data in an array 
 					   
 					        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,

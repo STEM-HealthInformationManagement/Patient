@@ -92,7 +92,7 @@
     <string name="state">*State</string>
     <string name="zipcode">*Zip Code</string>
     <string name="email">Email</string>
-    <string name="phone">Phone</string>
+    <string name="phone">*Phone</string>
     <string name="next2">Next</string>
     <string name="employmenthistory">Employment History</string>
     <string name="employercompany">*Employer</string>

@@ -125,7 +125,7 @@ public class ReviewActivity extends Activity {
 	String iZip;
 	String iEmail;
 	String iPhone;
-	String iAddress2;
+	
 	
 	String empName;
 	String empPhone;
@@ -303,7 +303,7 @@ public class ReviewActivity extends Activity {
 		iZip = patientDetails[10];
 		iEmail = patientDetails[11];
 		iPhone = patientDetails[12];
-		iAddress2 = patientDetails[13];
+		
 		
 		empName = employmentHist[0];
 		empPhone = employmentHist[1];
@@ -382,12 +382,9 @@ public class ReviewActivity extends Activity {
 		marital.setText(iStatus);
 		socialSec.setText("Social Security Number: " + iSSN);
 		
-		if (iAddress2.equals("")||iAddress2.isEmpty()){
+		
 			address.setText("Address: " + iAddress + ", " + iCity + ", " + iState + " " + iZip);
-		}
-		else {
-			address.setText("Address: " + iAddress + " " + iAddress2 + ", " + iCity + ", " + iState + " " + iZip);
-		}
+		
 		
 		email.setText("Email: " + iEmail);
 		phone.setText("Phone: " + iPhone);
@@ -701,7 +698,7 @@ public class ReviewActivity extends Activity {
 //		 	postParameters.add(new BasicNameValuePair("firstName", firstName.getText().toString().trim()));
 //			int numFirst = 11;
 //			int numLast = 9;
-			final String fullAddress = iAddress + " " + iAddress2;
+			final String fullAddress = iAddress;
 			final String fullMedicalHistory = medHistory.toString();
 			/*String separator = ", ";
 			int total = medHistory.length * separator.length();

@@ -263,8 +263,9 @@
             android:id="@+id/httpResponseTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignRight="@+id/button3"
-            android:layout_below="@+id/editText_reaction5"
+            android:layout_above="@+id/textView_medication_allergies"
+            android:layout_alignLeft="@+id/button1"
+            android:layout_marginLeft="14dp"
             android:text="@string/mssg2user"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
