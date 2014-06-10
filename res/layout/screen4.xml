@@ -74,24 +74,15 @@
             android:text="@string/selfin" />
 
         <!-- if yes textview -->
-        <TextView
-            android:id="@+id/textView_ifyes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignLeft="@id/ChB_self_insured"
-            android:layout_below="@+id/ChB_self_insured"
-            android:layout_marginLeft="15dp"
-            android:layout_marginTop="20dp"
-            android:text="@string/ifyes"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <!-- Policy holder's name -->
+
         <TextView
             android:id="@+id/textView_policyholder"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/textView_ifyes"
-            android:layout_toRightOf="@+id/textView_ifyes"
+            android:layout_alignLeft="@id/ChB_self_insured"
+            android:layout_below="@+id/ChB_self_insured"
             android:layout_marginTop="20dp"
             android:text="@string/pohns"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -129,17 +120,20 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <!-- Insurance company's phone2 -->
+
         <TextView
             android:id="@+id/textView_insurancecompanyphone2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView_insurancecompany2"
+            android:layout_alignRight="@+id/textView_policyrelationship"
             android:layout_below="@+id/textView_insurancecompany2"
             android:layout_marginTop="20dp"
             android:text="@string/incompn2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <!-- Insurance company group number2 -->
+
         <TextView
             android:id="@+id/textView_insurancecompanygroup2"
             android:layout_width="wrap_content"
@@ -147,15 +141,18 @@
             android:layout_alignLeft="@+id/textView_insurancecompanyphone2"
             android:layout_below="@+id/textView_insurancecompanyphone2"
             android:layout_marginTop="20dp"
+            android:layout_toLeftOf="@+id/editText_insurancephone2"
             android:text="@string/incompgr2"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <!-- Insurance company policy number2 -->
+
         <TextView
             android:id="@+id/textView_insurancecompanypolicy2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@+id/textView_insurancecompanygroup2"
+            android:layout_alignRight="@+id/textView_insurancecompanygroup2"
             android:layout_below="@+id/textView_insurancecompanygroup2"
             android:layout_marginTop="20dp"
             android:text="@string/incomppo2"
@@ -228,37 +225,10 @@
             android:inputType="text" />
 
         <!-- Insurance phone2 textbox -->
-        <EditText
-            android:id="@+id/editText_insurancephone2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView_insurancecompanyphone2"
-            android:layout_alignBottom="@+id/textView_insurancecompanyphone2"
-            android:layout_toRightOf="@+id/textView_policyrelationship"
-            android:ems="10"
-            android:inputType="phone" />
 
         <!-- Insurance group number2 textbox -->
-        <EditText
-            android:id="@+id/editText_insurancegroupnumber2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView_insurancecompanygroup2"
-            android:layout_alignBottom="@+id/textView_insurancecompanygroup2"
-            android:layout_toRightOf="@+id/textView_policyrelationship"
-            android:ems="10"
-            android:inputType="number" />
 
         <!-- Insurance policy number2 textbox -->
-        <EditText
-            android:id="@+id/editText_insurancepolicynumber2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBaseline="@+id/textView_insurancecompanypolicy2"
-            android:layout_alignBottom="@+id/textView_insurancecompanypolicy2"
-            android:layout_toRightOf="@+id/textView_policyrelationship"
-            android:ems="10"
-            android:inputType="number" />
 
         <!-- Insurance company textbox -->
         <EditText
@@ -293,6 +263,36 @@
             android:background="#CFDBC5"
             android:text="@string/insurance"
             android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <EditText
+            android:id="@+id/editText_insurancephone2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_insurancecompanyphone2"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="phone" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/editText_insurancegroupnumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_insurancecompanygroup2"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="number" />
+
+        <EditText
+            android:id="@+id/editText_insurancepolicynumber2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_insurancecompanypolicy2"
+            android:layout_alignParentRight="true"
+            android:ems="10"
+            android:inputType="number" />
 
     </RelativeLayout>
 

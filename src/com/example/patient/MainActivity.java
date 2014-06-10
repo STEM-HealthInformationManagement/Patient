@@ -38,7 +38,7 @@ public class MainActivity extends Activity {
                   else
                   {
                 	  b.setVisibility(View.INVISIBLE);
-                	  tv1.setText("Internet Connection Required!");;
+                	  tv1.setText("Internet Connection Required!");
                   }
              } 
         }, 2000); 
