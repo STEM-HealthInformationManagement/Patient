@@ -194,4 +194,14 @@
         android:layout_centerHorizontal="true"
         android:text="@string/clear6" />
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/httpResponseTextView"
+        android:layout_alignBottom="@+id/httpResponseTextView"
+        android:layout_alignRight="@+id/checkBox7"
+        android:text="@string/mssg2user"
+        android:textAppearance="?android:attr/textAppearanceSmall" />
+
 </RelativeLayout>

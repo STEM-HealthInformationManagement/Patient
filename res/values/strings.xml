@@ -109,7 +109,7 @@
     <string name="emcon1re">*Relationship with Patient</string>
     <string name="emcon2re">Relationship with Patient</string>
     <string name="next3">Next</string>
-    <string name="insurance">*Insurance</string>
+    <string name="insurance">Insurance</string>
     <string name="checkcover">Check if covered</string>
     <string name="incomp">*Insurance Company</string>
     <string name="incomp2">*Insurance Company</string>
