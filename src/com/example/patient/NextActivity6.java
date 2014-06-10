@@ -90,32 +90,32 @@ public class NextActivity6 extends Activity {
 		reactionT5 =  (TextView) findViewById(R.id.textView_reaction5);
 		
 		//Add/delete allergy button invisible
-		addAllergyButton.setVisibility(View.INVISIBLE);
-		deleteAllergyButton.setVisibility(View.INVISIBLE);
+		addAllergyButton.setVisibility(View.GONE);
+		deleteAllergyButton.setVisibility(View.GONE);
 		
 		allergy1.setEnabled(false);
-		allergy2.setVisibility(View.INVISIBLE);
-		allergy3.setVisibility(View.INVISIBLE);
-		allergy4.setVisibility(View.INVISIBLE);
-		allergy5.setVisibility(View.INVISIBLE);
+		allergy2.setVisibility(View.GONE);
+		allergy3.setVisibility(View.GONE);
+		allergy4.setVisibility(View.GONE);
+		allergy5.setVisibility(View.GONE);
 		
 		allergyT1.setEnabled(false);
-		allergyT2.setVisibility(View.INVISIBLE);
-		allergyT3.setVisibility(View.INVISIBLE);
-		allergyT4.setVisibility(View.INVISIBLE);
-		allergyT5.setVisibility(View.INVISIBLE);
+		allergyT2.setVisibility(View.GONE);
+		allergyT3.setVisibility(View.GONE);
+		allergyT4.setVisibility(View.GONE);
+		allergyT5.setVisibility(View.GONE);
 
 		reaction1.setEnabled(false);
-		reaction2.setVisibility(View.INVISIBLE);
-		reaction3.setVisibility(View.INVISIBLE);
-		reaction4.setVisibility(View.INVISIBLE);
-		reaction5.setVisibility(View.INVISIBLE);
+		reaction2.setVisibility(View.GONE);
+		reaction3.setVisibility(View.GONE);
+		reaction4.setVisibility(View.GONE);
+		reaction5.setVisibility(View.GONE);
 		
 		reactionT1.setEnabled(false);
-		reactionT2.setVisibility(View.INVISIBLE);
-		reactionT3.setVisibility(View.INVISIBLE);
-		reactionT4.setVisibility(View.INVISIBLE);
-		reactionT5.setVisibility(View.INVISIBLE);
+		reactionT2.setVisibility(View.GONE);
+		reactionT3.setVisibility(View.GONE);
+		reactionT4.setVisibility(View.GONE);
+		reactionT5.setVisibility(View.GONE);
 		
 		//tasks the activity performs when it is started by the review page
 		if (fromReview == 1){
@@ -281,31 +281,31 @@ public class NextActivity6 extends Activity {
         	public void onClick(View v) {
         		if (allergy5.isShown() && reaction5.isShown())
         		{
-        			allergy5.setVisibility(View.INVISIBLE);
-        			reaction5.setVisibility(View.INVISIBLE);
-        			allergyT5.setVisibility(View.INVISIBLE);
-        			reactionT5.setVisibility(View.INVISIBLE);
+        			allergy5.setVisibility(View.GONE);
+        			reaction5.setVisibility(View.GONE);
+        			allergyT5.setVisibility(View.GONE);
+        			reactionT5.setVisibility(View.GONE);
         		}
         		else if (allergy4.isShown() && reaction4.isShown())
         		{
-        			allergy4.setVisibility(View.INVISIBLE);
-        			reaction4.setVisibility(View.INVISIBLE);
-        			allergyT4.setVisibility(View.INVISIBLE);
-        			reactionT4.setVisibility(View.INVISIBLE);
+        			allergy4.setVisibility(View.GONE);
+        			reaction4.setVisibility(View.GONE);
+        			allergyT4.setVisibility(View.GONE);
+        			reactionT4.setVisibility(View.GONE);
         		}
         		else if (allergy3.isShown() && reaction3.isShown())
         		{
-        			allergy3.setVisibility(View.INVISIBLE);
-        			reaction3.setVisibility(View.INVISIBLE);
-        			allergyT3.setVisibility(View.INVISIBLE);
-        			reactionT3.setVisibility(View.INVISIBLE);
+        			allergy3.setVisibility(View.GONE);
+        			reaction3.setVisibility(View.GONE);
+        			allergyT3.setVisibility(View.GONE);
+        			reactionT3.setVisibility(View.GONE);
         		}
         		else if (allergy2.isShown() && reaction2.isShown())
         		{
-        			allergy2.setVisibility(View.INVISIBLE);
-        			reaction2.setVisibility(View.INVISIBLE);
-        			allergyT2.setVisibility(View.INVISIBLE);
-        			reactionT2.setVisibility(View.INVISIBLE);
+        			allergy2.setVisibility(View.GONE);
+        			reaction2.setVisibility(View.GONE);
+        			allergyT2.setVisibility(View.GONE);
+        			reactionT2.setVisibility(View.GONE);
         		}
         	}
 		});
