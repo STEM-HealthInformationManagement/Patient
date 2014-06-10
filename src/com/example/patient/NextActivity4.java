@@ -128,7 +128,7 @@ public class NextActivity4 extends Activity
         			highCol = "High Cholesterol";
         		
         		if (C_highPress.isChecked())
-        			highPress = "High Blood Prressure";
+        			highPress = "High Blood Pressure";
         		
         		if (C_diabetes.isChecked())
         			diabetes = "Diabetes";
