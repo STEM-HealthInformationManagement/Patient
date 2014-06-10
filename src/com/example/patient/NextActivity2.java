@@ -24,6 +24,24 @@ public class NextActivity2 extends Activity {
 	private EditText c2Phone;
 	private EditText c2Relation;
 	int fromReview;
+	
+	String empName;
+    String empPhone;
+    String occup;
+    String empAddress;
+    
+    final String[] employment = null;
+    
+    //gets the data from the emergency contact section
+    String cName1;
+    String cPhone1;
+    String cRelation1;
+    
+    String cName2;
+    String cPhone2;
+    String cRelation2;
+    
+    final String[] emergency = null;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -132,21 +150,21 @@ public class NextActivity2 extends Activity {
             
             
             //gets the data from the employment history section
-            String empName = employerName.getText().toString();
-            String empPhone = employerPhone.getText().toString();
-            String occup = occupation.getText().toString();
-            String empAddress = employerAddress.getText().toString();
+            empName = employerName.getText().toString();
+            empPhone = employerPhone.getText().toString();
+            occup = occupation.getText().toString();
+            empAddress = employerAddress.getText().toString();
             
             final String[] employment = { empName, empPhone, occup, empAddress };
             
             //gets the data from the emergency contact section
-            String cName1 = c1Name.getText().toString();
-            String cPhone1 = c1Phone.getText().toString();
-            String cRelation1 = c1Relation.getText().toString();
+            cName1 = c1Name.getText().toString();
+            cPhone1 = c1Phone.getText().toString();
+            cRelation1 = c1Relation.getText().toString();
             
-            String cName2 = c2Name.getText().toString();
-            String cPhone2 = c2Phone.getText().toString();
-            String cRelation2 = c2Relation.getText().toString();
+            cName2 = c2Name.getText().toString();
+            cPhone2 = c2Phone.getText().toString();
+            cRelation2 = c2Relation.getText().toString();
             
             final String[] emergency = {cName1, cPhone1, cRelation1, 
             							cName2, cPhone2, cRelation2 };

@@ -1305,6 +1305,7 @@ containing a value of this type.
          */
         public static final int abc_max_action_buttons=0x7f090000;
         public static final int nine=0x7f090002;
+        public static final int ten=0x7f090003;
     }
     public static final class layout {
         public static final int abc_action_bar_decor=0x7f030000;

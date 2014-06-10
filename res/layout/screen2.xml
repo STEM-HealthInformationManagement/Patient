@@ -327,7 +327,9 @@
             android:layout_alignRight="@+id/editText_email"
             android:layout_toRightOf="@+id/textView_zipcode"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:maxLength="@integer/ten"
+             />
 
         <!-- DOB date picker -->
         <ImageButton

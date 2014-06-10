@@ -433,4 +433,11 @@ public class NextActivity extends Activity {
 	        }	        
 	    }
 	}
+	
+	   @Override
+	    public void onBackPressed() {
+
+	       return;
+	    }	
+	
 }
