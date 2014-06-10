@@ -37,7 +37,7 @@ public class NextActivity extends Activity {
 	RadioButton dSingle;
 	EditText dSocialSec;
 	EditText dAddress;
-	EditText dAddress2;
+
 	EditText dCity;
 	Spinner dState;
 	EditText dZipCode;
@@ -88,7 +88,7 @@ public class NextActivity extends Activity {
 		
 		dSocialSec = (EditText) findViewById(R.id.editText_ssn);
 		dAddress = (EditText) findViewById(R.id.editText_Address1);
-		dAddress2 = (EditText) findViewById(R.id.editText_Address2);
+	
 		dCity = (EditText) findViewById(R.id.editText_city);
 		
 		dState = (Spinner) findViewById(R.id.spinner_states); 
@@ -120,7 +120,7 @@ public class NextActivity extends Activity {
 			final String iEmail = patientDetails[11];
 			final String iPhone = patientDetails[12];
 			
-			final String iAddress2 = patientDetails[13];
+			
 			//fill out the page with the retrieved data through the review page
 			dFirstName.setText(iFirstName);
 			dMiddleName.setText(iMiddleName);
@@ -144,7 +144,7 @@ public class NextActivity extends Activity {
 			
 			dSocialSec.setText(iSSN);
 			dAddress.setText(iAddress);
-			dAddress2.setText(iAddress2);
+			
 			dCity.setText(iCity);			
 			dState.setSelection(getIntent().getIntExtra("selected_state", -1));
 			dZipCode.setText(iZip);
@@ -208,7 +208,6 @@ public class NextActivity extends Activity {
        	    
        	 String ssn = dSocialSec.getText().toString();
  		String address1 = dAddress.getText().toString();
- 		String address2 = dAddress2.getText().toString();
  		String genderSelected = "Gender: not selected";
 		if (dGenderFem.isChecked()) {
 			genderSelected = "Gender: Female";			
@@ -290,7 +289,7 @@ public class NextActivity extends Activity {
 	        		//puts the data in an array 
 	   
 	        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
-	        									email, phone,  address2 };
+	        									email, phone };
 	        		//puts the array in an intent to be sent to the next activity 
 	        		i.putExtra("details", patientDetails);
 	        		
@@ -326,7 +325,7 @@ public class NextActivity extends Activity {
 					        		//puts the data in an array 
 					   
 					        		String patientDetails[] = { firstName, middleName, lastName, genderSelected, birthDate, status, ssn, address1, city, state, zip,
-					        									email, phone,  address2 };
+					        									email, phone };
 					        		//puts the array in an intent to be sent to the next activity 
 					        		i.putExtra("details", patientDetails);
 					        		

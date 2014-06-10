@@ -223,24 +223,14 @@
             android:inputType="textPostalAddress" />
 
         <!-- Address line 2 textbox -->
-        <EditText
-            android:id="@+id/editText_Address2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignRight="@id/editText_firstname"
-            android:layout_below="@+id/textView_Address"
-            android:layout_marginTop="20dp"
-            android:layout_toRightOf="@+id/textView_Address"
-            android:ems="10"
-            android:inputType="textPostalAddress" />
 
         <!-- City textview -->
-        <TextView
+        <TextView
             android:id="@+id/textView_city"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignLeft="@id/textView_firstname"
-            android:layout_below="@+id/editText_Address2"
+            android:layout_below="@+id/textView_Address"
             android:layout_marginTop="20dp"
             android:text="@string/city"
             android:textAppearance="?android:attr/textAppearanceMedium" />
@@ -399,11 +389,8 @@
             android:id="@+id/textView_mssg2user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentBottom="false"
-            android:layout_below="@+id/editText_phone"
-            android:layout_centerInParent="false"
-            android:layout_marginTop="7dp"
-            android:layout_toRightOf="@+id/textView_phone"
+            android:layout_alignBottom="@+id/textView_title1"
+            android:layout_alignRight="@+id/imageButton_date"
             android:text="@string/mssg2user"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
