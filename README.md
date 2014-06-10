@@ -18,4 +18,16 @@ emergencyphone
 emergencyaddress
 
 
+
 ** Things to be added / fixed **
+
+Add if/else for whole program
+
+fix null for medical history
+
+fix back button
+
+fix insurance page
+
+change invisible to Gone for insurance fields
+
