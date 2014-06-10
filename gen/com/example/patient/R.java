@@ -1013,7 +1013,7 @@ containing a value of this type.
         public static final int ChB_covered=0x7f0500ca;
         public static final int ChB_secondary=0x7f0500d3;
         public static final int ChB_self_insured=0x7f0500d0;
-        public static final int ImageView_logo=0x7f05003d;
+        public static final int ImageView_logo=0x7f05003e;
         public static final int RelativeLayout1=0x7f05008d;
         public static final int ScrollView1=0x7f05008c;
         public static final int ScrollView2=0x7f0500b0;
@@ -1222,7 +1222,7 @@ containing a value of this type.
         public static final int submit_area=0x7f050039;
         public static final int tabMode=0x7f050002;
         public static final int textName_lastname=0x7f050097;
-        public static final int textView1=0x7f05003e;
+        public static final int textView1=0x7f05003d;
         public static final int textView2=0x7f05008b;
         public static final int textView_Address=0x7f0500a1;
         public static final int textView_allergy2=0x7f050100;
