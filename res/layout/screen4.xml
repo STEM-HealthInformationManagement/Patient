@@ -294,6 +294,15 @@
             android:ems="10"
             android:inputType="number" />
 
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ChB_covered"
+            android:layout_toRightOf="@+id/ChB_covered"
+            android:text="@string/mssg2user"
+            android:textAppearance="?android:attr/textAppearanceSmall" />
+
     </RelativeLayout>
 
 </ScrollView>
