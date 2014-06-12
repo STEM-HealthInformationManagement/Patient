@@ -1,5 +1,7 @@
 package com.example.patient;
 
+import com.example.patient.R;
+
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
