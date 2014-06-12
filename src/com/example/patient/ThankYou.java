@@ -18,7 +18,7 @@ public class ThankYou extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_thank_you);
 		
-		TextView continueTextView = (TextView) findViewById(R.id.textView2);
+		TextView continueTextView = (TextView) findViewById(R.id.textView2); // Alpha parameters, used for transparency (SCALE: 0.0 [Completely Transparent] - 1.0 [Fully Visible])
 		Animation continueBlinker = new AlphaAnimation(0.3f, 1.0f);
 		continueBlinker.setDuration(500); //Time Of blink
 		continueBlinker.setStartOffset(20);
