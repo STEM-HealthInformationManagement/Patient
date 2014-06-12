@@ -1,9 +1,5 @@
 package com.example.patient;
 
-import java.util.ArrayList;
-
-import com.example.patient.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -35,7 +31,6 @@ public class NextActivity4 extends Activity
 	private CheckBox C_earProb;
 	private CheckBox C_depression;
 	private Button clearButton;
-	ArrayList<String> medHistory = new ArrayList<String>();
 	
 	int fromReview;
 	@Override
@@ -105,109 +100,88 @@ public class NextActivity4 extends Activity
         		//Data of the insurance section from the previous activity
         		String[] insurance = getIntent().getStringArrayExtra("insurance_Data");
         		
-        		String heartD = "";
-        		String highCol = "";
-        		String highPress = "";
-        		String diabetes = "";
-        		String arthritis = "";
-        		String hearLoss = "";
-        		String kidneyStn = "";
-        		String prostate = "";
-        		String correctLens = "";
-        		String neuroProb = "";
-        		String asthma = "";
-        		String cancer = "";
-        		String sTD = "";
-        		String anemia = "";
-        		String seizures = "";
-        		String ulcers = "";
-        		String stroke = "";
-        		String earProb = "";
-        		String depression = "";
-        		
+        		String heartD = null;
+        		String highCol = null;
+        		String highPress = null;
+        		String diabetes = null;
+        		String arthritis = null;
+        		String hearLoss = null;
+        		String kidneyStn = null;
+        		String prostate = null;
+        		String correctLens = null;
+        		String neuroProb = null;
+        		String asthma = null;
+        		String cancer = null;
+        		String sTD = null;
+        		String anemia = null;
+        		String seizures = null;
+        		String ulcers = null;
+        		String stroke = null;
+        		String earProb = null;
+        		String depression = null;
 
         		if (C_heartD.isChecked()){
         			heartD = "Heart Disease";
-        			medHistory.add(heartD);
         		}
         		
-        		if (C_highCol.isChecked()){
+        		if (C_highCol.isChecked())
         			highCol = "High Cholesterol";
-        			medHistory.add(highCol);
-        		}
-        		if (C_highPress.isChecked()){
-        			highPress = "High Blood Prressure";
-        			medHistory.add(highPress);
-        		}
-        		if (C_diabetes.isChecked()){
-        			diabetes = "Diabetes";
-        			medHistory.add(diabetes);
-        		}
-        		if (C_arthritis.isChecked()){
-        			arthritis = "Arthritis";
-        			medHistory.add(arthritis);
-        		}
-        		if (C_hearLoss.isChecked()){
-        			hearLoss = "Hearing Loss";
-        			medHistory.add(hearLoss);
-        		}
-        		if (C_kidneyStn.isChecked()){
-        			kidneyStn = "Kidney Stones";
-        			medHistory.add(kidneyStn);
-        		}
-        		if (C_prostate.isChecked()){
-        			prostate = "Prostate Problems";
-        			medHistory.add(prostate);
-        		}
-        		if (C_correctLens.isChecked()){
-        			correctLens = "Corrective Lenses";
-        			medHistory.add(correctLens);
-        		}
-        		if (C_neuroProb.isChecked()){
-        			neuroProb = "Neurological Problems";
-        			medHistory.add(neuroProb);
-        		}
-        		if (C_asthma.isChecked()){
-        			asthma = "Asthma";
-        			medHistory.add(asthma);
-        		}
-        		if (C_cancer.isChecked()){
-        			cancer = "Cancer";
-        			medHistory.add(cancer);
-        		}
-        		if (C_sTD.isChecked()){
-        			sTD = "Sexually Transmitted Disease";
-        			medHistory.add(sTD);
-        		}
-        		if (C_anemia.isChecked()){
-        			anemia = "Anemia";
-        			medHistory.add(anemia);
-        		}
-        		if (C_seizures.isChecked()){
-        			seizures = "Seizures";
-        			medHistory.add(seizures);
-        		}
-        		if (C_ulcers.isChecked()){
-        			ulcers = "Ulcers";
-        			medHistory.add(ulcers);
-        		}
-        		if (C_stroke.isChecked()){
-        			stroke = "Stroke";
-        			medHistory.add(stroke);
-        		}
-        		if (C_earProb.isChecked()){
-        			earProb = "Ear Problems";
-        			medHistory.add(earProb);
-        		}
-        		if (C_depression.isChecked()){
-        			depression = "Depression";
-        			medHistory.add(depression);
-        		}
         		
-/**        		final String[] medHistory = { heartD,  highCol, highPress, diabetes, arthritis, 
+        		if (C_highPress.isChecked())
+        			highPress = "High Blood Prressure";
+        		
+        		if (C_diabetes.isChecked())
+        			diabetes = "Diabetes";
+        		
+        		if (C_arthritis.isChecked())
+        			arthritis = "Arthritis";
+        		
+        		if (C_hearLoss.isChecked())
+        			hearLoss = "Hearing Loss";
+        		
+        		if (C_kidneyStn.isChecked())
+        			kidneyStn = "Kidney Stones";
+        		
+        		if (C_prostate.isChecked())
+        			prostate = "Prostate Problems";
+        		
+        		if (C_correctLens.isChecked())
+        			correctLens = "Corrective Lenses";
+        		
+        		if (C_neuroProb.isChecked())
+        			neuroProb = "Neurological Problems";
+        		
+        		if (C_asthma.isChecked())
+        			asthma = "Asthma";
+        		
+        		if (C_cancer.isChecked())
+        			cancer = "Cancer";
+        		
+        		if (C_sTD.isChecked())
+        			sTD = "Sexually Transmitted Disease";
+        		
+        		if (C_anemia.isChecked())
+        			anemia = "Anemia";
+        		
+        		if (C_seizures.isChecked())
+        			seizures = "Seizures";
+        		
+        		if (C_ulcers.isChecked())
+        			ulcers = "Ulcers";
+        		
+        		if (C_stroke.isChecked())
+        			stroke = "Stroke";
+        		
+        		if (C_earProb.isChecked())
+        			earProb = "Ear Problems";
+        		
+        		if (C_depression.isChecked())
+        			depression = "Depression";
+        		
+        		final String[] medHistory = { heartD,  highCol, highPress, diabetes, arthritis, 
         									hearLoss, kidneyStn, prostate, correctLens, neuroProb,
         									asthma, cancer, sTD, anemia, seizures, ulcers, stroke, 
-        									earProb, depression};**/
+        									earProb, depression};
         		Intent i;
         		if (fromReview == 1) {
         			i = new Intent(NextActivity4.this, ReviewActivity.class);
@@ -251,7 +225,7 @@ public class NextActivity4 extends Activity
         		
         		
         		//pile all the data on this activity to send it to the next one
-        		i.putStringArrayListExtra("medical_History_Data", medHistory);
+        		i.putExtra("medical_History_Data", medHistory);
         		
         		i.putExtra("selected_state", getIntent().getIntExtra("selected_state", -1));
         		
@@ -273,7 +247,7 @@ public class NextActivity4 extends Activity
 		int k = 0;  
 		
 		//gets the respective data through the review page in an array
-		final ArrayList<String> medHistory = getIntent().getStringArrayListExtra("medical_History_Data");
+		final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
 	    for (int i = 0, j = root.getChildCount(); i < j; i++) 
 	    {
 	        View view = root.getChildAt(i);
@@ -285,9 +259,9 @@ public class NextActivity4 extends Activity
 	        if (view instanceof CheckBox) 
 	        {
 	        	
-	        	if (k<=medHistory.size())
+	        	if (k<=18)
 	        	{
-	        		if (medHistory.get(k) != null) {
+	        		if (medHistory[k] != null) {
 	    				((CheckBox) view).setChecked(true);	    				
 		        	}	
 	        		k++;

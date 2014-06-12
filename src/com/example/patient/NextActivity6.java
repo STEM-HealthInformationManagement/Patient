@@ -1,9 +1,5 @@
 package com.example.patient;
 
-import java.util.ArrayList;
-
-import com.example.patient.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -247,9 +243,7 @@ public class NextActivity6 extends Activity {
 		final String[] insurance = getIntent().getStringArrayExtra("insurance_Data");
 		
 		//Data of the medical history section from the previous activity
-		final ArrayList<String> medHistory = new ArrayList<String>();
-		//medHistory = getIntent().getStringArrayExtra("medical_History_Data");
-		medHistory.addAll(getIntent().getStringArrayListExtra("medical_History_Data"));
+		final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
 		addAllergyButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
         		if (allergy4.isShown() && reaction4.isShown())
@@ -372,7 +366,7 @@ public class NextActivity6 extends Activity {
 
         		i.putExtra("insurance_Data", insurance);
         		
-        		i.putStringArrayListExtra("medical_History_Data", medHistory);
+        		i.putExtra("medical_History_Data", medHistory);
         		
         		i.putExtra("allergies", allergies);
         		

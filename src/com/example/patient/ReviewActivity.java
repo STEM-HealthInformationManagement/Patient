@@ -5,7 +5,6 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
-import java.util.Arrays;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -19,7 +18,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
-import com.example.patient.R;
 import com.example.patient.R.color;
 
 import android.os.Bundle;
@@ -196,10 +194,6 @@ public class ReviewActivity extends Activity {
 	//Show response content in this textview
 	private TextView httpResponseContentView; 
 	
-	//Med History Fetch Array
-	ArrayList<String> medHist = new ArrayList<String>();
-	
-	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -340,9 +334,8 @@ public class ReviewActivity extends Activity {
 		polNum2 = insurance[9];
 		
 		//Data of the medical history section from the previous activity
-		//medHistory = getIntent().getStringArrayExtra("medical_History_Data");
-		medHist = getIntent().getStringArrayListExtra("medical_History_Data");
-/*		heartD = medHistory[0];
+		medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		heartD = medHistory[0];
 		highCol = medHistory[1];
 		highPress = medHistory[2];
 		diab = medHistory[3];
@@ -360,30 +353,7 @@ public class ReviewActivity extends Activity {
 		ulcrs = medHistory[15];
 		strk = medHistory[16];
 		earProb = medHistory[17];
-		depressn = medHistory[18];*/
-		
-		
-/*		heartD = medHist.get(0);
-		highCol = medHist.get(1);
-		highPress = medHist.get(2);
-		diab = medHist.get(3);
-		arth = medHist.get(4);
-		hearLoss = medHist.get(5);
-		kidneyStn = medHist.get(6);
-		prostate = medHist.get(7);
-		correctLens = medHist.get(8);
-		neuroProb = medHist.get(9);
-		asthm = medHist.get(10);
-		canc = medHist.get(11);
-		sTD = medHist.get(12);
-		anem = medHist.get(13);
-		seizr = medHist.get(14);
-		ulcrs = medHist.get(15);
-		strk = medHist.get(16);
-		earProb = medHist.get(17);
-		depressn = medHist.get(18);
-*/
-		//Data of the medical history section from the previous activity in full array form, because all the checking is done over there and then set here.
+		depressn = medHistory[18];
 		
 		
 		//Data of the allergy section from the previous activity
@@ -467,7 +437,7 @@ public class ReviewActivity extends Activity {
 		int deadAndGone = 0;
 	    
 	    //heart disease
-		if (medHist.contains("Heart Disease")){
+		if (heartD != null){
 			heartDisease.setText(heartD);
 		}
 		else {
@@ -476,7 +446,7 @@ public class ReviewActivity extends Activity {
 		}
 		
 		//high cholesterol
-		if (medHist.contains("High Cholestrol")) {
+		if (highCol != null) {
 			highCholesterol.setText(highCol);
 		}
 		else {
@@ -729,7 +699,7 @@ public class ReviewActivity extends Activity {
 //			int numFirst = 11;
 //			int numLast = 9;
 			final String fullAddress = iAddress;
-			final String fullMedicalHistory = Arrays.toString(medHistory);
+			final String fullMedicalHistory = medHistory.toString();
 			/*String separator = ", ";
 			int total = medHistory.length * separator.length();
 			for (String s : medHistory) {
@@ -857,7 +827,7 @@ public class ReviewActivity extends Activity {
 							jObj.put("insurance_phone2", phoneIns2);
 							jObj.put("group_num2", gNum2);
 							jObj.put("policy_num2", polNum2);
-							jObj.put("medicalhistory", medHist);
+							jObj.put("medicalhistory", medHistory);
 							jObj.put("allergy1", sAllergy1);
 							jObj.put("allergy2", sAllergy2);
 							jObj.put("allergy3", sAllergy3);

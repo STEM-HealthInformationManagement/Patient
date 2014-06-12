@@ -1,8 +1,6 @@
 //screen4.xml
 package com.example.patient;
 
-import com.example.patient.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

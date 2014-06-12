@@ -1,7 +1,5 @@
 package com.example.patient;
 
-import com.example.patient.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -21,7 +19,7 @@ public class ThankYou extends Activity {
 		setContentView(R.layout.activity_thank_you);
 		
 		TextView continueTextView = (TextView) findViewById(R.id.textView2);
-		Animation continueBlinker = new AlphaAnimation(0.3f, 1.0f); // Alpha parameters, used for transparency (SCALE: 0.0 [Completely Transparent] - 1.0 [Fully Visible])
+		Animation continueBlinker = new AlphaAnimation(0.3f, 1.0f);
 		continueBlinker.setDuration(500); //Time Of blink
 		continueBlinker.setStartOffset(20);
 		continueBlinker.setRepeatMode(Animation.REVERSE);
