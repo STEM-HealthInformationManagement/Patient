@@ -170,7 +170,8 @@ public class NextActivity2 extends Activity {
             }
             else {
             
-            	if(empPhone.equals("")||empName.equals("")||occup.equals("")){
+            	if(empPhone.equals("")||empName.equals("")||occup.equals("")||empAddress.equals("")||
+            			cName1.equals("")||cPhone1.equals("")||cRelation1.equals("")){
             		
             		runOnUiThread(new Runnable(){
             			public void run(){
