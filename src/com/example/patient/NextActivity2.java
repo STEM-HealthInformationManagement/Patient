@@ -8,6 +8,7 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class NextActivity2 extends Activity {
 	
@@ -112,11 +113,27 @@ public class NextActivity2 extends Activity {
 		// when the next page button is clicked
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-            Intent i;
+                //gets the data from the employment history section
+            empName = employerName.getText().toString();
+            empPhone = employerPhone.getText().toString();
+            occup = occupation.getText().toString();
+            empAddress = employerAddress.getText().toString();
+            
+          
+            
+            //gets the data from the emergency contact section
+            cName1 = c1Name.getText().toString();
+            cPhone1 = c1Phone.getText().toString();
+            cRelation1 = c1Relation.getText().toString();
+            
+            cName2 = c2Name.getText().toString();
+            cPhone2 = c2Phone.getText().toString();
+            cRelation2 = c2Relation.getText().toString();
+            
             if (fromReview == 1){
             	//if this activity is started by the review page 
     			//the intent is assigned with a value that starts the review page
-            	i = new Intent(NextActivity2.this, ReviewActivity.class);
+            	 Intent i = new Intent(NextActivity2.this, ReviewActivity.class);
             	
             	//Data of the patient details section from the review page
         		final String[] patientDetails = getIntent().getStringArrayExtra("details");
@@ -130,7 +147,18 @@ public class NextActivity2 extends Activity {
     			//Data of the allergy section from the review page
     			final String[] allergies = getIntent().getStringArrayExtra("allergies");
     			
+        		
+        	
+        		
+        		i.putExtra("selected_state", getIntent().getIntExtra("selected_state", -1));
+        		
     			//put the data from the other activities in the intent for the review page
+    			final String[] employment = { empName, empPhone, occup, empAddress };
+    			i.putExtra("employment_history", employment);
+            final String[] emergency = {cName1, cPhone1, cRelation1, 
+            							cName2, cPhone2, cRelation2 };	
+            	i.putExtra("emergency_contact", emergency);
+            	
     			i.putExtra("details", patientDetails);
 
         		i.putExtra("insurance_Data", insurance);
@@ -138,47 +166,41 @@ public class NextActivity2 extends Activity {
         		i.putExtra("medical_History_Data", medHistory);
         		
         		i.putExtra("allergies", allergies);
+        		startActivity(i);
             }
             else {
+            
+            	if(empPhone.equals("")||empName.equals("")||occup.equals("")){
+            		
+            		runOnUiThread(new Runnable(){
+            			public void run(){
+            				Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
+            			}
+            		});
+            		}
+            	else{
             	//the intent is assigned with a value that start the next activity
-            	i = new Intent(NextActivity2.this, NextActivity3.class);
+            	 Intent i = new Intent(NextActivity2.this, NextActivity3.class);
             	
             	//put the data from the previous activities in the intent to preserve them through the next activity 
             	i.putExtra("details", patientDetails);
+        		final String[] employment = { empName, empPhone, occup, empAddress };
+    			i.putExtra("employment_history", employment);
+            final String[] emergency = {cName1, cPhone1, cRelation1, 
+            							cName2, cPhone2, cRelation2 };	
+            	i.putExtra("emergency_contact", emergency);
+            	startActivity(i);
             }
             
             
             
-            //gets the data from the employment history section
-            empName = employerName.getText().toString();
-            empPhone = employerPhone.getText().toString();
-            occup = occupation.getText().toString();
-            empAddress = employerAddress.getText().toString();
-            
-            final String[] employment = { empName, empPhone, occup, empAddress };
-            
-            //gets the data from the emergency contact section
-            cName1 = c1Name.getText().toString();
-            cPhone1 = c1Phone.getText().toString();
-            cRelation1 = c1Relation.getText().toString();
-            
-            cName2 = c2Name.getText().toString();
-            cPhone2 = c2Phone.getText().toString();
-            cRelation2 = c2Relation.getText().toString();
-            
-            final String[] emergency = {cName1, cPhone1, cRelation1, 
-            							cName2, cPhone2, cRelation2 };
+        
             
             //pile all the received data on this activity to send it to the next one            
-    		i.putExtra("employment_history", employment);
     		
-    		i.putExtra("emergency_contact", emergency);
     		
-    		i.putExtra("selected_state", getIntent().getIntExtra("selected_state", -1));
-            
-    		startActivity(i);
             }
-        });
+            }});
 	}
 
 	@Override
