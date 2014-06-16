@@ -1,5 +1,6 @@
 package com.example.patient;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
@@ -10,16 +11,21 @@ import android.os.Handler;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 
+@SuppressLint("NewApi")
 public class MainActivity extends Activity {
 
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Button b = (Button) findViewById(R.id.btn_Confirm);
         final TextView tv1 = (TextView) findViewById(R.id.textView1);
+        final ProgressBar sp = (ProgressBar) findViewById(R.id.progressBar1);
         b.setVisibility(View.INVISIBLE);
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
@@ -27,16 +33,20 @@ public class MainActivity extends Activity {
             startActivity(i);
             }
         });
+        sp.animate();
+        sp.setVisibility(View.VISIBLE);
         Handler handler = new Handler(); 
         handler.postDelayed(new Runnable() { 
              public void run() { 
                   if(isNetworkAvailable())
                   {
+                	  sp.setVisibility(View.INVISIBLE);
                 	  b.setVisibility(View.VISIBLE);
                 	  tv1.setText("");
                   }
                   else
                   {
+                	  sp.setVisibility(View.INVISIBLE);
                 	  b.setVisibility(View.INVISIBLE);
                 	  tv1.setText("Internet Connection Required!");
                   }

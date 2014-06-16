@@ -5,17 +5,6 @@
     tools:context=".ThankYou" >
 
     <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="68dp"
-        android:gravity="center"
-        android:text="@string/thanks_message"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -25,5 +14,16 @@
         android:gravity="center"
         android:text="@string/continue_to_start"
         android:textAppearance="?android:attr/textAppearanceSmall" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="67dp"
+        android:gravity="center"
+        android:text="@string/thanks_message"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
 
 </RelativeLayout>
