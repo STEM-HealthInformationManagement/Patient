@@ -285,7 +285,7 @@ public class NextActivity4 extends Activity
 	        if (view instanceof CheckBox) 
 	        {
 	        	
-	        	if (k<=18)
+	        	if (k <= medHistory.size())
 	        	{
 	        		if (medHistory.get(k).toString() != null) {
 	    				((CheckBox) view).setChecked(true);	    				
