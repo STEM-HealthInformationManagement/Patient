@@ -155,6 +155,7 @@ public class ReviewActivity extends Activity {
 	String polNum2;
 
 	String[] medHistory;
+	ArrayList<String> medHist = new ArrayList<String>();
 	String heartD;
 	String highCol;
 	String highPress;
@@ -334,7 +335,7 @@ public class ReviewActivity extends Activity {
 		polNum2 = insurance[9];
 		
 		//Data of the medical history section from the previous activity
-		medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+/*		medHistory = getIntent().getStringArrayExtra("medical_History_Data");
 		heartD = medHistory[0];
 		highCol = medHistory[1];
 		highPress = medHistory[2];
@@ -354,7 +355,29 @@ public class ReviewActivity extends Activity {
 		strk = medHistory[16];
 		earProb = medHistory[17];
 		depressn = medHistory[18];
-		
+*/
+	
+		medHist = getIntent().getStringArrayListExtra("medical_History_Data");
+/*		heartD = medHist.get(0);
+		highCol = medHist.get(1);
+		highPress = medHist.get(2);
+		diab = medHist.get(3);
+		arth = medHist.get(4);
+		hearLoss = medHist.get(5);
+		kidneyStn = medHist.get(6);
+		prostate = medHist.get(7);
+		correctLens = medHist.get(8);
+		neuroProb = medHist.get(9);
+		asthm = medHist.get(10);
+		canc = medHist.get(11);
+		sTD = medHist.get(12);
+		anem = medHist.get(13);
+		seizr = medHist.get(14);
+		ulcrs = medHist.get(15);
+		strk = medHist.get(16);
+		earProb = medHist.get(17);
+		depressn = medHist.get(18);
+*/		
 		
 		//Data of the allergy section from the previous activity
 		allergies = getIntent().getStringArrayExtra("allergies");
@@ -699,7 +722,6 @@ public class ReviewActivity extends Activity {
 //			int numFirst = 11;
 //			int numLast = 9;
 			final String fullAddress = iAddress;
-			final String fullMedicalHistory = medHistory.toString();
 			/*String separator = ", ";
 			int total = medHistory.length * separator.length();
 			for (String s : medHistory) {
@@ -827,7 +849,7 @@ public class ReviewActivity extends Activity {
 							jObj.put("insurance_phone2", phoneIns2);
 							jObj.put("group_num2", gNum2);
 							jObj.put("policy_num2", polNum2);
-							jObj.put("medicalhistory", medHistory);
+							jObj.put("medicalhistory", medHist);
 							jObj.put("allergy1", sAllergy1);
 							jObj.put("allergy2", sAllergy2);
 							jObj.put("allergy3", sAllergy3);
