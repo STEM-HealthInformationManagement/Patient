@@ -79,35 +79,35 @@ public class NextActivity3 extends Activity {
         group_Num_Sec_In = (EditText) findViewById(R.id.editText_insurancegroupnumber2);
         policy_Num_Sec_In = (EditText) findViewById(R.id.editText_insurancepolicynumber2);
         
-        // makes labels invisible
+        // makes labels GONE
         //disables all the textViews, and editTexts
-		ins_Comp.setVisibility(View.INVISIBLE);
-		phone.setVisibility(View.INVISIBLE);
-		group_Num.setVisibility(View.INVISIBLE); 
-		policy_Num.setVisibility(View.INVISIBLE);
+		ins_Comp.setVisibility(View.GONE);
+		phone.setVisibility(View.GONE);
+		group_Num.setVisibility(View.GONE); 
+		policy_Num.setVisibility(View.GONE);
 		
 		
-		// makes input fields invisible
+		// makes input fields GONE
 		// ins_Comp_In.setEnabled(false);
-		ins_Comp_In.setVisibility(View.INVISIBLE);
-		phone_In.setVisibility(View.INVISIBLE);
-		group_Num_In.setVisibility(View.INVISIBLE);
-		policy_Num_In.setVisibility(View.INVISIBLE);
+		ins_Comp_In.setVisibility(View.GONE);
+		phone_In.setVisibility(View.GONE);
+		group_Num_In.setVisibility(View.GONE);
+		policy_Num_In.setVisibility(View.GONE);
 		
-		holder_Name.setVisibility(View.INVISIBLE); 
-		rel_Holder.setVisibility(View.INVISIBLE);
-		holder_Name_In.setVisibility(View.INVISIBLE); 
-		rel_Holder_In.setVisibility(View.INVISIBLE); 
+		holder_Name.setVisibility(View.GONE); 
+		rel_Holder.setVisibility(View.GONE);
+		holder_Name_In.setVisibility(View.GONE); 
+		rel_Holder_In.setVisibility(View.GONE); 
 		
-		ins_Comp_Sec.setVisibility(View.INVISIBLE);
-		phone_Sec.setVisibility(View.INVISIBLE);
-		group_Num_Sec.setVisibility(View.INVISIBLE);
-		policy_Num_Sec.setVisibility(View.INVISIBLE);
+		ins_Comp_Sec.setVisibility(View.GONE);
+		phone_Sec.setVisibility(View.GONE);
+		group_Num_Sec.setVisibility(View.GONE);
+		policy_Num_Sec.setVisibility(View.GONE);
 		
-		ins_Comp_Sec_In.setVisibility(View.INVISIBLE);
-		phone_Sec_In.setVisibility(View.INVISIBLE);
-		group_Num_Sec_In.setVisibility(View.INVISIBLE);
-		policy_Num_Sec_In.setVisibility(View.INVISIBLE);
+		ins_Comp_Sec_In.setVisibility(View.GONE);
+		phone_Sec_In.setVisibility(View.GONE);
+		group_Num_Sec_In.setVisibility(View.GONE);
+		policy_Num_Sec_In.setVisibility(View.GONE);
 		
 		C_secondary.setEnabled(false);
 		
@@ -158,14 +158,14 @@ public class NextActivity3 extends Activity {
 				if (C_covered.isChecked() == false){
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled 
-					ins_Comp.setVisibility(View.INVISIBLE);
-					ins_Comp_In.setVisibility(View.INVISIBLE);
-					phone.setVisibility(View.INVISIBLE);
-					phone_In.setVisibility(View.INVISIBLE);
-					group_Num.setVisibility(View.INVISIBLE);
-					group_Num_In.setVisibility(View.INVISIBLE);
-					policy_Num.setVisibility(View.INVISIBLE);
-					policy_Num_In.setVisibility(View.INVISIBLE);
+					ins_Comp.setVisibility(View.GONE);
+					ins_Comp_In.setVisibility(View.GONE);
+					phone.setVisibility(View.GONE);
+					phone_In.setVisibility(View.GONE);
+					group_Num.setVisibility(View.GONE);
+					group_Num_In.setVisibility(View.GONE);
+					policy_Num.setVisibility(View.GONE);
+					policy_Num_In.setVisibility(View.GONE);
 					
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);
@@ -233,10 +233,10 @@ public class NextActivity3 extends Activity {
 				if (C_self_insured.isChecked() == false){ 
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled
-					holder_Name.setVisibility(View.INVISIBLE); 
-					holder_Name_In.setVisibility(View.INVISIBLE);
-					rel_Holder.setVisibility(View.INVISIBLE);
-					rel_Holder_In.setVisibility(View.INVISIBLE);
+					holder_Name.setVisibility(View.GONE); 
+					holder_Name_In.setVisibility(View.GONE);
+					rel_Holder.setVisibility(View.GONE);
+					rel_Holder_In.setVisibility(View.GONE);
 					
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);
@@ -290,15 +290,15 @@ public class NextActivity3 extends Activity {
 				if (C_secondary.isChecked() == false){
 					//when it's not checked, disables the textViews and editTexts
 					//previously enabled
-					ins_Comp_Sec.setVisibility(View.INVISIBLE);
-					phone_Sec.setVisibility(View.INVISIBLE);
-					group_Num_Sec.setVisibility(View.INVISIBLE);
-					policy_Num_Sec.setVisibility(View.INVISIBLE);
+					ins_Comp_Sec.setVisibility(View.GONE);
+					phone_Sec.setVisibility(View.GONE);
+					group_Num_Sec.setVisibility(View.GONE);
+					policy_Num_Sec.setVisibility(View.GONE);
 					
-					ins_Comp_Sec_In.setVisibility(View.INVISIBLE);
-					phone_Sec_In.setVisibility(View.INVISIBLE);
-					group_Num_Sec_In.setVisibility(View.INVISIBLE);
-					policy_Num_Sec_In.setVisibility(View.INVISIBLE);
+					ins_Comp_Sec_In.setVisibility(View.GONE);
+					phone_Sec_In.setVisibility(View.GONE);
+					group_Num_Sec_In.setVisibility(View.GONE);
+					policy_Num_Sec_In.setVisibility(View.GONE);
 				}
 			}
         });
