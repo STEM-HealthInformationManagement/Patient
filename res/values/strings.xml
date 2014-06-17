@@ -83,7 +83,7 @@
     <string name="male">Male</string>
     <string name="female">Female</string>
     <string name="dob">*Birthday</string>
-    <string name="marialstatus">Marial Status</string>
+    <string name="marialstatus">*Marial Status</string>
     <string name="single">Single</string>
     <string name="married">Married</string>
     <string name="socialsecurity">*Social Security</string>

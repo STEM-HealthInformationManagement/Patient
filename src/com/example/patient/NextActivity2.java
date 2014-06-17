@@ -170,7 +170,7 @@ public class NextActivity2 extends Activity {
             }
             else {
             
-            	if(empPhone.equals("")||empName.equals("")||occup.equals("")||empAddress.equals("")||
+            	/*if(empPhone.equals("")||empName.equals("")||occup.equals("")||empAddress.equals("")||
             			cName1.equals("")||cPhone1.equals("")||cRelation1.equals("")){
             		
             		runOnUiThread(new Runnable(){
@@ -178,8 +178,8 @@ public class NextActivity2 extends Activity {
             				Toast.makeText(getApplicationContext(), "Some Required Fields Were Left Blank", Toast.LENGTH_LONG).show();
             			}
             		});
-            		}
-            	else{
+            		}*/// Yesterday Only God I knew what it does now only God knows 
+            	//else{ need more beer
             	//the intent is assigned with a value that start the next activity
             	 Intent i = new Intent(NextActivity2.this, NextActivity3.class);
             	
@@ -201,7 +201,8 @@ public class NextActivity2 extends Activity {
     		
     		
             }
-            }});
+          //  }
+        });
 	}
 
 	@Override
