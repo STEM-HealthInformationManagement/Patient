@@ -245,7 +245,7 @@ public class NextActivity6 extends Activity {
 		final String[] insurance = getIntent().getStringArrayExtra("insurance_Data");
 		
 		//Data of the medical history section from the previous activity
-		//final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		final String[] medHist = getIntent().getStringArrayExtra("medical_History_Checked");
 		final ArrayList<String> medHistory = getIntent().getStringArrayListExtra("medical_History_Data");
 		addAllergyButton.setOnClickListener(new View.OnClickListener() {
         	public void onClick(View v) {
@@ -370,6 +370,9 @@ public class NextActivity6 extends Activity {
         		i.putExtra("insurance_Data", insurance);
         		
         		i.putStringArrayListExtra("medical_History_Data", medHistory);
+        		
+        		//This is just for the Checked Boxes in the previous activity.
+        		i.putExtra("medical_History_Checked", medHist);
         		
         		i.putExtra("allergies", allergies);
         		
