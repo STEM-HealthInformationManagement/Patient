@@ -134,9 +134,10 @@ public class NextActivity3 extends Activity {
 					if (C_self_insured.isChecked())
 					{
 						C_self_insured.setChecked(false);
+				
 					}
-					
-					// C_secondary.setEnabled(true);
+					C_self_insured.setEnabled(false);
+					 C_secondary.setEnabled(true);
 					
 					//enables the textviews and editTexts associated 
 					//with the checkbox
@@ -167,10 +168,14 @@ public class NextActivity3 extends Activity {
 					policy_Num.setVisibility(View.GONE);
 					policy_Num_In.setVisibility(View.GONE);
 					
+					if (!C_self_insured.isEnabled()){
+						C_self_insured.setEnabled(true);
+					}
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);
 					C_secondary.setEnabled(false);
 					
+				
 					ins_Comp_In.setEnabled(false);
 					phone_In.setEnabled(false);
 					group_Num_In.setEnabled(false);
@@ -206,11 +211,16 @@ public class NextActivity3 extends Activity {
 					if (C_covered.isChecked())
 					{
 						C_covered.setChecked(false);
+						
 					}
-					/*if (C_secondary.isChecked()) {
+					C_covered.setEnabled(false);
+					
+					
+					if (C_secondary.isChecked()) {
 						C_secondary.setChecked(false);
-					}*/
-					C_secondary.setEnabled(true);
+						}
+					C_secondary.setEnabled(false);
+			
 					
 					//enables the textviews and editTexts associated 
 					//with the checkbox
@@ -238,9 +248,14 @@ public class NextActivity3 extends Activity {
 					rel_Holder.setVisibility(View.GONE);
 					rel_Holder_In.setVisibility(View.GONE);
 					
+					
+					if (!C_covered.isEnabled()){
+						C_covered.setEnabled(true);
+					}
 					if (C_secondary.isChecked())
 						C_secondary.setChecked(false);
 					C_secondary.setEnabled(false);
+				
 					
 					holder_Name_In.setEnabled(false); 
 					rel_Holder_In.setEnabled(false); 
