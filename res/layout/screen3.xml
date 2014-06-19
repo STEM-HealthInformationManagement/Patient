@@ -82,6 +82,7 @@
         </EditText>
 
         <!-- Employer phone textbox -->
+
         <EditText
             android:id="@+id/editText_employerphone"
             android:layout_width="wrap_content"
@@ -90,7 +91,8 @@
             android:layout_alignBottom="@+id/textView_employerphone"
             android:layout_toRightOf="@+id/textView_employerphone"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:maxLength="@integer/ten" />
 
          <!-- Employer's address textbox -->
         <EditText
@@ -160,6 +162,7 @@
             android:inputType="textPersonName" />
 
         <!-- conatct2 phone textbox -->
+
         <EditText
             android:id="@+id/editText_contact2phone"
             android:layout_width="wrap_content"
@@ -168,7 +171,8 @@
             android:layout_alignBottom="@+id/textView_contact2phone"
             android:layout_toRightOf="@+id/textView_contact2phone"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:maxLength="@integer/ten" />
 
         <EditText
             android:id="@+id/editText_contact2relationship"
@@ -208,7 +212,8 @@
             android:layout_alignBottom="@+id/textView_contact1phone"
             android:layout_toRightOf="@+id/textView_contact1phone"
             android:ems="10"
-            android:inputType="phone" />
+            android:inputType="phone"
+            android:maxLength="@integer/ten" />
 
         <TextView
             android:id="@+id/textView_contact2"
