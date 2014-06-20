@@ -24,9 +24,15 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         final Button b = (Button) findViewById(R.id.btn_Confirm);
-        final TextView tv1 = (TextView) findViewById(R.id.textView1);
+        final Button update_Button = (Button) findViewById(R.id.update_Btn);
+        		
+        final TextView tv1 = (TextView) findViewById(R.id.textView2);
+        final TextView slidingText = (TextView) findViewById(R.id.textView1);
         final ProgressBar sp = (ProgressBar) findViewById(R.id.progressBar1);
+        
         b.setVisibility(View.INVISIBLE);
+        update_Button.setVisibility(View.INVISIBLE);
+        
         b.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
             Intent i = new Intent(MainActivity.this, NextActivity.class);
@@ -41,17 +47,21 @@ public class MainActivity extends Activity {
                   if(isNetworkAvailable())
                   {
                 	  sp.setVisibility(View.INVISIBLE);
+                	  update_Button.setVisibility(View.VISIBLE);
                 	  b.setVisibility(View.VISIBLE);
+                	  tv1.setVisibility(View.GONE);
                 	  tv1.setText("");
                   }
                   else
                   {
                 	  sp.setVisibility(View.INVISIBLE);
+                	  update_Button.setVisibility(View.INVISIBLE);
                 	  b.setVisibility(View.INVISIBLE);
+                	  tv1.setVisibility(View.VISIBLE);
                 	  tv1.setText("Internet Connection Required!");
                   }
              } 
-        }, 2000); 
+        }, 2000);
 	        
 
     }
