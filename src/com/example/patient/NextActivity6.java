@@ -351,6 +351,7 @@ public class NextActivity6 extends Activity {
 						sReaction5 };
         		
         		Intent i = new Intent(NextActivity6.this, ReviewActivity.class);
+        		//Intent i = new Intent(NextActivity6.this, UpdateInfo.class);
         		
         		//pile all the received data on this activity to send it to the next one
         		

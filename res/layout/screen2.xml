@@ -255,7 +255,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView_zipcode"
             android:layout_alignBottom="@+id/textView_zipcode"
-            android:layout_toLeftOf="@+id/imageButton_date"
+            android:layout_toLeftOf="@+id/imageButton_dateVerify"
             android:layout_toRightOf="@+id/textView_zipcode"
             android:ems="10"
             android:inputType="number"
@@ -333,7 +333,7 @@
 
         <!-- DOB date picker -->
         <ImageButton
-            android:id="@+id/imageButton_date"
+            android:id="@+id/imageButton_dateVerify"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/editText_dob"
@@ -360,7 +360,7 @@
             android:layout_alignBaseline="@+id/textView_email"
             android:layout_alignBottom="@+id/textView_email"
             android:layout_alignLeft="@+id/editText_zipcode"
-            android:layout_toLeftOf="@+id/imageButton_date"
+            android:layout_toLeftOf="@+id/imageButton_dateVerify"
             android:ems="10"
             android:inputType="textEmailAddress" />
 
@@ -392,7 +392,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBottom="@+id/textView_title1"
-            android:layout_alignRight="@+id/imageButton_date"
+            android:layout_alignRight="@+id/imageButton_dateVerify"
             android:text="@string/mssg2user"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
