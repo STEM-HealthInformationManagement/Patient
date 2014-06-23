@@ -281,15 +281,12 @@
             android:layout_alignBottom="@+id/textView_insurancecompanyphone2"
             android:layout_alignLeft="@+id/editText_insurancecompany2"
             android:ems="10"
-<<<<<<< HEAD
-            android:inputType="phone" />
-=======
-            android:inputType="phone"
-            android:maxLength="@integer/ten" >
 
+            android:inputType="phone" 
+            android:maxLength="@integer/ten" >
             <requestFocus />
         </EditText>
->>>>>>> origin/master
+
 
         <EditText
             android:id="@+id/editText_insurancegroupnumber2"
