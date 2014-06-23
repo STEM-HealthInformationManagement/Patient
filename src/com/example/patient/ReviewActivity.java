@@ -335,7 +335,7 @@ public class ReviewActivity extends Activity {
 		polNum2 = insurance[9];
 		
 		//Data of the medical history section from the previous activity
-/*		medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		medHistory = getIntent().getStringArrayExtra("medical_History_Checked");
 		heartD = medHistory[0];
 		highCol = medHistory[1];
 		highPress = medHistory[2];
@@ -355,28 +355,28 @@ public class ReviewActivity extends Activity {
 		strk = medHistory[16];
 		earProb = medHistory[17];
 		depressn = medHistory[18];
-*/
+
 	
 		medHist = getIntent().getStringArrayListExtra("medical_History_Data");
-/*		heartD = medHist.get(0);
-		highCol = medHist.get(1);
-		highPress = medHist.get(2);
-		diab = medHist.get(3);
-		arth = medHist.get(4);
-		hearLoss = medHist.get(5);
-		kidneyStn = medHist.get(6);
-		prostate = medHist.get(7);
-		correctLens = medHist.get(8);
-		neuroProb = medHist.get(9);
-		asthm = medHist.get(10);
-		canc = medHist.get(11);
-		sTD = medHist.get(12);
-		anem = medHist.get(13);
-		seizr = medHist.get(14);
-		ulcrs = medHist.get(15);
-		strk = medHist.get(16);
-		earProb = medHist.get(17);
-		depressn = medHist.get(18);
+/*		heartD = "Heart Disease";
+		highCol = "High Cholestrol";
+		highPress = "High Blood Pressure";
+		diab = "Diabetes";
+		arth = "Arthritis";
+		hearLoss = "Hearing oss";
+		kidneyStn = "Kidney tones";
+		prostate = "Prostate problems";
+		correctLens = "Corrective Lens";
+		neuroProb = "Neurological problem";
+		asthm = "Asthma";
+		canc = "Cancer";
+		sTD = "Sexually Transmitted Disease";
+		anem = "Anemia";
+		seizr = "Seizures";
+		ulcrs = "Ulcers";
+		strk = "Stroke";
+		earProb = "Ear problems";
+		depressn = "Depression";
 */		
 		
 		//Data of the allergy section from the previous activity
