@@ -213,7 +213,7 @@ public class ReviewActivity extends Activity {
 		phone = (TextView) findViewById(R.id.reviewPhone);
 		
 		
-		httpResponseContentView = (TextView) findViewById(R.id.textView1);
+		httpResponseContentView = (TextView) findViewById(R.id.slideUpTextView);
 		
 		
 		

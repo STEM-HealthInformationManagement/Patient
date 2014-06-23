@@ -39,7 +39,7 @@
         android:inputType="text" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/slideUpTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/editText2"
@@ -52,8 +52,8 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView1"
-        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignBaseline="@+id/slideUpTextView"
+        android:layout_alignBottom="@+id/slideUpTextView"
         android:layout_alignLeft="@+id/editText2"
         android:layout_marginLeft="44dp"
         android:text="@string/lastname" />
