@@ -33,35 +33,18 @@
             android:id="@id/content"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:focusable="true"
             android:orientation="vertical" >
 
             <TextView
                 android:id="@+id/HIS_Info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:focusable="true"
                 android:text="Information about the app \n What it does \n How to contact us \n and more" />
+
         </LinearLayout>
     </SlidingDrawer>
-
-    <!-- Next Button | Ace -->
-
-    <Button
-        android:id="@+id/btn_Confirm"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="44dp"
-        android:contentDescription="@string/btn_Confirm"
-        android:text="@string/btnStart" />
-
-    <Button
-        android:id="@+id/update_Btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@id/btn_Confirm"
-        android:layout_marginLeft="20dp"
-        android:layout_toRightOf="@id/btn_Confirm"
-        android:text="Update Application" />
 
     <!-- Logo Image | Ace -->
 
@@ -69,11 +52,12 @@
         android:id="@+id/ImageView_logo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@id/btn_Confirm"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
         android:contentDescription="@string/icon"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
         android:src="@drawable/logo" />
 
     <ProgressBar
@@ -82,7 +66,27 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ImageView_logo"
         android:layout_centerHorizontal="true"
-        android:visibility="gone" />
+        android:visibility="invisible" />
+    
+    <!-- Next Button | Ace -->
+
+    <Button
+        android:id="@+id/btn_Confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@id/progressBar1"
+        android:layout_toLeftOf="@id/progressBar1"
+        android:contentDescription="@string/btn_Confirm"
+        android:text="@string/btnStart" />
+
+    <Button
+        android:id="@+id/update_Btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:layout_alignTop="@id/btn_Confirm"
+        android:layout_toRightOf="@id/progressBar1"
+        android:text="Update \n Application" />
 
     <TextView
         android:id="@+id/textView2"
