@@ -202,11 +202,11 @@ public class NextActivity4 extends Activity
         			depression = "Depression";
         			medHistory.add(depression);
         		}
-/*        		final String[] medHistory = { heartD,  highCol, highPress, diabetes, arthritis, 
+        		final String[] medHist = { heartD,  highCol, highPress, diabetes, arthritis, 
         									hearLoss, kidneyStn, prostate, correctLens, neuroProb,
         									asthma, cancer, sTD, anemia, seizures, ulcers, stroke, 
         									earProb, depression};
-*/
+
         		Intent i;
         		if (fromReview == 1) {
         			i = new Intent(NextActivity4.this, ReviewActivity.class);
@@ -252,6 +252,9 @@ public class NextActivity4 extends Activity
         		//pile all the data on this activity to send it to the next one
         		i.putStringArrayListExtra("medical_History_Data", medHistory);
         		
+        		//This is just for verifying the CheckBoxes. The Actual Data is entered into an ArrayList
+        		i.putExtra("medical_History_Checked", medHist);
+        		
         		i.putExtra("selected_state", getIntent().getIntExtra("selected_state", -1));
         		
         		startActivity(i);
@@ -272,7 +275,7 @@ public class NextActivity4 extends Activity
 		int k = 0;  
 		
 		//gets the respective data through the review page in an array
-		//final String[] medHistory = getIntent().getStringArrayExtra("medical_History_Data");
+		final String[] medHist = getIntent().getStringArrayExtra("medical_History_Checked");
 		//final ArrayList<String> medHistory = new ArrayList<String>();
 	    for (int i = 0, j = root.getChildCount(); i < j; i++) 
 	    {
@@ -285,9 +288,9 @@ public class NextActivity4 extends Activity
 	        if (view instanceof CheckBox) 
 	        {
 	        	
-	        	if (k <= medHistory.size())
+	        	if (k <= 18)
 	        	{
-	        		if (medHistory.get(k).toString() != null) {
+	        		if (medHist[k] != null) {
 	    				((CheckBox) view).setChecked(true);	    				
 		        	}	
 	        		k++;

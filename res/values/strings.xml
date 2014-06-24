@@ -186,5 +186,7 @@
     <string name="title_activity_thank_you">Thank You</string>
     <string name="thanks_message">Thank you for submitting your health information!</string>
     <string name="continue_to_start">Tap to start a new application</string>
+    <string name="title_activity_update_info">Update Health Info</string>
+    <string name="verifyButtonText">Verify</string>
 
 </resources>

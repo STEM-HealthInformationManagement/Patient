@@ -154,7 +154,7 @@ public class NextActivity extends Activity {
 		}
 		
 		//button to pop up the datepicker 
-        ImageButton dateButton = (ImageButton) findViewById(R.id.imageButton_date);
+        ImageButton dateButton = (ImageButton) findViewById(R.id.imageButton_dateVerify);
         
         dateButton.setOnClickListener(new View.OnClickListener() {
         	@SuppressLint("NewApi") @Override 
