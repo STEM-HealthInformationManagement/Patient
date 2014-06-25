@@ -301,7 +301,7 @@ public class NextActivity extends Activity {
         			//the intent is assigned with a value that start the next activity
         			 
         			 //This If Parameter below is too damn High .. i mean .. long ... Suggest switching it to a for-loop that checks the patientDetails Array for empty/null strings.
-                		/*if (firstName.equals("") || lastName.equals("")|| genderSelected.equals("Gender: not selected")
+                		if (firstName.equals("") || lastName.equals("")|| genderSelected.equals("Gender: not selected")
                 				|| birthDate.equals("")||status.equals("Marital Status: not selected") || ssn.equals("")|| address1.equals("") 
                 				|| city.equals("")|| state.equals("")|| zip.equals("")|| phone.equals("") ){
         		      			  runOnUiThread(new Runnable(){
@@ -314,7 +314,7 @@ public class NextActivity extends Activity {
 					    	 });
         		      			//i = new Intent(NextActivity.this, NextActivity.class);
 					    	 }
-                		else{*/
+                		else{
 					    		 Intent i = new Intent(NextActivity.this, NextActivity2.class);
 					    		 
 					        		//Save everything in the intent again, and start new intent.
@@ -338,7 +338,7 @@ public class NextActivity extends Activity {
         		      			  
         	
         	}
-       // } this one dat onee big one
+        } 
 	);
         //clear button 
        
