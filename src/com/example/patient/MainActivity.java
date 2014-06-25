@@ -91,7 +91,7 @@ public class MainActivity extends Activity {
 					b.animate().alpha(1);
 					update_Button.animate().alpha(1);
 
-				}else {
+				} else {
 					slidingText.setText("Close");
 					slidingText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, downArrow, 0, 0);
 					logo.animate().alpha(0);
