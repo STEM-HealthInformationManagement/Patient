@@ -36,7 +36,7 @@ public class MainActivity extends Activity {
         final TextView slidingText = (TextView) findViewById(R.id.slideUpTextView);
         final ProgressBar sp = (ProgressBar) findViewById(R.id.progressBar1);
         SlidingDrawer sd = (SlidingDrawer) findViewById(R.id.drawer);
-        sd.setOnTouchListener(new View.OnTouchListener() {
+ /*       sd.setOnTouchListener(new View.OnTouchListener() {
 			
 			@Override
 			public boolean onTouch(View v, MotionEvent event) {
@@ -47,11 +47,15 @@ public class MainActivity extends Activity {
 				return false;
 			}
 		});
+*/
         sd.setOnDrawerOpenListener(new OnDrawerOpenListener() {
             @Override
             public void onDrawerOpened() {
                 slidingText.setText("Slide down to begin");
                 slidingText.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.down_button, 0, 0);
+				b.setVisibility(View.INVISIBLE);
+				update_Button.setVisibility(View.INVISIBLE);
+				tv1.setVisibility(View.INVISIBLE);
             }
         });
         sd.setOnDrawerCloseListener(new OnDrawerCloseListener(){
@@ -60,7 +64,9 @@ public class MainActivity extends Activity {
 			public void onDrawerClosed() {
 				slidingText.setText("Slide up to learn more about HIS");
 				slidingText.setCompoundDrawablesWithIntrinsicBounds( 0, R.drawable.up_button, 0, 0);
-				
+				b.setVisibility(View.VISIBLE);
+				update_Button.setVisibility(View.VISIBLE);
+				tv1.setVisibility(View.VISIBLE);
 			}
         	
         });
