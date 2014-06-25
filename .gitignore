@@ -215,3 +215,5 @@ pip-log.txt
 .mr.developer.cfg
 
 gen/com/example/patient/R.java
+
+gen/com/example/patient/R.java
