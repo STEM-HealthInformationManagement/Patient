@@ -85,14 +85,14 @@ public class MainActivity extends Activity {
 				// TODO Auto-generated method stub
 				if(drawer.isOpened()){
 					// TODO Auto-generated method stub
-					slidingText.setText(textWhenClosed);
+					slidingText.setText("Close");
 					slidingText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, upArrow, 0, 0);
 					logo.animate().alpha(1);
 					b.animate().alpha(1);
 					update_Button.animate().alpha(1);
 
 				}else {
-					slidingText.setText("Close");
+					slidingText.setText("Slide to learn more");
 					slidingText.setCompoundDrawablesRelativeWithIntrinsicBounds(0, downArrow, 0, 0);
 					logo.animate().alpha(0);
 					b.animate().alpha(0);
