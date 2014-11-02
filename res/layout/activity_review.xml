@@ -25,7 +25,7 @@
 
         <!-- Patient Details edit button -->
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/loginButton"
             style="?android:attr/buttonStyleSmall"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -43,7 +43,7 @@
             android:layout_alignLeft="@+id/reviewPatientDetails"
             android:layout_below="@+id/reviewPatientDetails"
             android:layout_marginTop="10dp"
-            android:layout_toStartOf="@id/button1"
+            android:layout_toStartOf="@id/loginButton"
             android:text="@string/firstname"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
@@ -352,7 +352,7 @@
             android:layout_alignLeft="@+id/reviewInsurancePhoneNumber"
             android:layout_below="@+id/reviewInsurance"
             android:layout_marginTop="5dp"
-            android:layout_toStartOf="@id/button1"
+            android:layout_toStartOf="@id/loginButton"
             android:text="@string/incomp"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 

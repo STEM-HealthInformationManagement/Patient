@@ -12,6 +12,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
         android:gravity="center"
+        android:height="40dp"
         android:text="@string/continue_to_start"
         android:textAppearance="?android:attr/textAppearanceSmall" />
 

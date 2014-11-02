@@ -1,4 +1,6 @@
-package com.example.patient;
+package org.him.patient;
+
+import com.example.patient.R;
 
 import android.app.Activity;
 import android.content.Intent;

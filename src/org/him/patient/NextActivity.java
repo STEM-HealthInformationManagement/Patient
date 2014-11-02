@@ -1,9 +1,11 @@
 //screen2.xml
-package com.example.patient;
+package org.him.patient;
 
 import java.util.Calendar;
 import java.util.Date;
 import java.util.StringTokenizer;
+
+import com.example.patient.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -342,7 +344,7 @@ public class NextActivity extends Activity {
 	);
         //clear button 
        
-		Button clearButton = (Button) findViewById(R.id.button1);
+		Button clearButton = (Button) findViewById(R.id.loginButton);
 		clearButton.setOnClickListener (new View.OnClickListener()
 		{
 			public void onClick(View w)

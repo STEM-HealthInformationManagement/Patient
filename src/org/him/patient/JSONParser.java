@@ -1,4 +1,4 @@
-package com.example.patient;
+package org.him.patient;
 
 
 import java.io.BufferedReader;

@@ -1,5 +1,7 @@
 //Goes with screen3.xml
-package com.example.patient;
+package org.him.patient;
+
+import com.example.patient.R;
 
 import android.os.Bundle;
 import android.app.Activity;

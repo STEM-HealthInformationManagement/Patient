@@ -1,6 +1,8 @@
-package com.example.patient;
+package org.him.patient;
 
 import java.util.ArrayList;
+
+import com.example.patient.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -59,7 +61,7 @@ public class NextActivity6 extends Activity {
 		//otherwise the value is 0
 		fromReview = getIntent().getIntExtra("review", 0);
 		
-		b = (Button) findViewById(R.id.button1);
+		b = (Button) findViewById(R.id.loginButton);
 		addAllergyButton = (Button) findViewById(R.id.button2);
 		deleteAllergyButton = (Button) findViewById(R.id.button3);
 		

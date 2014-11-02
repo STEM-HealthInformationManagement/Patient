@@ -188,5 +188,6 @@
     <string name="continue_to_start">Tap to start a new application</string>
     <string name="title_activity_update_info">Update Health Info</string>
     <string name="verifyButtonText">Verify</string>
+    <string name="title_activity_doctor">Doctor</string>
 
 </resources>

@@ -1,4 +1,6 @@
-package com.example.patient;
+package org.him.patient;
+
+import com.example.patient.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -12,6 +14,7 @@ import android.view.Menu;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.SlidingDrawer;
 import android.widget.SlidingDrawer.OnDrawerCloseListener;
@@ -29,13 +32,28 @@ public class MainActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        
         final Button b = (Button) findViewById(R.id.btn_Confirm);
         final Button update_Button = (Button) findViewById(R.id.update_Btn);
-        		
+        final Button doctorButton = (Button) findViewById(R.id.doctorLoginButton);
+        
         final TextView tv1 = (TextView) findViewById(R.id.textView2);
         final TextView slidingText = (TextView) findViewById(R.id.slideUpTextView);
-        final ProgressBar sp = (ProgressBar) findViewById(R.id.progressBar1);
-        SlidingDrawer sd = (SlidingDrawer) findViewById(R.id.drawer);
+        final ProgressBar sp = (ProgressBar) findViewById(R.id.doctorLoginProgress);
+        
+        final TextView info = (TextView) findViewById(R.id.HIS_Info);
+        
+        final ImageView logo = (ImageView) findViewById(R.id.ImageView_logo);
+        final SlidingDrawer sd = (SlidingDrawer) findViewById(R.id.drawer);
+        b.setVisibility(View.INVISIBLE);
+		update_Button.setVisibility(View.INVISIBLE);
+		tv1.setVisibility(View.INVISIBLE);
+		logo.setVisibility(View.INVISIBLE);
+		
+		b.setVisibility(View.VISIBLE);
+		update_Button.setVisibility(View.VISIBLE);
+		tv1.setVisibility(View.VISIBLE);
+		logo.setVisibility(View.VISIBLE);
  /*       sd.setOnTouchListener(new View.OnTouchListener() {
 			
 			@Override
@@ -48,6 +66,11 @@ public class MainActivity extends Activity {
 			}
 		});
 */
+		
+		doctorButton.setVisibility(View.INVISIBLE);
+        
+        //Make the slider invisible till the internet connection is checked.
+        sd.setVisibility(View.INVISIBLE);
         sd.setOnDrawerOpenListener(new OnDrawerOpenListener() {
             @Override
             public void onDrawerOpened() {
@@ -56,6 +79,8 @@ public class MainActivity extends Activity {
 				b.setVisibility(View.INVISIBLE);
 				update_Button.setVisibility(View.INVISIBLE);
 				tv1.setVisibility(View.INVISIBLE);
+				logo.setVisibility(View.INVISIBLE);
+				doctorButton.setVisibility(View.VISIBLE);
             }
         });
         sd.setOnDrawerCloseListener(new OnDrawerCloseListener(){
@@ -67,6 +92,8 @@ public class MainActivity extends Activity {
 				b.setVisibility(View.VISIBLE);
 				update_Button.setVisibility(View.VISIBLE);
 				tv1.setVisibility(View.VISIBLE);
+				logo.setVisibility(View.VISIBLE);
+				doctorButton.setVisibility(View.INVISIBLE);
 			}
         	
         });
@@ -80,6 +107,14 @@ public class MainActivity extends Activity {
             startActivity(i);
             }
         });
+        
+        doctorButton.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+            Intent i = new Intent(MainActivity.this, Doctor.class);
+            startActivity(i);
+            }
+        });
+        
         slidingText.setVisibility(View.INVISIBLE);
         sp.animate();
         sp.setVisibility(View.VISIBLE);
@@ -91,9 +126,12 @@ public class MainActivity extends Activity {
                 	  sp.setVisibility(View.INVISIBLE);
                 	  update_Button.setVisibility(View.VISIBLE);
                 	  b.setVisibility(View.VISIBLE);
-                	  tv1.setVisibility(View.GONE);
+                	  tv1.setVisibility(View.INVISIBLE);
                 	  tv1.setText("");
                 	  slidingText.setVisibility(View.VISIBLE);
+                	  sp.setVisibility(View.GONE);
+                	  //Make the slider visible if internet is available.
+                      sd.setVisibility(View.VISIBLE);
                   }
                   else
                   {
@@ -103,9 +141,13 @@ public class MainActivity extends Activity {
                 	  tv1.setVisibility(View.VISIBLE);
                 	  slidingText.setVisibility(View.VISIBLE);
                 	  tv1.setText("Internet Connection Required!");
+                	  sp.setVisibility(View.GONE);
+                	  //Make the slider visible even if internet is not available.
+                      sd.setVisibility(View.VISIBLE);
                   }
              } 
         }, 2000);
+        
 	        
 
     }
@@ -129,8 +171,7 @@ public class MainActivity extends Activity {
     }
     
     private boolean isNetworkAvailable() {
-        ConnectivityManager connectivityManager 
-              = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        ConnectivityManager connectivityManager = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
         return activeNetworkInfo != null && activeNetworkInfo.isConnected();
     }

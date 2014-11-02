@@ -1,4 +1,4 @@
-package com.example.patient;
+package org.him.patient;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -18,6 +18,7 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.example.patient.R;
 import com.example.patient.R.color;
 
 import android.os.Bundle;
@@ -995,7 +996,7 @@ public class ReviewActivity extends Activity {
 	
 	public void editDetails(View v) {
 		fromReview = new Intent(ReviewActivity.this, NextActivity.class);
-		Button edit = (Button) findViewById(R.id.button1);
+		Button edit = (Button) findViewById(R.id.loginButton);
 		edit.setBackgroundColor(Color.GRAY);		
 		fromReview.putExtra("review", 1);
 		fromReview.putExtras(getIntent());

@@ -1,6 +1,8 @@
-package com.example.patient;
+package org.him.patient;
 
 import java.util.ArrayList;
+
+import com.example.patient.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -70,7 +72,7 @@ public class NextActivity4 extends Activity
 		C_earProb = (CheckBox) findViewById(R.id.checkBox18);
 		C_depression = (CheckBox) findViewById(R.id.checkBox19);
 		
-		clearButton = (Button) findViewById(R.id.button1);
+		clearButton = (Button) findViewById(R.id.loginButton);
 		clearButton.setOnClickListener (new View.OnClickListener()
 		{
 			public void onClick(View v)

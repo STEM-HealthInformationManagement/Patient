@@ -39,7 +39,19 @@
                 android:id="@+id/HIS_Info"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Information about the app \n What it does \n How to contact us \n and more" />
+                android:layout_gravity="center_horizontal"
+                android:text="\n HIS is an application for patients all over the United States\n
+This application allows patients in doctor's offices, hospital and other clinics
+to enter the required information for the doctor's office to have access to.\n
+The information is available to doctors and hospitals in the US upon the patient's approval.
+\n 
+This application enables easier information retrieval as well as it consumes less time
+for the office to process the information. Therefore, the patient no longer has to 
+fill out a paper in every new doctor's office the patient goes to.\n
+\n\n
+For more information and questions about this application, please contact the
+HIS Team at srathod927@gmail.com." />
+
         </LinearLayout>
     </SlidingDrawer>
 
@@ -70,7 +82,7 @@
         android:src="@drawable/logo" />
 
     <ProgressBar
-        android:id="@+id/progressBar1"
+        android:id="@+id/doctorLoginProgress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/ImageView_logo"
@@ -81,7 +93,7 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/progressBar1"
+        android:layout_below="@id/doctorLoginProgress"
         android:gravity="center" />
 
     <Button
@@ -92,5 +104,14 @@
         android:layout_below="@+id/ImageView_logo"
         android:layout_marginRight="8dp"
         android:text="Update Application" />
+
+    <Button
+        android:id="@+id/doctorLoginButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btn_Confirm"
+        android:layout_centerHorizontal="true"
+        android:text="Doctor&apos;s Login" />
 
 </RelativeLayout>

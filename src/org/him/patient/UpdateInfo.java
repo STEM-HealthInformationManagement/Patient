@@ -1,7 +1,9 @@
-package com.example.patient;
+package org.him.patient;
 
 import java.util.Calendar;
 import java.util.StringTokenizer;
+
+import com.example.patient.R;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
@@ -29,7 +31,7 @@ public class UpdateInfo extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_update_info);
 		findViewById(R.id.RelativeLayout1).requestFocus();
-		firstName = (EditText) findViewById(R.id.editText1);
+		firstName = (EditText) findViewById(R.id.idTextField);
 		
 		date = (EditText) findViewById(R.id.editText4);
 		title = "Choose your date of birth";

@@ -231,7 +231,7 @@
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/loginButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/editText_reaction5"
@@ -264,7 +264,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_above="@+id/textView_medication_allergies"
-            android:layout_alignLeft="@+id/button1"
+            android:layout_alignLeft="@+id/loginButton"
             android:layout_marginLeft="14dp"
             android:text="@string/mssg2user"
             android:textAppearance="?android:attr/textAppearanceSmall" />

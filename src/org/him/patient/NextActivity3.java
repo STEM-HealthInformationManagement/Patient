@@ -1,5 +1,7 @@
 //screen4.xml
-package com.example.patient;
+package org.him.patient;
+
+import com.example.patient.R;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -30,7 +32,7 @@ public class NextActivity3 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.screen4);
 		
-		Button b = (Button) findViewById(R.id.button1);
+		Button b = (Button) findViewById(R.id.loginButton);
 		
 		//gets the value 1 if this activity was started by the review page
 		//otherwise the value is 0

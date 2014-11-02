@@ -183,11 +183,11 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_below="@string/std"
-        android:layout_toRightOf="@+id/button1"
+        android:layout_toRightOf="@+id/loginButton"
         android:text="@string/next6" />
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBottom="@id/button2"
