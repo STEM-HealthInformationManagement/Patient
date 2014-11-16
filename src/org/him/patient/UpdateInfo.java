@@ -33,7 +33,7 @@ public class UpdateInfo extends Activity {
 		findViewById(R.id.RelativeLayout1).requestFocus();
 		firstName = (EditText) findViewById(R.id.idTextField);
 		
-		date = (EditText) findViewById(R.id.editText4);
+		date = (EditText) findViewById(R.id.reg_phoneNumber);
 		title = "Choose your date of birth";
 		
 		

@@ -71,6 +71,10 @@
             android:name="org.him.patient.Doctor"
             android:label="@string/title_activity_doctor" >
         </activity>
+        <activity
+            android:name="org.him.patient.DoctorRegister"
+            android:label="@string/title_activity_doctor_register" >
+        </activity>
     </application>
 
 </manifest>

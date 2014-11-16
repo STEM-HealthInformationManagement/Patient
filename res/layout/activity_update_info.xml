@@ -61,7 +61,7 @@
     <!-- Social Security Text box -->
     
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/reg_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/idTextField"
@@ -81,10 +81,10 @@
         android:text="@string/socialsecurity" />
 
     <EditText
-        android:id="@+id/editText4"
+        android:id="@+id/reg_phoneNumber"
         android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignLeft="@+id/reg_email"
         android:layout_below="@+id/textView4"
         android:layout_marginTop="23dp"
         android:layout_toLeftOf="@+id/imageButton_dateVerify"
@@ -97,9 +97,9 @@
         android:id="@+id/imageButton_dateVerify"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBottom="@+id/editText4"
-        android:layout_alignRight="@+id/editText3"
-        android:layout_alignTop="@+id/editText4"
+        android:layout_alignBottom="@+id/reg_phoneNumber"
+        android:layout_alignRight="@+id/reg_email"
+        android:layout_alignTop="@+id/reg_phoneNumber"
         android:background="#80000000"
         android:contentDescription="@string/date_picker"
         android:src="@drawable/ic_action_name" />
@@ -108,7 +108,7 @@
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText3"
+        android:layout_below="@+id/reg_email"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="37dp"
         android:text="@string/dob" />
@@ -117,7 +117,7 @@
         android:id="@+id/loginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/editText4"
+        android:layout_below="@+id/reg_phoneNumber"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="32dp"
         android:text="@string/verifyButtonText" />

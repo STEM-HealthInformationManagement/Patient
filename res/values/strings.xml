@@ -189,5 +189,6 @@
     <string name="title_activity_update_info">Update Health Info</string>
     <string name="verifyButtonText">Verify</string>
     <string name="title_activity_doctor">Doctor</string>
+    <string name="title_activity_doctor_register">DoctorRegister</string>
 
 </resources>

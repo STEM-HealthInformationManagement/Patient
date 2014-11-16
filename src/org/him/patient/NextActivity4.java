@@ -52,7 +52,7 @@ public class NextActivity4 extends Activity
 		fromReview = getIntent().getIntExtra("review", 0);
 		
 		//medical history 
-		C_heartD = (CheckBox) findViewById(R.id.checkBox1);
+		C_heartD = (CheckBox) findViewById(R.id.reg_checkbox_spw);
 		C_highCol = (CheckBox) findViewById(R.id.checkBox2);
 		C_highPress = (CheckBox) findViewById(R.id.checkBox3);
 		C_diabetes = (CheckBox) findViewById(R.id.checkBox4);

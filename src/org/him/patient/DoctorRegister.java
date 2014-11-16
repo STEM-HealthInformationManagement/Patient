@@ -1,6 +1,7 @@
 package org.him.patient;
 
 import java.io.BufferedReader;
+import java.io.DataInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -13,101 +14,131 @@ import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.example.patient.R;
+import com.example.patient.R.layout;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
-public class Doctor extends Activity {
+public class DoctorRegister extends Activity {
 
-	String dident;
-	String pw;
+	String name = null;
+	String dob = null;
+	String email = null;
+	//int phoneNumber;
+	String phoneNumber;
+	String password = null;
 	
-	TextView dIDTextView;
-	TextView dPasswordTextView;
-	TextView rememberMeTextView;
 	String responseContent;
 	String content;
+	//TextView afterRegister;
 	JSONObject evaluator;
 	String evaluatorValue;
 	
-	String dlg_niv;
-	String dlg_niv2;
-	String dlg_niv3;
+	CheckBox spw;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.doctor_screen);
+		setContentView(R.layout.dc_register_screen);
+		final ProgressBar reg_progress = (ProgressBar) findViewById(R.id.reg_progressBar);
 		
-		//##################################################//
-		dIDTextView = (TextView) findViewById(R.id.textView2);
-		dPasswordTextView = (TextView) findViewById(R.id.textView3);
-		rememberMeTextView = (TextView) findViewById(R.id.textView4);
-		//##################################################//
+		///////////////////////////////////////////////////////////
+		final TextView t1 = (TextView) findViewById(R.id.textView1);
+		final TextView t2 = (TextView) findViewById(R.id.textView2);
+		final TextView t3 = (TextView) findViewById(R.id.textView3);
+		final TextView t4 = (TextView) findViewById(R.id.textView4);
+		final TextView t5 = (TextView) findViewById(R.id.textView5);
+		final TextView t6 = (TextView) findViewById(R.id.textView6);
+		final TextView t7 = (TextView) findViewById(R.id.textView7);
+		////////////////////////////////////////////////////////////
 		
-		final ProgressBar sp = (ProgressBar) findViewById(R.id.doctorLoginProgress);
-		final EditText idField = (EditText) findViewById(R.id.idTextField);
-		final EditText pwField = (EditText) findViewById(R.id.passwordTextField);
-		final Button loginButton = (Button) findViewById(R.id.loginButton);
-		final Button retryButton = (Button) findViewById(R.id.retryButton);
-		final ToggleButton rememberToggle = (ToggleButton) findViewById(R.id.rememberToggle);
-		final TextView afterLogin = (TextView) findViewById(R.id.afterDoctorLogin);
-		sp.setVisibility(View.INVISIBLE);
-		afterLogin.setVisibility(View.INVISIBLE);
-		retryButton.setVisibility(View.INVISIBLE);
+		spw = (CheckBox) findViewById(R.id.reg_checkbox_spw);
 		
-		rememberToggle.setOnClickListener(new View.OnClickListener() {
+		final EditText reg_name = (EditText) findViewById(R.id.reg_nameField);
+		final EditText reg_dob = (EditText) findViewById(R.id.reg_dob);
+		final EditText reg_email = (EditText) findViewById(R.id.reg_emailField);
+		final EditText reg_phone = (EditText) findViewById(R.id.reg_phNumber);
+		final EditText reg_pass = (EditText) findViewById(R.id.reg_desiredPassword);
+		final Button reg_button = (Button) findViewById(R.id.doctorRegisterButton);
+		final TextView afterRegister = (TextView) findViewById(R.id.afterRegister);
+		reg_progress.setVisibility(View.INVISIBLE);
+		afterRegister.setVisibility(View.INVISIBLE);
+		
+		spw.setOnClickListener(new View.OnClickListener() {
 			
 			@Override
-			public void onClick(View v) 
-			{
-				//Going to work on this later...
-			}
-		});
-		
-		loginButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) 
-			{
-				dident = idField.getText().toString();
-				pw = pwField.getText().toString();
-				afterLogin.setText("");
-				if(dident.matches(""))
+			public void onClick(View v) {
+				if(spw.isChecked())
 				{
-					Toast.makeText(getBaseContext(), "Identity Code is Required!", Toast.LENGTH_LONG).show();
-				}
-				else if(pw.matches(""))
-				{
-					Toast.makeText(getBaseContext(), "Password is Required!", Toast.LENGTH_LONG).show();
+					reg_pass.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
 				}
 				else
 				{
-					idField.setVisibility(View.INVISIBLE);
-					pwField.setVisibility(View.INVISIBLE);
-					loginButton.setVisibility(View.INVISIBLE);
-					rememberToggle.setVisibility(View.INVISIBLE);
-					dIDTextView.setVisibility(View.INVISIBLE);
-					dPasswordTextView.setVisibility(View.INVISIBLE);
-					rememberMeTextView.setVisibility(View.INVISIBLE);
-					afterLogin.setVisibility(View.VISIBLE);
-					retryButton.setVisibility(View.INVISIBLE);
+					reg_pass.setInputType(InputType.TYPE_CLASS_TEXT | InputType.TYPE_TEXT_VARIATION_PASSWORD);
+				}
+			}
+		});
+		
+		reg_button.setOnClickListener(new View.OnClickListener() 
+		{
+            public void onClick(View v) 
+            {
+            	/*Intent i = new Intent(MainActivity.this, DoctorRegister.class);
+            	startActivity(i);*/
+            	name = reg_name.getText().toString();
+				dob = reg_dob.getText().toString();
+				email = reg_email.getText().toString();
+				//String numberText = reg_phone.getText().toString();
+				//phoneNumber = Integer.parseInt(numberText);
+				phoneNumber = reg_phone.getText().toString();
+				password = reg_pass.getText().toString();
+				
+				afterRegister.setText("");
+				afterRegister.setVisibility(View.VISIBLE);
+				
+				if(name.matches("") || dob.matches("") || email.matches("") || phoneNumber.matches("") || password.matches(""))
+				{
+					Toast.makeText(getBaseContext(), "All fields are required!", Toast.LENGTH_LONG).show();
+				}
+				else
+				{
+				
+					reg_name.setVisibility(View.INVISIBLE);
+					reg_dob.setVisibility(View.INVISIBLE);
+					reg_email.setVisibility(View.INVISIBLE);
+					reg_phone.setVisibility(View.INVISIBLE);
+					reg_pass.setVisibility(View.INVISIBLE);
+					reg_button.setVisibility(View.INVISIBLE);
+					t1.setVisibility(View.INVISIBLE);
+					t2.setVisibility(View.INVISIBLE);
+					t3.setVisibility(View.INVISIBLE);
+					t4.setVisibility(View.INVISIBLE);
+					t5.setVisibility(View.INVISIBLE);
+					t6.setVisibility(View.INVISIBLE);
+					t7.setVisibility(View.INVISIBLE);
+					spw.setVisibility(View.INVISIBLE);
 					
 					//Initialize a JSON Object. JSON Allows us to store information in a smarter way
 					//by shortening and simplifying the array, and most scripts are able to read JSON
 					//very easily today.
 					final JSONObject jObj = new JSONObject();
 					//URL To the script which executes the information provided and stores in the database.
-					final String url = "http://www.njcuacm.org/restricted/stem_test/doctor/getDoctorInfo.php";
+					final String url = "http://www.njcuacm.org/restricted/stem_test/doctor/put_doctor_info.php";
+					Toast.makeText(getBaseContext(), "Submitting Form...", Toast.LENGTH_LONG).show();
 					
-					sp.setVisibility(View.VISIBLE);
-					sp.animate();
+					reg_progress.setVisibility(View.VISIBLE);
+					reg_progress.animate();
 					
 					new Thread() {
 						@Override
@@ -117,10 +148,17 @@ public class Doctor extends Activity {
 	
 								HttpClient httpclient = new DefaultHttpClient();
 							     HttpPost httppost = new HttpPost(url);
-							     	     
+							     
+				/*
+				 * From Saurabh: I am trying this new way to enter everything into a JSON Array and Encode it through Java.
+				 * Then, take the information in PHP and Decode it there, as well as output everything there.
+				 */			     
 							   //Enter all information into a JSON ARRAY  
-							    jObj.put("dident", dident);
-							    jObj.put("password", pw);
+							    jObj.put("name", name);
+							    jObj.put("dob", dob);
+							    jObj.put("email", email);
+							    jObj.put("phoneNumber", phoneNumber);
+							    jObj.put("password", password);
 							    
 								JSONArray allJsonObjects = new JSONArray();
 					            allJsonObjects.put(jObj);
@@ -164,7 +202,6 @@ public class Doctor extends Activity {
 					                
 					                //Evaluate the response content to get the name and values from the JSON String.
 					                evaluator = new JSONObject(responseContent);
-					                dlg_niv3 = evaluator.getString("dlg_niv3");
 					                
 					                
 					                /*DataInputStream input = new DataInputStream(response.getEntity().getContent());
@@ -185,75 +222,60 @@ public class Doctor extends Activity {
 	/***********************************************************************************************************************				                
 					                runOnUiThread(new Runnable(){
 								    	 public void run() {
-							                afterLogin.setText(responseContent);
+							                afterRegister.setText(responseContent);
 								    	 }
 								    	 });
 	***********************************************************************************************************************/				                
-							    if(dlg_niv3.equals("DLG_TRUE_IV_TRUE"))
+							    if(responseContent.contains("good"))
 							    {
 					                //Store specific name related values in the String.
 					                //In this case, I'm going to store the e-mail value from JSON name "good"
-					                dlg_niv = evaluator.getString("dlg_niv");
+					                evaluatorValue = evaluator.getString("good");
 					                
 								    runOnUiThread(new Runnable(){
 								    	 public void run() {
 								    	    //Toast.makeText(getApplicationContext(), "Application Successfully Submitted!", Toast.LENGTH_LONG).show();
-							                afterLogin.setText(dlg_niv);
-							                sp.clearAnimation();
-							        		sp.setVisibility(View.INVISIBLE);
+							                afterRegister.setText("Your form was successfully submitted!\n" +
+							                		"Please check your e-mail for the Identification Code at " + evaluatorValue);
+							                reg_progress.clearAnimation();
+							        		reg_progress.setVisibility(View.INVISIBLE);
 								    	 }
 								    });
 							    }
-							    else if(dlg_niv3.equals("DLG_TRUE_IV_FALSE"))
+							    else if(responseContent.contains("bad"))
 							    {
-							    	dlg_niv = evaluator.getString("dlg_niv");
-							    	dlg_niv2 = evaluator.getString("dlg_niv2");
-							    	
 							    	runOnUiThread(new Runnable(){
 								    	 public void run() {
 								    	    //Toast.makeText(getApplicationContext(), "An Error Occurred!", Toast.LENGTH_LONG).show();
-								    		 afterLogin.setText(dlg_niv + "\n" + dlg_niv2);
-								    		 sp.clearAnimation();
-								    		 sp.setVisibility(View.INVISIBLE);
+							                afterRegister.setText("We're sorry, an error occured submitting your application.\n"
+							                								+ "Please try again.\n\n"
+							                								+ "If error persists, please try again an hour later.");
+							                reg_progress.clearAnimation();
+							        		reg_progress.setVisibility(View.INVISIBLE);
 								    	 }
 								    	 });
 							    }
-							    else if(dlg_niv3.equals("DLG_FALSE"))
-							    {
-							    	dlg_niv = evaluator.getString("dlg_niv");
-							    	
-							    	runOnUiThread(new Runnable(){
-								    	 public void run() {
-								    	    //Toast.makeText(getApplicationContext(), "An Error Occurred!", Toast.LENGTH_LONG).show();
-								    		 afterLogin.setText(dlg_niv);
-								    		 sp.clearAnimation();
-								    		 sp.setVisibility(View.INVISIBLE);
-								    		 retryButton.setVisibility(View.VISIBLE);
-								    	 }
-								    	 });
-							    }
-							    
 							   }
 							   else
 							   {
 								   runOnUiThread(new Runnable(){
 								    	 public void run() {
-								    		 afterLogin.setText("Fatal Error Occurred.\n\nsPlease try again.");
-								    	    sp.clearAnimation();
-								    	    sp.setVisibility(View.INVISIBLE);
-								    	    retryButton.setVisibility(View.VISIBLE);
+								    	    Toast.makeText(getApplicationContext(), "Submission "
+								    	    		+ "Unsuccessful! Please Try Again.", Toast.LENGTH_LONG).show();
+								    	    reg_progress.clearAnimation();
+								    		reg_progress.setVisibility(View.INVISIBLE);
 								    	 }
 								    	 });
 							   }
 							}
 							catch (final Exception e) 
 							{
+								// TODO Auto-generated catch block
 								 runOnUiThread(new Runnable(){
 							    	 public void run() {
-							    		 afterLogin.setText(e.getMessage() + "\n\nThere was an unexpected error...Please Try again.");
-							    		 sp.clearAnimation();
-							    		 sp.setVisibility(View.INVISIBLE);
-							    		 retryButton.setVisibility(View.VISIBLE);
+							    		 Toast.makeText(getBaseContext(), e.getMessage()+"...There was an unexpected error...Please Try again.", Toast.LENGTH_SHORT).show();
+							    		 reg_progress.clearAnimation();
+							    			reg_progress.setVisibility(View.INVISIBLE);
 							    	 }
 						    	 });
 								e.printStackTrace();
@@ -261,30 +283,16 @@ public class Doctor extends Activity {
 							
 							super.run();
 						}
-						}.start();					
-				}	//End else
+						}.start();
+					
+				}
 				
-			}		//End onClick()
-			
-		});			//End Click Listener
-		
-		
-		retryButton.setOnClickListener(new View.OnClickListener() {
-			
-			@Override
-			public void onClick(View v) 
-			{
-				idField.setVisibility(View.VISIBLE);
-				pwField.setVisibility(View.VISIBLE);
-				loginButton.setVisibility(View.VISIBLE);
-				rememberToggle.setVisibility(View.VISIBLE);
-				dIDTextView.setVisibility(View.VISIBLE);
-				dPasswordTextView.setVisibility(View.VISIBLE);
-				rememberMeTextView.setVisibility(View.VISIBLE);
-				afterLogin.setVisibility(View.INVISIBLE);
-				retryButton.setVisibility(View.INVISIBLE);
-			}
+
+            }
 		});
+		
+		
+		
 		
 	}
 }

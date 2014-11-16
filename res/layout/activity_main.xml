@@ -111,7 +111,21 @@ HIS Team at srathod927@gmail.com." />
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/btn_Confirm"
-        android:layout_centerHorizontal="true"
-        android:text="Doctor&apos;s Login" />
+        android:layout_alignLeft="@+id/ImageView_logo"
+        android:background="@color/red"
+        android:text="Doctor&apos;s Login"
+        android:textColorLink="@color/red" />
+
+    <Button
+        android:id="@+id/doctorRegisterButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/ImageView_logo"
+        android:layout_alignRight="@+id/ImageView_logo"
+        android:layout_marginRight="21dp"
+        android:background="@color/red"
+        android:text="Doctor&apos;s Registration"
+        android:textColorLink="@color/red" />
 
 </RelativeLayout>

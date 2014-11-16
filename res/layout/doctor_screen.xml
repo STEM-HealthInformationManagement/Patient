@@ -4,14 +4,6 @@
     android:layout_height="match_parent"
     tools:context="org.him.patient.Doctor" >
 
-    <TextView
-        android:id="@+id/afterDoctorLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:text="After Login" />
-
     <ProgressBar
         android:id="@+id/doctorLoginProgress"
         android:layout_width="wrap_content"
@@ -65,7 +57,7 @@
         android:layout_marginLeft="33dp"
         android:layout_toRightOf="@+id/textView3"
         android:ems="10"
-        android:inputType="number" />
+        android:inputType="text" />
 
     <Button
         android:id="@+id/loginButton"
@@ -83,5 +75,23 @@
         android:layout_alignBottom="@+id/idTextField"
         android:layout_toLeftOf="@+id/loginButton"
         android:text="Doctor ID" />
+
+    <TextView
+        android:id="@+id/afterDoctorLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="After Login" />
+
+    <Button
+        android:id="@+id/retryButton"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="74dp"
+        android:text="Retry" />
 
 </RelativeLayout>
